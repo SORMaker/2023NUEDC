@@ -39,14 +39,15 @@ extern "C"
                 PACKER_CB send; //数据发送回调
 
         } upacker_inst;
+
+#pragma pack(push, 1)   // 保存当前对齐方式，并将对齐方式设置为 1 字节对齐
 typedef struct
 {
     int8_t workMode;
     int16_t demo;
-
-
+    float aaa;
 }rx_data_st;
-
+#pragma pack(pop)       // 恢复之前保存的对齐方式
 
         typedef upacker_inst *upacker_inst_t;
 extern rx_data_st rxData;

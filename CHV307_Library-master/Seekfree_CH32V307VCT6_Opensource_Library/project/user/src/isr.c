@@ -146,12 +146,12 @@ void UART7_IRQHandler (void)
             {
                 Buffer[BufferIndex++] = res;
             }
-            else if (BufferIndex == 1)
+            else if (BufferIndex == 1 && Buffer[0] == STX_L)
             {
                 Buffer[BufferIndex++] = res;
                 DataNum = res;
             }
-            else if(BufferIndex < (DataNum + 4))
+            else if((BufferIndex < (DataNum + 4)) && Buffer[0] == STX_L )
             {
                 Buffer[BufferIndex++] = res;
             }

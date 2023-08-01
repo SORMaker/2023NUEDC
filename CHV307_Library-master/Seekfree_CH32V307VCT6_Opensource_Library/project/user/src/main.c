@@ -38,15 +38,18 @@
 
 void packReceiveHandle(uint8_t *d, uint16_t s)
 {
-    rxData.workMode = d[0];
-    rxData.demo =  ((d[2] << 8)| d[1]);
-    printf("%d %d\n",rxData.workMode,rxData.demo);
+//    rxData.workMode = d[0];
+//    rxData.demo =  ((d[2] << 8)| d[1]);
+//    printf("%d %d\n",rxData.workMode,rxData.demo);
 }
 
 void packSendHandle(uint8_t *d, uint16_t s)
 {
     uart_write_buffer(UART_7, d, s);
-
+//    for (int i = 0; i < s; i++)
+//    {
+//        printf("%c\n",i);
+//    }
 }
 
 
@@ -67,6 +70,8 @@ int main (void)
 
     system_delay_ms(1000);
 
+
+
     // 此处编写用户代码 例如外设初始化代码等
     while(1)
     {
@@ -74,10 +79,12 @@ int main (void)
         if(BufferFinish == 1)
         {
             upacker_unpack(myPackPtr,Buffer,sizeof(Buffer));
-            upacker_pack(myPackPtr,&rxData.workMode,sizeof(rxData.workMode));
+            upacker_pack(myPackPtr,(uint8_t*)&rxData,sizeof(rxData));
+//            upacker_pack(myPackPtr,&rxData.demo,sizeof(rxData.demo));
             BufferFinish = 0;
             uart_rx_interrupt(UART_7,ENABLE);
         }
+
 //        printf("aaaa\n");
 //        system_delay_ms(500);
         // 此处编写需要循环执行的代码
