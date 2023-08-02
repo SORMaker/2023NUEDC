@@ -84,7 +84,8 @@ code/ctrl.o: \
  F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/inc_all.h \
  F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/moto.h \
  F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/pid.h \
- F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/buzzer.h
+ F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/buzzer.h \
+ F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/upacker.h
 
 F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/ctrl.h:
 
@@ -255,3 +256,5 @@ F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/moto.h:
 F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/pid.h:
 
 F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/buzzer.h:
+
+F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/project/code/upacker.h:

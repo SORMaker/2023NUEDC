@@ -58,13 +58,17 @@ int main (void)
     clock_init(SYSTEM_CLOCK_120M);      // 初始化芯片时钟 工作频率为 120MHz
     debug_init();                       // 务必保留，本函数用于初始化MPU 时钟 调试串口
 
+    uart_init(UART_7, 115200, UART7_MAP3_TX_E12, UART7_MAP3_RX_E13);
+    upacker_inst myPack;
+    upacker_inst_t myPackPtr = &myPack;
+    upacker_init(myPackPtr,&packReceiveHandle,&packSendHandle);
     // 此处编写用户代码 例如外设初始化代码等
     pwmInit();
     pidAllInit();
     BuzzerInit();
     // 此处编写用户代码 例如外设初始化代码等
     taskTimAllInit();
-
+    uart_rx_interrupt(UART_7,ENABLE);
     while(1)
     {
         // 此处编写需要循环执行的代码

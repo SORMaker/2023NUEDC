@@ -133,7 +133,34 @@ void UART7_IRQHandler (void)
 {
     if(USART_GetITStatus(UART7, USART_IT_RXNE) != RESET)
     {
-        wireless_module_uart_handler();
+        //        wireless_module_uart_handler();
+                static uint8_t BufferIndex = 0;
+                static uint16_t DataNum = 0;
+                uint8_t res = 0;
+                if(BufferFinish == 0)
+                {
+                    uart_query_byte(UART_7,&res);
+                    if(res == STX_L)
+                    {
+                        Buffer[BufferIndex++] = res;
+                    }
+                    else if (BufferIndex == 1 && Buffer[0] == STX_L)
+                    {
+                        Buffer[BufferIndex++] = res;
+                        DataNum = res;
+                    }
+                    else if((BufferIndex < (DataNum + 4)) && Buffer[0] == STX_L )
+                    {
+                        Buffer[BufferIndex++] = res;
+                    }
+                    if (BufferIndex >= (DataNum + 4))
+                    {
+                        BufferIndex = 0;
+                        BufferFinish = 1;
+                        DataNum = 0;
+                        uart_rx_interrupt(UART_7,DISABLE);
+                    }
+                }
         USART_ClearITPendingBit(UART7, USART_IT_RXNE);
     }
 }
