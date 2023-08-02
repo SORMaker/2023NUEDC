@@ -35,6 +35,24 @@
 #include "zf_common_headfile.h"
 #include "inc_all.h"
 
+
+
+void packReceiveHandle(uint8_t *d, uint16_t s)
+{
+    rxData.cx = (d[1] << 8) | d[0];
+    rxData.cy =  ((d[3] << 8)| d[2]);
+    printf("%d %d\n",rxData.cx,rxData.cy);
+}
+
+void packSendHandle(uint8_t *d, uint16_t s)
+{
+    uart_write_buffer(UART_7, d, s);
+//    for (int i = 0; i < s; i++)
+//    {
+//        printf("%c\n",i);
+//    }
+}
+
 int main (void)
 {
     clock_init(SYSTEM_CLOCK_120M);      // 初始化芯片时钟 工作频率为 120MHz
@@ -50,7 +68,15 @@ int main (void)
     while(1)
     {
         // 此处编写需要循环执行的代码
-
+        if(BufferFinish == 1)
+        {
+            upacker_unpack(myPackPtr,Buffer,sizeof(Buffer));
+            upacker_pack(myPackPtr,(uint8_t*)&rxData,sizeof(rxData));
+            BufferFinish = 0;
+            uart_rx_interrupt(UART_7,ENABLE);
+        }
+//        printf("aaaa\n");
+//        system_delay_ms(500);
         // 此处编写需要循环执行的代码
     }
 }

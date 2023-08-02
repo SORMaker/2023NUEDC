@@ -1,3 +1,0 @@
-"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\red_firm.dir/objects.a
-"E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\red_firm.dir/objects.a @CMakeFiles\red_firm.dir\objects1.rsp
-"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\red_firm.dir/objects.a -Wl,--no-whole-archive -o red_firm.exe -Wl,--out-implib,libred_firm.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\red_firm.dir\linklibs.rsp
