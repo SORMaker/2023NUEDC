@@ -1,0 +1,3 @@
+F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/red_firm.dir
+F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
