@@ -43,9 +43,8 @@ extern "C"
 #pragma pack(push, 1)   // 保存当前对齐方式，并将对齐方式设置为 1 字节对齐
 typedef struct
 {
-    int8_t workMode;
-    int16_t demo;
-    float aaa;
+    int16_t cx;
+    int16_t cy;
 }rx_data_st;
 #pragma pack(pop)       // 恢复之前保存的对齐方式
 

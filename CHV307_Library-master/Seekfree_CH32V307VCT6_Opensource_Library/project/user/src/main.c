@@ -38,9 +38,9 @@
 
 void packReceiveHandle(uint8_t *d, uint16_t s)
 {
-//    rxData.workMode = d[0];
-//    rxData.demo =  ((d[2] << 8)| d[1]);
-//    printf("%d %d\n",rxData.workMode,rxData.demo);
+    rxData.cx = (d[1] << 8) | d[0];
+    rxData.cy =  ((d[3] << 8)| d[2]);
+    printf("%d %d\n",rxData.cx,rxData.cy);
 }
 
 void packSendHandle(uint8_t *d, uint16_t s)
@@ -80,11 +80,9 @@ int main (void)
         {
             upacker_unpack(myPackPtr,Buffer,sizeof(Buffer));
             upacker_pack(myPackPtr,(uint8_t*)&rxData,sizeof(rxData));
-//            upacker_pack(myPackPtr,&rxData.demo,sizeof(rxData.demo));
             BufferFinish = 0;
             uart_rx_interrupt(UART_7,ENABLE);
         }
-
 //        printf("aaaa\n");
 //        system_delay_ms(500);
         // 此处编写需要循环执行的代码

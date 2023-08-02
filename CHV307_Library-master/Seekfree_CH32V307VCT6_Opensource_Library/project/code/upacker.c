@@ -12,7 +12,7 @@
   */
 #include "upacker.h"
 
-rx_data_st rxData = {54,100,11.9};
+rx_data_st rxData = {0,0};
 uint8_t Buffer[MAX_PACK_SIZE] = {0};
 uint8_t BufferFinish = 0;
 
