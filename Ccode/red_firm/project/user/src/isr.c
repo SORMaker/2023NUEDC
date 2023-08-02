@@ -325,10 +325,10 @@ void TIM2_IRQHandler(void)
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update );
         if (pointIndex < maxIndex && maxIndex != 0)
         {
-            vofaData[4] = servoDuty[pointIndex][0];
-            pwm_set_servo_duty(SERVO_UP_PIN, servoDuty[pointIndex][0]);
-            vofaData[5] = servoDuty[pointIndex][1];
-            pwm_set_servo_duty(SERVO_BOTTOM_PIN, servoDuty[pointIndex++][1]);
+            vofaData[4] = servoDuty[pointIndex][1];
+            pwm_set_servo_duty(SERVO_UP_PIN, servoDuty[pointIndex][1]);
+            vofaData[5] = servoDuty[pointIndex][0];
+            pwm_set_servo_duty(SERVO_BOTTOM_PIN, servoDuty[pointIndex++][0]);
             VofaSendFrame();
         }
     }

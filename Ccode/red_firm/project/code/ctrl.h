@@ -11,6 +11,8 @@
 #include "pid.h"
 #include <math.h>
 #include "vofa.h"
+#include "upacker.h"
+#include "easy_ui.h"
 
 #define SERVO_FREQ          50                                  // Servo frequency(50-300)
 /*
@@ -29,15 +31,22 @@
  * duty = ------------------------   (-90 <= x <= 90)
  *              1000 / freq
  */
-#define GetServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetServoDuty(x)    ((float)(10000 * (1.56 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetBottomServoDuty(x)    ((float)(10000 * (1.54 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetUpServoDuty(x)    ((float)(10000 * (1.58 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 
-#define SERVO_MID           GetServoDuty(0)                     // Middle duty of servo motor
-#define SERVO_DUTY_MAX      (GetServoDuty(80) - SERVO_MID)      // Maximum turning angle of servo motor
+#define SERVO_UP_MID            GetUpServoDuty(0)                     // Middle duty of servo motor
+#define SERVO_BOTTOM_MID        GetBottomServoDuty(0)                 // Middle duty of servo motor
+#define SERVO_MID               GetServoDuty(0)                 // Middle duty of servo motor
+
+#define SERVO_DUTY_MAX      (GetServoDuty(80) - SERVO_MID)            // Maximum turning angle of servo motor
 
 #define RAD_TO_DEGREE       57.29578
 
+#define FRAME_SIZE          224
+
 extern float cornerPoint[4][2];
-extern uint16_t servoDuty[1000][2];
+extern uint16_t servoDuty[2000][2];
 
 void MotorInit(void);
 //void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty);

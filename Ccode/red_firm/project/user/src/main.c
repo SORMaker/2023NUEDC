@@ -38,9 +38,23 @@ void packReceiveHandle(uint8_t *d, uint16_t s)
 {
     rxData.cx = (d[1] << 8) | d[0];
     rxData.cy =  ((d[3] << 8)| d[2]);
-//    cornerPoint[0][1] = rxData.cx - 111;
-//    cornerPoint[0][0] = 111 - rxData.cy;
-    printf("%d %d\n",rxData.cx,rxData.cy);
+    cornerPoint[0][0] = (d[5]<<8 | d[4]) - FRAME_SIZE / 2 - 1;
+    cornerPoint[0][1] = FRAME_SIZE / 2 - 1 - (d[7]<<8 | d[6]);
+    cornerPoint[1][0] = (d[9]<<8 | d[8]) - FRAME_SIZE / 2 - 1;
+    cornerPoint[1][1] = FRAME_SIZE / 2 - 1 - (d[11]<<8 | d[10]);
+    cornerPoint[2][0] = (d[13]<<8 | d[12]) - FRAME_SIZE / 2 - 1;
+    cornerPoint[2][1] = FRAME_SIZE / 2 - 1 - (d[15]<<8 | d[14]);
+    cornerPoint[3][0] = (d[17]<<8 | d[16]) - FRAME_SIZE / 2 - 1;
+    cornerPoint[3][1] = FRAME_SIZE / 2 - 1 - (d[19]<<8 | d[18]);
+//    printf("%d %d %d %d %d %d %d %d %d %d\n",rxData.cx,rxData.cy ,
+//           (d[5]<<8 | d[4]),
+//           (d[5]<<8 | d[4]),
+//           (d[9]<<8 | d[8]),
+//           (d[11]<<8 | d[10]),
+//           (d[13]<<8 | d[12]),
+//           (d[15]<<8 | d[14]),
+//           (d[17]<<8 | d[16]),
+//           (d[19]<<8 | d[18]));
 }
 
 void packSendHandle(uint8_t *d, uint16_t s)
@@ -54,7 +68,7 @@ void packSendHandle(uint8_t *d, uint16_t s)
 
 void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty)
 {
-    duty = Limitation(duty, (-SERVO_DUTY_MAX), SERVO_DUTY_MAX);
+    duty = Limitation(duty, (SERVO_MID-SERVO_DUTY_MAX), (SERVO_MID + SERVO_DUTY_MAX));
     pwm_set_duty(pin, duty);
 }
 
@@ -86,18 +100,20 @@ int main (void)
 
     system_delay_ms(1000);
 
-    pwm_init(TIM4_PWM_MAP1_CH1_D12, SERVO_FREQ, SERVO_MID);
-    pwm_init(TIM4_PWM_MAP1_CH3_D14, SERVO_FREQ, SERVO_MID);
+    pwm_init(TIM4_PWM_MAP1_CH1_D12, SERVO_FREQ, SERVO_UP_MID);
+    pwm_init(TIM4_PWM_MAP1_CH3_D14, SERVO_FREQ, SERVO_BOTTOM_MID);
+    system_delay_ms(500);
     extern uint16_t maxIndex;
     GetRectLine();
     maxIndex = GetLaserPoint();
 
 //    EasyUITransitionAnim();
     pit_ms_init(TIM1_PIT, 10);
-    pit_ms_init(TIM2_PIT, 10);
+    pit_ms_init(TIM2_PIT, 1);
 
     while(1)
     {
+//        pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, 00);
 //        if(BufferFinish == 1)
 //        {
 //            upacker_unpack(myPackPtr,Buffer,sizeof(Buffer));
