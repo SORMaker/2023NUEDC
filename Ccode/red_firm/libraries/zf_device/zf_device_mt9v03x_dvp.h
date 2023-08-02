@@ -81,7 +81,7 @@
 #define MT9V03X_D5_PIN      	(B6 )
 #define MT9V03X_D6_PIN      	(B8 )
 #define MT9V03X_D7_PIN      	(B9 )
-	
+
 #define MT9V03X_PCLK_PIN    	(A6 )
 #define MT9V03X_VSY_PIN     	(A5 )
 #define MT9V03X_HERF_PIN    	(A4 )
@@ -93,7 +93,7 @@
 #define MT9V03X_W               (188)                           	// 图像宽度     范围 [1-752]
 #define MT9V03X_H               (120)                           	// 图像高度     范围 [1-480]
 #define MT9V03X_IMAGE_SIZE      (MT9V03X_W * MT9V03X_H)         	// 整体图像大小不能超过 65535
-		
+
 #define MT9V03X_AUTO_EXP_DEF    (0  )                           	// 自动曝光设置     默认不开启自动曝光设置  范围 [0-63] 0为关闭
 																	//                  如果自动曝光开启  EXP_TIME命令设置自动曝光时间的上限
 																	//                  一般情况是不需要开启自动曝光设置 如果遇到光线非常不均匀的情况可以尝试设置自动曝光，增加图像稳定性
@@ -107,7 +107,7 @@
 #define MT9V03X_PCLK_MODE_DEF   (1  )                           	// 像素时钟模式     范围 [0-1]    默认：0 可选参数为：[0：不输出消隐信号,1：输出消隐信号]
                                                                     //                  通常都设置为0，如果使用CH32V307的DVP接口或STM32的DCMI接口采集需要设置为1
                                                                     //                  仅总钻风 MT9V034 V1.5 以及以上版本支持该命令
-																				
+
 // 摄像头命令枚举
 typedef enum
 {
@@ -122,12 +122,12 @@ typedef enum
     MT9V03X_GAIN,                                  						// 图像偏移命令
     MT9V03X_PCLK_MODE,                             						// 像素时钟模式命令(仅总钻风MT9V034 V1.5以及以上版本支持该命令)
     MT9V03X_CONFIG_FINISH,                         						// 非命令位，主要用来占位计数
-						
-    MT9V03X_COLOR_GET_WHO_AM_I = 0xEF,						
+
+    MT9V03X_COLOR_GET_WHO_AM_I = 0xEF,
     MT9V03X_SET_EXP_TIME = 0XF0,                   						// 单独设置曝光时间命令
     MT9V03X_GET_STATUS,                            						// 获取摄像头配置命令
     MT9V03X_GET_VERSION,                           						// 固件版本号命令
-						
+
     MT9V03X_SET_ADDR = 0XFE,                       						// 寄存器地址命令
     MT9V03X_SET_DATA                               						// 寄存器数据命令
 }m9v03x_cmd_enum;

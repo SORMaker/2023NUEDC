@@ -1,145 +1,141 @@
-/**
- ***************************************(C) COPYRIGHT 2021 DIODE***************************************
- * @file       pid.c
- * @brief     
- * @note
- * @Version    V1.0.0
- * @Date       2021.5
- ***************************************(C) COPYRIGHT 2021 DIODE***************************************
+/*!
+ * Copyright (c) 2022, ErBW_s
+ * All rights reserved.
+ *
+ * @author  Baohan
  */
-#include "moto.h"
+
 #include "pid.h"
-#include "math.h"
 
-bool preset1 = false, preset2 = false, preset3 = false;
-// PID struct define
-PID_TypeDef dirYawPid;
-PID_TypeDef dirPitchPid;
-void PID_Reset(PID_TypeDef	*pid, float kp, float ki, float kd)
+/*!
+ * @brief       Change the coefficient of integral
+ *
+ * @param       error       Error
+ * @param       pid         PID struct
+ * @return      Coefficient of integral
+ *
+ * @note        Modify this part to implement different function
+ */
+paramType ConfigIntegral(paramType error, PidParam_t *pid)
 {
-    pid->Kp = kp;
-    pid->Ki = ki;
-    pid->Kd = kd;
+    paramType coeffi;
+
+    // Get linear integration coefficient
+#ifdef FPU
+    if (fabsf(error) <= pid->errMin)
+        coeffi = 1;
+    else if (fabsf(error) >= pid->errMax)
+        coeffi = 0;
+    else
+        coeffi = (pid->errMax - fabsf(error)) / (pid->errMax - pid->errMin);
+#else
+    if (abs(error) <= pid->errMin)
+        coeffi = 1;
+    else if (abs(error) >= pid->errMax)
+        coeffi = 0;
+    else
+        coeffi = (pid->errMax - abs(error)) / (pid->errMax - pid->errMin);
+#endif
+
+    return coeffi;
 }
-/**
-  * @brief  初始化PID结构体
-  * @param  PID结构体指针
-		@param	PID模式
-		@param  总输出最大值
-		@param  积分最大值
-    @param  比例系数
-		@param  积分系数
-		@param  微分系数
 
 
-  * @retval None
-  */
-void PID_Init(
-    PID_TypeDef*	pid,
-    uint32_t 			mode,
-    float 			maxout,
-    float 			intergral_limit,
-    float 				kp,
-    float 				ki,
-    float 				kd)
+/*!
+ * @brief       Incremental pid control
+ *
+ * @param       pid             PID struct
+ * @param       nowData         Current data
+ * @return      PID output
+ */
+int32_t PidIncControl(PidParam_t *pid, paramType nowData)
 {
-    pid->IntegralLimit = intergral_limit;
-    pid->MaxOutput = maxout;
-    pid->pid_mode = mode;
+    static paramType coeffi = 0;     // Coefficient of integration
+    static paramType delta = 0;
+    static paramType pErr = 0, iErr = 0, dErr = 0;
 
-    pid->target[0]=0;
-    pid->Kp = kp;
-    pid->Ki = ki;
-    pid->Kd = kd;
+    // Get coefficient of Integration;
+    paramType thisErr = pid->targetVal - nowData;
+    coeffi = ConfigIntegral(thisErr, pid);
 
-}
-static void abs_limit(float *num, float Limit)
-{
-    if (*num > Limit)
+    // Trapezoidal integration
+    paramType preI = (thisErr + pid->lastErr) / 2;
+    pErr = thisErr - pid->lastErr;
+    dErr = thisErr - 2 * (pid->lastErr) + pid->preLastErr;
+
+    // Integration limitation
+    if (pid->out > pid->integralMax)
     {
-        *num = Limit;
-    }
-    else if (*num < -Limit)
+        if (preI <= 0)
+            iErr = preI;
+    } else if (pid->out < (-pid->integralMax))
     {
-        *num = -Limit;
-    }
-}
-float PID_Calculate(PID_TypeDef *pid, float target, float feedback)
-{
-    pid->feedback[NOW] = feedback;
-    pid->target[NOW] = target;
-    pid->err[NOW] = target - feedback;
-
-    if (pid->max_err != 0 && ABS(pid->err[NOW]) >  pid->max_err  )
-        return 0;
-    if (pid->deadband != 0 && ABS(pid->err[NOW]) < pid->deadband)
-        return 0;
-
-    if(pid->pid_mode == POSITION_PID)					 //位置式PID
+        if (preI >= 0)
+            iErr = preI;
+    } else
     {
-        pid->pout = pid->Kp * pid->err[NOW];
-        pid->iout += pid->Ki * pid->err[NOW];
-//			  if(pid->pout*pid->iout<0) pid->iout/=3.0f;
-        pid->dout = pid->Kd * (pid->err[NOW] - pid->err[LAST] );
-				
-				
-        abs_limit(&(pid->iout), pid->IntegralLimit);				//限制积分输出
-        pid->pos_out = pid->pout + pid->iout + pid->dout;		// 计算总输出
-        abs_limit(&(pid->pos_out), pid->MaxOutput);					// 限制总输出
-        pid->last_pos_out = pid->pos_out;										//更新上一次总输出
-    }
-    else if(pid->pid_mode == DELTA_PID)					//增量式PID
-    {
-        pid->pout = pid->Kp * (pid->err[NOW] - pid->err[LAST]);
-        pid->iout = pid->Ki * pid->err[NOW];
-        pid->dout = pid->Kd * (pid->err[NOW] - 2*pid->err[LAST] + pid->err[LLAST]);
-
-        abs_limit(&(pid->iout), pid->IntegralLimit);
-        pid->delta_u = pid->pout + pid->iout + pid->dout;
-        pid->delta_out = pid->last_delta_out + pid->delta_u;
-        abs_limit(&(pid->delta_out), pid->MaxOutput);
-        pid->last_delta_out = pid->delta_out;	//update last time
+        iErr = preI;
     }
 
-    pid->err[LLAST] = pid->err[LAST];
-    pid->err[LAST] = pid->err[NOW];
-    pid->feedback[LLAST] = pid->feedback[LAST];
-    pid->feedback[LAST] = pid->feedback[NOW];
-    pid->target[LLAST] = pid->target[LAST];
-    pid->target[LAST] = pid->target[NOW];
+    // Calculate
+    delta = pid->kp * pErr
+            + coeffi * pid->ki * iErr
+            + pid->kd * dErr;
 
-//    return pid->pid_mode==POSITION_PID ? (fabs(target)<=0.1? 0 : pid->pos_out) : pid->delta_out;
-	return pid->pid_mode==POSITION_PID ?  pid->pos_out : pid->delta_out;
-}
-void pidClear(PID_TypeDef *pid)
-{
-    pid->err[NOW] = 0;
-    pid->err[LAST] = 0;
-    pid->err[LLAST] = 0;
-    pid->last_delta_out = 0;
-    pid->delta_u = 0;
-    pid->dout = 0;
-    pid->iout = 0;
-    pid->pout = 0;
-    pid->last_pos_out = 0;
-    pid->pos_out = 0;
-}
-void pidAllInit(void)
-{
-	/**
-  * @brief  初始化PID结构体
-  * @param  PID结构体指针
-    @param	PID模式
-    @param  总输出最大值
-    @param  积分最大值
-    @param  比例系数
-    @param  积分系数
-    @param  微分系数
-	
-  * @retval None
-  */
+    // Save errors for next calculation
+    pid->preLastErr = pid->lastErr;
+    pid->lastErr = thisErr;
+    pid->out += delta;
 
-#define SERVO_MAX_ANGLE 10.0
-	PID_Init(&dirYawPid,POSITION_PID,SERVO_MAX_ANGLE,0,-0.045f,0,0);//舵机YAW   PD
-    PID_Init(&dirYawPid,POSITION_PID,SERVO_MAX_ANGLE,0,-0.045f,0,0);//舵机PITCH PD
+    pid->out = Limitation(pid->out, -pid->outputLimit, pid->outputLimit);
+    return (int32_t) pid->out;
+}
+
+
+/*!
+ * @brief       Position pid control
+ *
+ * @param       pid             PID struct
+ * @param       nowData         Current data
+ * @return      PID output
+ */
+int32_t PidPosControl(PidParam_t *pid, paramType nowData)
+{
+    static paramType coeffi = 0;     // Coefficient of integration
+    static paramType delta = 0;
+    static paramType pErr = 0, iErr = 0, dErr = 0;
+
+    // Get coefficient of Integration;
+    paramType thisErr = pid->targetVal - nowData;
+    coeffi = ConfigIntegral(thisErr, pid);
+
+    // Trapezoidal integration
+    paramType preI = (thisErr + pid->lastErr) / 2;
+    pErr = thisErr;
+    dErr = thisErr - pid->lastErr;
+
+    // Integration limitation
+    if (pid->out > pid->integralMax)
+    {
+        if (preI <= 0)
+            iErr += preI;
+    } else if (pid->out < (-pid->integralMax))
+    {
+        if (preI >= 0)
+            iErr += preI;
+    } else
+    {
+        iErr += preI;
+    }
+
+    // Calculate
+    pid->out = pid->kp * pErr
+               + coeffi * pid->ki * iErr
+               + pid->kd * dErr;
+
+    // Save error for next calculate
+    pid->lastErr = thisErr;
+
+    pid->out = Limitation(pid->out, -pid->outputLimit, pid->outputLimit);
+    return (int32_t) pid->out;
 }

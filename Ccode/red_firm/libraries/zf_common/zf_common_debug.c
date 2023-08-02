@@ -219,36 +219,20 @@ static void debug_output (char *type, char *file, int line, char *str)
     }
 }
 
-
-//-------------------------------------------------------------------------------------------------------------------
-// 函数简介     调试串口发送缓冲区
-// 参数说明     *buff       读出数据存放的数组指针
-// 参数说明     len         需要发送的长度
-// 返回参数     uint32      剩余未发送的长度
-// 使用示例
-// 备注信息     本函数需要开启 DEBUG_UART_USE_INTERRUPT 宏定义才可使用
-//-------------------------------------------------------------------------------------------------------------------
-uint32 debug_send_buffer(const uint8 *buff, uint32 len)
-{
-    uart_write_buffer(DEBUG_UART_INDEX, buff, len);
-    return 0;
-}
-
-
 #if DEBUG_UART_USE_INTERRUPT                                                    // 条件编译 只有在启用串口中断才编译
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     读取 debug 环形缓冲区数据
-// 参数说明     *buff       读出数据存放的数组指针
-// 参数说明     len         需要读取的长度
+// 参数说明     *data       读出数据存放的数组指针
 // 返回参数     uint32      读出数据的实际长度
-// 使用示例
+// 使用示例     uint8 data[64]; uint32 len = debug_read_ring_buffer(data);
 // 备注信息     本函数需要开启 DEBUG_UART_USE_INTERRUPT 宏定义才可使用
 //-------------------------------------------------------------------------------------------------------------------
-uint32 debug_read_ring_buffer (uint8 *buff, uint32 len)
+uint32 debug_read_ring_buffer (uint8 *data)
 {
-    fifo_read_buffer(&debug_uart_fifo, buff, &len, FIFO_READ_AND_CLEAN);
-    return len;
+    uint32 data_len = sizeof(data);
+    fifo_read_buffer(&debug_uart_fifo, data, &data_len, FIFO_READ_AND_CLEAN);
+    return data_len;
 }
 
 //-------------------------------------------------------------------------------------------------------------------

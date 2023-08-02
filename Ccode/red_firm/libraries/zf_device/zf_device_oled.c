@@ -105,8 +105,8 @@ static void oled_set_coordinate (uint8 x, uint8 y)
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
     oled_write_command(0xb0 + y);
     oled_write_command(((x & 0xf0) >> 4) | 0x10);
@@ -132,19 +132,16 @@ static void oled_debug_init (void)
     switch(oled_display_font)
     {
         case OLED_6X8_FONT:
-        {
             info.font_x_size = 6;
             info.font_y_size = 1;
-        }break;
+            break;
         case OLED_8X16_FONT:
-        {
             info.font_x_size = 8;
             info.font_y_size = 2;
-        }break;
+            break;
         case OLED_16X16_FONT:
-        {
             // 暂不支持
-        }break;
+            break;
     }
     info.output_screen = oled_show_string;
     info.output_screen_clear = oled_clear;
@@ -157,19 +154,19 @@ static void oled_debug_init (void)
 // 参数说明     void
 // 返回参数     void
 // 使用示例     oled_clear();
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_clear (void)
 {
-    uint8 y = 0, x = 0;
+    uint8 y, x;
 
     OLED_CS(0);
-    for(y = 0; 8 > y; y ++)
+    for(y = 0; y < 8; y ++)
     {
         oled_write_command(0xb0 + y);
         oled_write_command(0x01);
         oled_write_command(0x10);
-        for(x = 0; OLED_X_MAX > x; x ++)
+        for(x = 0; x < OLED_X_MAX; x ++)
         {
             oled_write_data(0x00); 
         }
@@ -182,19 +179,19 @@ void oled_clear (void)
 // 参数说明     color           填充颜色选着(0x00 or 0xff)
 // 返回参数     void
 // 使用示例     oled_full(0x00);
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_full (const uint8 color)
 {
-    uint8 y = 0, x = 0;
+    uint8 y, x;
 
     OLED_CS(0);
-    for(y = 0; 8 > y; y ++)
+    for(y = 0; y < 8; y ++)
     {
         oled_write_command(0xb0 + y);
         oled_write_command(0x01);
         oled_write_command(0x10);
-        for(x = 0; OLED_X_MAX > x; x ++)
+        for(x = 0; x < OLED_X_MAX; x ++)
         {
             oled_write_data(color); 
         }
@@ -233,15 +230,15 @@ void oled_set_font (oled_font_size_enum font)
 // 参数说明     color           8 个点数据
 // 返回参数     void
 // 使用示例     oled_draw_point(0, 0, 1);
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_draw_point (uint16 x, uint16 y, const uint8 color)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
     OLED_CS(0);
     oled_set_coordinate(x, y);
@@ -259,24 +256,23 @@ void oled_draw_point (uint16 x, uint16 y, const uint8 color)
 // 参数说明     ch[]            字符串
 // 返回参数     void
 // 使用示例     oled_show_string(0, 0, "SEEKFREE");
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_string (uint16 x, uint16 y, const char ch[])
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
     OLED_CS(0);
     uint8 c = 0, i = 0, j = 0;
-    while ('\0' != ch[j])
+    while (ch[j] != '\0')
     {
         switch(oled_display_font)
         {
             case OLED_6X8_FONT:
-            {
                 c = ch[j] - 32;
                 if(x > 126)
                 {
@@ -284,15 +280,14 @@ void oled_show_string (uint16 x, uint16 y, const char ch[])
                     y ++;
                 }
                 oled_set_coordinate(x, y);
-                for(i = 0; 6 > i; i ++)
+                for(i = 0; i < 6; i ++)
                 {
                     oled_write_data(ascii_font_6x8[c][i]);
                 }
                 x += 6;
                 j ++;
-            }break;
+                break;
             case OLED_8X16_FONT:
-            {
                 c = ch[j] - 32;
                 if(x > 120)
                 {
@@ -312,11 +307,10 @@ void oled_show_string (uint16 x, uint16 y, const char ch[])
                 }
                 x += 8;
                 j ++;
-            }break;
+                break;
             case OLED_16X16_FONT:
-            {
                 // 暂不支持
-            }break;
+                break;
         }
     }
     OLED_CS(1);
@@ -330,18 +324,18 @@ void oled_show_string (uint16 x, uint16 y, const char ch[])
 // 参数说明     num             需要显示的位数 最高10位  不包含正负号
 // 返回参数     void
 // 使用示例     oled_show_int(0, 0, x, 3);                      // x 可以为 int32 int16 int8 类型
-// 备注信息     负数会显示一个 ‘-’号
+// 备注信息     负数会显示一个 ‘-’号   正数显示一个空格
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_int (uint16 x, uint16 y, const int32 dat, uint8 num)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
-    zf_assert(0 < num);
-    zf_assert(10 >= num);
+    zf_assert(num > 0);
+    zf_assert(num <= 10);
 
     int32 dat_temp = dat;
     int32 offset = 1;
@@ -350,10 +344,9 @@ void oled_show_int (uint16 x, uint16 y, const int32 dat, uint8 num)
     memset(data_buffer, 0, 12);
     memset(data_buffer, ' ', num + 1);
 
-    // 用来计算余数显示 123 显示 2 位则应该显示 23
-    if(10 > num)
+    if(num < 10)
     {
-        for(; 0 < num; num --)
+        for(; num > 0; num --)
         {
             offset *= 10;
         }
@@ -371,18 +364,18 @@ void oled_show_int (uint16 x, uint16 y, const int32 dat, uint8 num)
 // 参数说明     num             需要显示的位数 最高10位  不包含正负号
 // 返回参数     void
 // 使用示例     oled_show_uint(0, 0, x, 3);                     // x 可以为 uint32 uint16 uint8 类型
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_uint (uint16 x,uint16 y,const uint32 dat,uint8 num)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
-    zf_assert(0 < num);
-    zf_assert(10 >= num);
+    zf_assert(num > 0);
+    zf_assert(num <= 10);
 
     uint32 dat_temp = dat;
     int32 offset = 1;
@@ -390,10 +383,9 @@ void oled_show_uint (uint16 x,uint16 y,const uint32 dat,uint8 num)
     memset(data_buffer, 0, 12);
     memset(data_buffer, ' ', num);
 
-    // 用来计算余数显示 123 显示 2 位则应该显示 23
-    if(10 > num)
+    if(num < 10)
     {
-        for(; 0 < num; num --)
+        for(; num > 0; num --)
         {
             offset *= 10;
         }
@@ -407,42 +399,44 @@ void oled_show_uint (uint16 x,uint16 y,const uint32 dat,uint8 num)
 // 函数简介     OLED 显示浮点数 (去除整数部分无效的0)
 // 参数说明     x               x 轴坐标设置 0-127
 // 参数说明     y               y 轴坐标设置 0-7
-// 参数说明     dat             需要显示的变量 数据类型 float
-// 参数说明     num             整数位显示长度   最高8位
+// 参数说明     dat             需要显示的变量，数据类型float或double
+// 参数说明     num             整数位显示长度   最高10位  
 // 参数说明     pointnum        小数位显示长度   最高6位
 // 返回参数     void
 // 使用示例     oled_show_float(0, 0, x, 2, 3);                 // 显示浮点数   整数显示2位   小数显示三位
 // 备注信息     特别注意当发现小数部分显示的值与你写入的值不一样的时候，
 //              可能是由于浮点数精度丢失问题导致的，这并不是显示函数的问题，
 //              有关问题的详情，请自行百度学习   浮点数精度丢失问题。
-//              负数会显示一个 ‘-’号
+//              负数会显示一个 ‘-’号   正数显示一个空格
 //-------------------------------------------------------------------------------------------------------------------
-void oled_show_float (uint16 x,uint16 y,const double dat,uint8 num,uint8 pointnum)
+void oled_show_float (uint16 x,uint16 y,const float dat,uint8 num,uint8 pointnum)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
 
-    zf_assert(0 < num);
-    zf_assert(8 >= num);
-    zf_assert(0 < pointnum);
-    zf_assert(6 >= pointnum);
+    zf_assert(num > 0);
+    zf_assert(num <= 8);
+    zf_assert(pointnum > 0);
+    zf_assert(pointnum <= 6);
 
-    double dat_temp = dat;
-    double offset = 1.0;
+    float dat_temp = dat;
+    float offset = 1.0;
     char data_buffer[17];
     memset(data_buffer, 0, 17);
     memset(data_buffer, ' ', num + pointnum + 2);
 
-    // 用来计算余数显示 123 显示 2 位则应该显示 23
-    for(; 0 < num; num --)
+    if(num < 10)
     {
-        offset *= 10;
+        for(; num > 0; num --)
+        {
+            offset *= 10;
+        }
+        dat_temp = dat_temp - ((int)dat_temp / (int)offset) * offset;
     }
-    dat_temp = dat_temp - ((int)dat_temp / (int)offset) * offset;
-    func_double_to_str(data_buffer, dat_temp, pointnum);
+    func_float_to_str(data_buffer, dat_temp, pointnum);
     oled_show_string(x, y, data_buffer);
 }
 
@@ -457,22 +451,19 @@ void oled_show_float (uint16 x,uint16 y,const double dat,uint8 num,uint8 pointnu
 // 参数说明     dis_height      图像显示高度 参数范围 [0, 64]
 // 返回参数     void
 // 使用示例     oled_show_binary_image(0, 0, ov7725_image_binary[0], OV7725_W, OV7725_H, OV7725_W, OV7725_H);
-// 备注信息     用于显示小钻风的未解压的压缩二值化图像
-//              这个函数不可以用来直接显示总钻风的未压缩的二值化图像
-//              这个函数不可以用来直接显示总钻风的未压缩的二值化图像
-//              这个函数不可以用来直接显示总钻风的未压缩的二值化图像
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_binary_image (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
-    zf_assert(NULL != image);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
+    zf_assert(image != NULL);
 
     uint32 i = 0, j = 0, z = 0;
-    uint8 dat = 0;
+    uint8 dat;
     uint32 width_index = 0, height_index = 0;
 
     OLED_CS(0);
@@ -485,7 +476,7 @@ void oled_show_binary_image (uint16 x, uint16 y, const uint8 *image, uint16 widt
         for(i = 0; i < dis_width; i += 8)
         {
             width_index = i * width / dis_width / 8;
-            for(z = 0; 8 > z; z ++)
+            for(z = 0; z < 8; z ++)
             {
                 dat = 0;
                 if(*(image + height_index * width / 8 + width_index + width / 8 * 0) & (0x80 >> z))
@@ -539,22 +530,19 @@ void oled_show_binary_image (uint16 x, uint16 y, const uint8 *image, uint16 widt
 // 参数说明     threshold       二值化显示阈值 0-不开启二值化
 // 返回参数     void
 // 使用示例     oled_show_gray_image(0, 0, mt9v03x_image[0], width, height, 128, 64, x);
-// 备注信息     用于显示总钻风的图像
-//              如果要显示二值化图像 直接修改最后一个参数为需要的二值化阈值即可
-//              如果要显示二值化图像 直接修改最后一个参数为需要的二值化阈值即可
-//              如果要显示二值化图像 直接修改最后一个参数为需要的二值化阈值即可
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_gray_image (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height, uint8 threshold)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
-    zf_assert(NULL != image);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
+    zf_assert(image != NULL);
 
-    int16 i = 0, j = 0;
-    uint8 dat = 0;
+    int16 i, j;
+    uint8 dat;
     uint32 width_index = 0, height_index = 0;
 
     OLED_CS(0);
@@ -616,16 +604,16 @@ void oled_show_gray_image (uint16 x, uint16 y, const uint8 *image, uint16 width,
 // 参数说明     dis_value_max   波形显示最大值 参数范围 [0, 64]
 // 返回参数     void
 // 使用示例     oled_show_wave(0, 0, data, 128, 64, 128, 64);
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_show_wave (uint16 x, uint16 y, const uint16 *wave, uint16 width, uint16 value_max, uint16 dis_width, uint16 dis_value_max)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
-    zf_assert(NULL != wave);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
+    zf_assert(wave != NULL);
 
     uint32 i = 0;
     uint32 width_index = 0, value_max_index = 0;
@@ -639,9 +627,7 @@ void oled_show_wave (uint16 x, uint16 y, const uint16 *wave, uint16 width, uint1
     {
         oled_set_coordinate(x + 0, y + y_temp / 8);
         for(x_temp = 0; x_temp < dis_width; x_temp ++)
-        {
             oled_write_data(0x00); 
-        }
     }
     for(i = 0; i < dis_width; i ++)
     {
@@ -672,11 +658,11 @@ void oled_show_chinese (uint16 x, uint16 y, uint8 size, const uint8 *chinese_buf
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
     // 检查一下你的显示调用的函数 自己计算一下哪里超过了屏幕显示范围
-    zf_assert(128 > x);
-    zf_assert(8 > y);
-    zf_assert(NULL != chinese_buffer);
+    zf_assert(x < 128);
+    zf_assert(y < 8);
+    zf_assert(chinese_buffer != NULL);
 
-    int16 i = 0, j = 0, k = 0;
+    int16 i, j, k;
 
     OLED_CS(0);
     for(i = 0; i < number; i ++)
@@ -684,7 +670,7 @@ void oled_show_chinese (uint16 x, uint16 y, uint8 size, const uint8 *chinese_buf
         for(j = 0; j < (size / 8); j ++)
         {
             oled_set_coordinate(x + i * size, y + j);
-            for(k = 0; 16 > k; k ++)
+            for(k = 0; k < 16; k ++)
             {
                 oled_write_data(*chinese_buffer);
                 chinese_buffer ++;
@@ -699,7 +685,7 @@ void oled_show_chinese (uint16 x, uint16 y, uint8 size, const uint8 *chinese_buf
 // 参数说明     void
 // 返回参数     void
 // 使用示例     oled_init();
-// 备注信息
+// 备注信息     
 //-------------------------------------------------------------------------------------------------------------------
 void oled_init (void)
 {
@@ -713,6 +699,7 @@ void oled_init (void)
     gpio_init(OLED_CS_PIN , GPO, GPIO_HIGH, GPO_PUSH_PULL);
 
     oled_set_dir(oled_display_dir);
+	oled_debug_init();
 
     OLED_CS(0);
     OLED_RES(0);
@@ -726,7 +713,7 @@ void oled_init (void)
     oled_write_command(0x81);                                                   // --set contrast control register
     oled_write_command(OLED_BRIGHTNESS);                                        //  Set SEG Output Current Brightness
 
-    if(OLED_CROSSWISE == oled_display_dir)
+    if (oled_display_dir == OLED_CROSSWISE)
     {
         oled_write_command(0xa1);                                               // --Set SEG/Column Mapping     0xa0左右反置 0xa1正常
         oled_write_command(0xc8);                                               // Set COM/Row Scan Direction   0xc0上下反置 0xc8正常
@@ -761,5 +748,4 @@ void oled_init (void)
 
     oled_clear();                                                               // 初始清屏
     oled_set_coordinate(0, 0);
-    oled_debug_init();
 }

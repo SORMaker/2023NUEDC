@@ -1,19 +1,4 @@
-"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/mingw64/bin/mingw32-make.exe -G "CodeBlocks - MinGW Makefiles" -S F:\电赛\Firmware\2023NUEDC\Ccode\green_firm -B F:\电赛\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug
--- The C compiler identification is GNU 11.2.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: E:/CLion 2022.3.2/bin/mingw/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done
-CMake Error at CMakeLists.txt:14 (add_executable):
-  Cannot find source file:
-
-    //buzzer.c
-
-
-CMake Error at CMakeLists.txt:14 (add_executable):
-  No SOURCES given to target: red_firm
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+"/Users/baohan/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.8660.139/CLion 2023.2 EAP.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/baohan/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.8660.139/CLion 2023.2 EAP.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm -B /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug

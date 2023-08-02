@@ -1,71 +1,54 @@
-#ifndef _PID_H
-#define _PID_H
+/*!
+ * Copyright (c) 2022, ErBW_s
+ * All rights reserved.
+ *
+ * @author  Baohan
+ */
+
+#ifndef _pid_h
+#define _pid_h
+
 #include <stdint.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <math.h>
+#include "easy_ui.h"
 
-#define ABS(x)		(((x)>0)? (x): -(x))
-#define pi 3.14159265358979
-
+/*!
+ * @brief   Limit the value of 'x'
+ *
+ * @param   x       Value need to be limited
+ * @param   low     The low outputLimit
+ * @param   high    The high outputLimit
+ * @return  Limited 'x'
+ */
 #define Limitation(x, low, high) ((x) < (low) ? (low) : ((x) > (high) ? (high) : (x)))
 
+//#ifdef FPU
+//typedef     float       double;
+//#else
+//typedef     int32_t     double;
+//#endif
 
-enum {
-    LLAST	= 0,
-    LAST 	= 1,
-    NOW 	= 2,
 
-    POSITION_PID,
-    DELTA_PID,
-};
-extern uint8_t motionflag;
-typedef struct _PID_Typedef
+typedef struct
 {
-    float Kp;
-    float Ki;
-    float Kd;
+    double kp;           // Kp
+    double ki;           // Ki
+    double kd;           // Kd
+    double targetVal;    // Target value
+    double outputLimit;  // Output limitation defined by device
+    double integralMax;  // Max of PID output which is used to limit integral error
+    double errMax;       // Error larger than this will separate the integral
+    double errMin;       // Error larger than this and smaller than errMax will decrease the coefficient of integral
 
-    float target[3];					//目标值,包含NOW， LAST， LLAST上上次
-    float feedback[3];					//测量值
-    float err[3];							//误差
+    double lastErr;      // Last time error
+    double preLastErr;   // Last time error of last time
+    double out;          // Output
+} PidParam_t;
 
-    float pout;								//p输出
-    float iout;								//i输出
-    float dout;								//d输出
+double ConfigIntegral(double error, PidParam_t *pid);
 
-    float pos_out;						//本次位置式输出
-    float last_pos_out;					//上次位置式输出
-    float pos_out0;						//位置式输出最小值
+int32_t PidIncControl(PidParam_t *pid, double nowData);
+int32_t PidPosControl(PidParam_t *pid, double nowData);
 
-    float delta_u;						//本次增量值
-    float last_delta_out;				//上次增量式输出
-    float delta_out;					//本次增量式输出 = last_delta_out + delta_u
-
-    float max_err;
-    float deadband;						//err < deadband return
-
-    uint32_t pid_mode;
-    float MaxOutput;				//输出限幅
-    float IntegralLimit;		    //积分限幅
-} PID_TypeDef;
-
-// PID struct define
-extern PID_TypeDef dirYawPid;
-extern PID_TypeDef dirPitchPid;
-
-void PID_Init(
-        PID_TypeDef*	pid,
-        uint32_t 			mode,
-        float 			maxout,
-        float 			intergral_limit,
-        float 				kp,
-        float 				ki,
-        float 				kd
-);
-void PID_Reset(PID_TypeDef	*pid, float kp, float ki, float kd);
-float PID_Calculate(PID_TypeDef *pid, float target, float feedback);
-void pidAllInit(void);
-void pidClear(PID_TypeDef *pid);
 #endif
-
-
-

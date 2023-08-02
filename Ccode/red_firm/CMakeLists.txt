@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.24)
-project(red_firm C)
+cmake_minimum_required(VERSION 3.25)
+project(CH32V307VCT6 C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -11,7 +11,22 @@ include_directories(libraries/zf_driver)
 include_directories(project/code)
 include_directories(project/user/inc)
 
-add_executable(red_firm
+## 设置xpack-riscv-none-embed-gcc-8.2.0路径
+#set(ENV-{CH32_DEV}/Users/baohan/ErBW_s/Code/Toolchains/xpack-riscv-none-embed-gcc-8.2.0/)
+#
+## 设置编译变量
+#set(COMPILER_DIR?$ENV{CH32_DEV}bin/riscv-none-embed-)
+#set(CMAKE_C_COMPILER?${COMPILER_DIR}gcc)
+#set(CMAKE_CXX_COMPILER${COMPILER_DIR}g++)
+#set(CMAKE_ASM_COMPILER${COMPILER_DIR}gcc)
+#set(CMAKE_LINKER?${COMPILER_DIR}gcc)
+#set(MAKE_AR?${COMPILER_DIR}ar)
+#set(CMAKE_OBJCOPY${COMPILER_DIR}objcopy)
+#set(MAKE_0BJDUMP${COMPILER_DIR}objdump)
+#set(SIZE${COMPILER_DIR}size)
+#set(CMAKE_TRY_COMPILE_TARGET_TYPE?STATIC_LIBRARY)
+
+add_executable(2_BLDC
         libraries/sdk/Core/core_riscv.c
         libraries/sdk/Core/core_riscv.h
         libraries/sdk/Peripheral/ch32v30x.h
@@ -90,12 +105,8 @@ add_executable(red_firm
         libraries/zf_device/zf_device_camera.c
         libraries/zf_device/zf_device_camera.h
         libraries/zf_device/zf_device_config.h
-        libraries/zf_device/zf_device_detector.c
-        libraries/zf_device/zf_device_detector.h
         libraries/zf_device/zf_device_dl1a.c
         libraries/zf_device/zf_device_dl1a.h
-        libraries/zf_device/zf_device_dl1b.c
-        libraries/zf_device/zf_device_dl1b.h
         libraries/zf_device/zf_device_dm1xa.c
         libraries/zf_device/zf_device_dm1xa.h
         libraries/zf_device/zf_device_gps_tau1201.c
@@ -130,8 +141,6 @@ add_executable(red_firm
         libraries/zf_device/zf_device_virtual_oscilloscope.h
         libraries/zf_device/zf_device_w25q32.c
         libraries/zf_device/zf_device_w25q32.h
-        libraries/zf_device/zf_device_wifi_spi.c
-        libraries/zf_device/zf_device_wifi_spi.h
         libraries/zf_device/zf_device_wifi_uart.c
         libraries/zf_device/zf_device_wifi_uart.h
         libraries/zf_device/zf_device_wireless_ch573.c
@@ -170,11 +179,26 @@ add_executable(red_firm
         libraries/zf_driver/zf_driver_uart.h
         libraries/zf_driver/zf_driver_usb_cdc.c
         libraries/zf_driver/zf_driver_usb_cdc.h
-        project/code/inc_all.h
-        project/code/moto.c
-        project/code/moto.h
-        project/code/pid.c
-        project/code/pid.h
+        project/code/easy_key.c
+        project/code/easy_key.h
+        project/code/ips096.c
+        project/code/ips096.h
+        project/code/ips096_dma.c
+        project/code/ips096_dma.h
+        project/code/user_flash.c
+        project/code/user_flash.h
+        project/code/user_spi.c
+        project/code/user_spi.h
+        project/code/vofa.c
+        project/code/vofa.h
         project/user/inc/isr.h
         project/user/src/isr.c
-        project/user/src/main.c project/code/ctrl.c /buzzer.c project/code/buzzer.c project/code/buzzer.c)
+        project/user/src/main.c project/code/easing_function.c project/code/easing_function.h project/code/easy_ui.c project/code/easy_ui.h project/code/easy_ui_user_app.c project/code/easy_ui_user_app.h project/code/profile_photo_erbws.c project/code/profile_photo_erbws.h project/code/user_header.h project/code/nmea0183.h project/code/nmea0183.c
+        project/code/buzzer.h
+        project/code/buzzer.c
+        project/code/ctrl.c
+        project/code/ctrl.h
+        project/code/upacker.c
+        project/code/upacker.h
+        project/code/pid.c
+        project/code/pid.h)

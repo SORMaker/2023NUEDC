@@ -1,2 +1,2 @@
 sdk/Core/core_riscv.o: \
- F:/µçÈü/Firmware/2023NUEDC/Ccode/red_firm/libraries/sdk/Core/core_riscv.c
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Core/core_riscv.c

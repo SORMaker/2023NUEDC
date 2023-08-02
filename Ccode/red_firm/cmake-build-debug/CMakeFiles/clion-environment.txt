@@ -1,4 +1,3 @@
-ToolSet: w64 9.0 (local)@E:\CLion 2022.3.2\bin\mingw
-Options: 
+ToolSet: 1.0 (local)Options: 
 
-Options:-DCMAKE_MAKE_PROGRAM=E:/mingw64/bin/mingw32-make.exe
+Options:-DCMAKE_MAKE_PROGRAM=/Users/baohan/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.8660.139/CLion 2023.2 EAP.app/Contents/bin/ninja/mac/ninja

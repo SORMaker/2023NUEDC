@@ -1,0 +1,3 @@
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/2_BLDC.dir
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug/CMakeFiles/rebuild_cache.dir

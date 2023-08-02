@@ -7,20 +7,23 @@
 
 #include "buzzer.h"
 
+// Volume:0 - 100
+paramType buzzerVolume = 40;
 int16_t beepTime = 0;
 
 void BuzzerInit()
 {
-    gpio_init(BUZZER_PIN,GPO,0,GPO_PUSH_PULL);
+    pwm_init(BUZZER_PIN, 3000, 0);
 }
 
 void Beep()
 {
     if (beepTime <= 0)
     {
-        gpio_set_level(BUZZER_PIN,0);
+        pwm_set_duty(BUZZER_PIN, 0);
         return;
     }
-    gpio_set_level(BUZZER_PIN,1);
+
+    pwm_set_duty(BUZZER_PIN, (uint32_t)buzzerVolume * 100);
     beepTime -= BUZZER_TRIGGER_TIME_MS;
 }

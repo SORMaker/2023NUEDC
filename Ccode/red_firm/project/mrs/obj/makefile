@@ -56,7 +56,7 @@ all: Seekfree_CH32V307VCT6_Opensource_Library.elf secondary-outputs
 
 # Tool invocations
 Seekfree_CH32V307VCT6_Opensource_Library.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_device" -Wl,-Map,"Seekfree_CH32V307VCT6_Opensource_Library.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "Seekfree_CH32V307VCT6_Opensource_Library.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Ld/Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device" -Wl,-Map,"Seekfree_CH32V307VCT6_Opensource_Library.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "Seekfree_CH32V307VCT6_Opensource_Library.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 Seekfree_CH32V307VCT6_Opensource_Library.hex: Seekfree_CH32V307VCT6_Opensource_Library.elf
 	@	riscv-none-embed-objcopy -O ihex "Seekfree_CH32V307VCT6_Opensource_Library.elf"  "Seekfree_CH32V307VCT6_Opensource_Library.hex"
@@ -76,3 +76,11 @@ secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
 .PHONY: all clean dependents
 
 -include ../makefile.targets
+
+#CFG_PATH := /Users/baohan/ErBW_s/Code/Toolchains/openocd_arm64/bin/wch-riscv.cfg
+#ELF_FILE    := Seekfree_CH32V307VCT6_Opensource_Library.elf
+#
+#flash:
+#	openocd -f $(CFG_PATH)  -c page_erase  -c init -c halt  -c "flash write_image $(ELF_FILE) " -c exit
+#verify:
+#	openocd -f $(CFG_PATH) -c init -c halt -c "verify_image $(ELF_FILE)" -c exit

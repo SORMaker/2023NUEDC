@@ -94,7 +94,7 @@ uint32 bluetooth_ch9141_send_byte (const uint8 data)
 // 使用示例     bluetooth_ch9141_send_buff(buff, 16);
 // 备注信息
 //-------------------------------------------------------------------------------------------------------------------
-uint32 bluetooth_ch9141_send_buffer (const uint8 *buff, uint32 len)
+uint32 bluetooth_ch9141_send_buff (const uint8 *buff, uint32 len)
 {
     zf_assert(buff != NULL);
     uint16 time_count = 0;
@@ -184,8 +184,8 @@ void bluetooth_ch9141_send_image (const uint8 *image_addr, uint32 image_size)
     uint16 time_count = 0;
 
     extern uint8 camera_send_image_frame_header[4];
-    bluetooth_ch9141_send_buffer(camera_send_image_frame_header, 4);
-    bluetooth_ch9141_send_buffer((uint8 *)image_addr, image_size);
+    bluetooth_ch9141_send_buff(camera_send_image_frame_header, 4);
+    bluetooth_ch9141_send_buff((uint8 *)image_addr, image_size);
 
     while(0 != image_size)
     {
@@ -225,7 +225,7 @@ void bluetooth_ch9141_send_image (const uint8 *image_addr, uint32 image_size)
 // 使用示例     bluetooth_ch9141_read_buff(buff, 16);
 // 备注信息
 //-------------------------------------------------------------------------------------------------------------------
-uint32 bluetooth_ch9141_read_buffer (uint8 *buff, uint32 len)
+uint32 bluetooth_ch9141_read_buff (uint8 *buff, uint32 len)
 {
     zf_assert(buff != NULL);
     uint32 data_len = len;

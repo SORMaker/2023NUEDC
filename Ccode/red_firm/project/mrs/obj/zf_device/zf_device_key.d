@@ -1,32 +1,32 @@
 zf_device/zf_device_key.o: \
- F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.c \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_debug.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_typedef.h \
- F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_driver/zf_driver_gpio.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_rcc.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Core/core_riscv.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_gpio.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_exti.h \
- F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_typedef.h
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.c \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_debug.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_typedef.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_gpio.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_rcc.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Core/core_riscv.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_gpio.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_exti.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_typedef.h
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_debug.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_debug.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_typedef.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_typedef.h:
 
-F:/电赛/Firmware/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_key.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_driver/zf_driver_gpio.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_gpio.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_rcc.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_rcc.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Core/core_riscv.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Core/core_riscv.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_gpio.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_gpio.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Peripheral/ch32v30x_exti.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_exti.h:
 
-F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_common/zf_common_typedef.h:
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_typedef.h:
