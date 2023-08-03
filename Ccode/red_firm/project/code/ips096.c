@@ -305,9 +305,6 @@ void IPS096_ShowStr(int16 x, int16 y, const char dat[])
 //-------------------------------------------------------------------------------------------------------------------
 void IPS096_ShowInt(int16 x, int16 y, const int32 dat, uint8 num)
 {
-    zf_assert(num > 0);
-    zf_assert(num <= 10);
-
     int32 dat_temp = dat;
     int32 offset = 1;
     char data_buffer[12];
@@ -339,9 +336,6 @@ void IPS096_ShowInt(int16 x, int16 y, const int32 dat, uint8 num)
 //-------------------------------------------------------------------------------------------------------------------
 void IPS096_ShowUint(int16 x, int16 y, const uint32 dat, uint8 num)
 {
-    zf_assert(num > 0);
-    zf_assert(num <= 10);
-
     uint32 dat_temp = dat;
     int32 offset = 1;
     char data_buffer[12];
@@ -376,11 +370,6 @@ void IPS096_ShowUint(int16 x, int16 y, const uint32 dat, uint8 num)
 //-------------------------------------------------------------------------------------------------------------------
 void IPS096_ShowFloat(int16 x, int16 y, const float dat, uint8 num, uint8 pointnum)
 {
-    zf_assert(num > 0);
-    zf_assert(num <= 8);
-    zf_assert(pointnum > 0);
-    zf_assert(pointnum <= 6);
-
     float dat_temp = dat;
     float offset = 1.0;
     char data_buffer[17];

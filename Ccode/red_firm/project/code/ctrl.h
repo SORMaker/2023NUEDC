@@ -43,14 +43,20 @@
 
 #define RAD_TO_DEGREE       57.29578
 
-#define FRAME_SIZE          224
+#define FRAME_WIDTH         160
+#define FRAME_HEIGHT        120
 
 extern float cornerPoint[4][2];
 extern uint16_t servoDuty[2000][2];
 
+extern paramType squarePoint[3][2];
+extern paramType teachCorner[3][2];
+extern paramType widthPerPixel, heightPerPixel, unit;
+
 void MotorInit(void);
-//void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty);
+uint16_t LaserGoSquare(void);
 void GetRectLine();
 uint16_t GetLaserPoint();
+void TeachCornerPointHandler(void);
 
 #endif

@@ -90,13 +90,13 @@ user_c/isr.o: \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/profile_photo_erbws.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/easing_function.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/easy_ui_user_app.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ips096_dma.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/nmea0183.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/user_spi.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/pid.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ips096_dma.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/nmea0183.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/user_spi.h
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_common/zf_common_headfile.h:
 
@@ -278,16 +278,16 @@ user_c/isr.o: \
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/easy_ui_user_app.h:
 
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/pid.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h:
+
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ips096_dma.h:
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/nmea0183.h:
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/user_spi.h:
-
-/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h:
-
-/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h:
-
-/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/pid.h:
-
-/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h:

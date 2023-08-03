@@ -181,10 +181,6 @@ add_executable(2_BLDC
         libraries/zf_driver/zf_driver_usb_cdc.h
         project/code/easy_key.c
         project/code/easy_key.h
-        project/code/ips096.c
-        project/code/ips096.h
-        project/code/ips096_dma.c
-        project/code/ips096_dma.h
         project/code/user_flash.c
         project/code/user_flash.h
         project/code/user_spi.c
@@ -200,5 +196,7 @@ add_executable(2_BLDC
         project/code/ctrl.h
         project/code/upacker.c
         project/code/upacker.h
+        project/code/ips096.c
+        project/code/ips096.h
         project/code/pid.c
         project/code/pid.h)

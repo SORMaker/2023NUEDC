@@ -312,11 +312,11 @@ void TIM1_UP_IRQHandler(void)
     }
 }
 
-uint16_t pointIndex = 0, maxIndex = 0;
+uint16_t pointIndex = 0, maxIndex = 0, tick;
 extern void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty);
 
-#define SERVO_UP_PIN           TIM4_PWM_MAP1_CH1_D12                    // Servo pwm output pin
-#define SERVO_BOTTOM_PIN           TIM4_PWM_MAP1_CH3_D14                    // Servo pwm output pin
+#define SERVO_UP_PIN            TIM4_PWM_MAP1_CH1_D12                    // Servo pwm output pin
+#define SERVO_BOTTOM_PIN        TIM4_PWM_MAP1_CH3_D14                    // Servo pwm output pin
 
 void TIM2_IRQHandler(void)
 {
@@ -325,11 +325,24 @@ void TIM2_IRQHandler(void)
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update );
         if (pointIndex < maxIndex && maxIndex != 0)
         {
-            vofaData[4] = servoDuty[pointIndex][1];
+            if (maxIndex == 5 && tick++ < 20)
+            {
+                return;
+            }
+
+//            vofaData[4] = servoDuty[pointIndex][1];
+//            vofaData[5] = servoDuty[pointIndex][0];
+//            VofaSendFrame();
             pwm_set_servo_duty(SERVO_UP_PIN, servoDuty[pointIndex][1]);
-            vofaData[5] = servoDuty[pointIndex][0];
             pwm_set_servo_duty(SERVO_BOTTOM_PIN, servoDuty[pointIndex++][0]);
-            VofaSendFrame();
+
+            tick = 0;
+        } else
+        {
+            pit_disable(TIM2_PIT);
+            pointIndex = 0;
+            maxIndex = 0;
+            memset(servoDuty, 0, sizeof(servoDuty));
         }
     }
 }

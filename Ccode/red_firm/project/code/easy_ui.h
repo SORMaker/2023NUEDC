@@ -25,8 +25,8 @@ extern "C"
 #include <stdbool.h>
 
 // Modify this to fit your EasyKeyInit
-#define KEY_UP          E4
-#define KEY_DOWN        E2
+#define KEY_UP          E15
+#define KEY_DOWN        E14
 #define KEY_FORWARD     E4
 #define KEY_BACKWARD    E2
 #define KEY_CONFIRM     E3

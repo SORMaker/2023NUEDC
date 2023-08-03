@@ -32,6 +32,12 @@ code/easy_ui_user_app.o: \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_timer.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_tim.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/profile_photo_erbws.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/pid.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_pit.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_pwm.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_dl1a.h
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/easy_ui_user_app.h:
@@ -97,5 +103,17 @@ code/easy_ui_user_app.o: \
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_tim.h:
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/profile_photo_erbws.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/pid.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_pit.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_pwm.h:
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_device/zf_device_dl1a.h:

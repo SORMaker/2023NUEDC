@@ -33,7 +33,8 @@ code/ctrl.o: \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/zf_driver/zf_driver_timer.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/libraries/sdk/Peripheral/ch32v30x_tim.h \
  /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/profile_photo_erbws.h \
- /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h \
+ /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/ctrl.h:
 
@@ -102,3 +103,5 @@ code/ctrl.o: \
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/profile_photo_erbws.h:
 
 /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/vofa.h:
+
+/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code/upacker.h:

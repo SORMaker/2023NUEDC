@@ -8,10 +8,10 @@
 #include "easy_ui_user_app.h"
 
 // Pages
-EasyUIPage_t pageWelcome, pageMain, pagePreset, pageSpdPID, pageDirPID, pageImage, pageThreshold, pageCam, pageElement, pageSetting, pageAbout;
+EasyUIPage_t pageMain, pageTeach, pageSetting;
 
 // Items
-EasyUIItem_t titleMain, itemRun, itemPreset, itemSpdPID, itemDirPID, itemImage, itemThreshold, itemCam, itemEle, itemSetting;
+EasyUIItem_t titleMain, itemTeach, itemSetting, itemRunSquare, itemRun;
 EasyUIItem_t titlePreset, itemPr1, itemPr2, itemPr3;
 EasyUIItem_t titleSpdPID, itemSpdKp, itemSpdKi, itemSpdKd, itemSpdTarget, itemSpdInMax, itemSpdErrMax, itemSpdErrMin;
 EasyUIItem_t titleDirPID, itemDirKp, itemDirKi, itemDirKd, itemDirInMax, itemDirErrMax, itemDirErrMin;
@@ -19,10 +19,36 @@ EasyUIItem_t itemExp, itemTh;
 EasyUIItem_t titleEle, itemLoop, itemCross, itemLeftR, itemRightR, itemBreak, itemObstacle, itemGarage;
 EasyUIItem_t titleSetting, itemColor, itemListLoop, itemBuzzer, itemSave, itemReset, itemAbout;
 
+//paramType
+static uint8_t teachState = 0;
+extern uint16_t maxIndex;
+extern uint8_t receiveSuccess;
+extern void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty);
 
-void EventMainLoop(EasyUIItem_t *item)
+void EventSquareLoop(EasyUIItem_t *item)
 {
-//    printf("%f\n", Gp2yGetDistance());
+    pit_enable(TIM2_PIT);
+    maxIndex = LaserGoSquare();
+    functionIsRunning = false;
+    EasyUIBackgroundBlur();
+
+    if (opnExit)
+    {
+        functionIsRunning = false;
+        EasyUIBackgroundBlur();
+    }
+}
+
+void EventRunLoop(EasyUIItem_t *item)
+{
+    pit_enable(TIM2_PIT);
+//    if (receiveSuccess)
+//    {
+//        GetRectLine();
+//        maxIndex = GetLaserPoint();
+//        functionIsRunning = false;
+//        EasyUIBackgroundBlur();
+//    }
 
     if (opnExit)
     {
@@ -32,160 +58,136 @@ void EventMainLoop(EasyUIItem_t *item)
 }
 
 
-void EventChangeBuzzerVolume(EasyUIItem_t *item)
+void CornerUpLeftHandler(void)
 {
+    EasyUIDisplayStr(0, 0, "Up left Corner X and Y:");
+    EasyUIDisplayFloat(0, 1 * 16, squarePoint[0][0], 4, 0);
+    EasyUIDisplayFloat(0, 2 * 16, squarePoint[0][1], 4, 0);
+    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
+
+    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 6);
+    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 6);
+
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[0][1]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[0][0]);
+
     if (opnUp)
-    {
-        if (*item->param + 10 <= 100)
-            *item->param += 10;
-        else
-            *item->param = 100;
-    }
+        squarePoint[0][1] += 10;
     if (opnDown)
-    {
-        if (*item->param - 10 >= 0)
-            *item->param -= 10;
-        else
-            *item->param = 0;
-    }
+        squarePoint[0][1] -= 10;
+
+    if (opnForward)
+        squarePoint[0][0] -= 10;
+    if (opnBackward)
+        squarePoint[0][0] += 10;
 
     if (opnEnter)
     {
-        item->paramBackup = *item->param;
-        EasyUIBackgroundBlur();
-        functionIsRunning = false;
-    }
-    if (opnExit)
-    {
-        *item->param = item->paramBackup;
-        EasyUIBackgroundBlur();
-        functionIsRunning = false;
+        teachCorner[0][0] = rxData.cx;
+        teachCorner[0][1] = rxData.cy;
+        teachState++;
     }
 
-    opnForward = opnBackward = opnExit = opnEnter = opnUp = opnDown = false;
+    TeachCornerPointHandler();
 }
 
-
-void PageWelcome(EasyUIPage_t *page)
+void CornerUpRightHandler(void)
 {
-    static uint8_t count = 50;
-    static float voltage = 0.0;
-    if (count++ >= 50)
-    {
-        voltage = EasyUIGetBatteryVoltage();
-        count = 0;
-    }
-    IPS096_ShowStr(143, 106, "Battery Voltage:");
-    IPS096_ShowFloat(209, 121, voltage, 1, 2);
-    IPS096_ShowStr(233, 121, "V");
+    EasyUIDisplayStr(0, 0, "Up right Corner X and Y:");
+    EasyUIDisplayFloat(0, 1 * 16, squarePoint[1][0], 4, 0);
+    EasyUIDisplayFloat(0, 2 * 16, squarePoint[1][1], 4, 0);
+    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
 
-    IPS096_ShowStr(7, 9, page->itemHead->title);
-    uint8_t len = strlen(page->itemHead->title);
-    IPS096_SetDrawColor(XOR);
-    IPS096_DrawRBox(5, 5, len * FONT_WIDTH + 5, ITEM_HEIGHT, IPS096_penColor, 1);
-    IPS096_SetDrawColor(NORMAL);
-    IPS096_ShowStr(7, 25, "*1.Press <Center> to run");
-    IPS096_ShowStr(7, 41, " 2.Hold <Center> to enter settings");
+    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 6);
+    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 6);
+
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[1][1]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[1][0]);
+
+    if (opnUp)
+        squarePoint[1][1] += 10;
+    if (opnDown)
+        squarePoint[1][1] -= 10;
+
+    if (opnForward)
+        squarePoint[1][0] -= 10;
+    if (opnBackward)
+        squarePoint[1][0] += 10;
 
     if (opnEnter)
     {
-        functionIsRunning = true;
-        EasyUIDrawMsgBox(page->itemHead->msg);
+        teachCorner[1][0] = rxData.cx;
+        teachCorner[1][1] = rxData.cy;
+        teachState++;
     }
+
+    TeachCornerPointHandler();
+}
+
+void CornerDownRightHandler(void)
+{
+    EasyUIDisplayStr(0, 0, "Down right Corner X and Y:");
+    EasyUIDisplayFloat(0, 1 * 16, squarePoint[2][0], 4, 6);
+    EasyUIDisplayFloat(0, 2 * 16, squarePoint[2][1], 4, 6);
+    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
+
+    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 0);
+    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 0);
+
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[2][1]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[2][0]);
+
+    if (opnUp)
+        squarePoint[2][1] += 10;
+    if (opnDown)
+        squarePoint[2][1] -= 10;
+
+    if (opnForward)
+        squarePoint[2][0] -= 10;
+    if (opnBackward)
+        squarePoint[2][0] += 10;
+
+    if (opnEnter)
+    {
+        teachCorner[2][0] = rxData.cx;
+        teachCorner[2][1] = rxData.cy;
+        teachState = 0;
+    }
+
+    TeachCornerPointHandler();
 }
 
 
 /*!
- * @brief   Custom page of Image
+ * @brief   Custom page of teach
  *
  * @param   page    Useless param
  * @return  void
  */
-void PageImage(EasyUIPage_t *page)
+void PageTeach(EasyUIPage_t *page)
 {
-    if (opnUp)
+    switch (teachState)
     {
-        if (*page->itemHead->param + 10 <= 500)
-            *page->itemHead->param += 10;
-        else
-            *page->itemHead->param = 500;
-    }
-    if (opnDown)
-    {
-        if (*page->itemHead->param - 10 >= 100)
-            *page->itemHead->param -= 10;
-        else
-            *page->itemHead->param = 0;
+    case 0:
+        CornerUpLeftHandler();
+        break;
+    case 1:
+        CornerUpRightHandler();
+        break;
+    case 2:
+        CornerDownRightHandler();
+    default:
+        break;
     }
 }
 
 
-/*!
- * @brief   Custom page of {About}
- *
- * @param   page    Useless param
- * @return  void
- */
-void PageAbout(EasyUIItem_t *page)
-{
-    static uint8_t time = 0;
-    static float x = SCREEN_WIDTH;
-    static float step = (float) (SCREEN_WIDTH - 115) / 5;
-
-    // Display about info
-    IPS096_ClearBuffer();
-    IPS096_ShowStr(3, 4, "SCEP");
-    IPS096_SetDrawColor(XOR);
-    IPS096_DrawRBox(1, 1, 4 * FONT_WIDTH + 5, ITEM_HEIGHT, IPS096_penColor, 1);
-    IPS096_SetDrawColor(NORMAL);
-    IPS096_DrawBox(2, 16, 2, ITEM_HEIGHT * 5, IPS096_penColor);
-    IPS096_ShowStr(36, 4, "v1.2");
-    IPS096_ShowStr(8, 18, "MCU    : CH32V3");
-    IPS096_ShowStr(8, 30, "EasyUI : ");
-    IPS096_ShowStr(8 + 9 * FONT_WIDTH, 30, EasyUIVersion);
-    IPS096_ShowStr(8, 42, "Flash  : 256KB");
-    IPS096_ShowStr(8, 54, "UID    : ");
-    IPS096_ShowStr(8, 66, ">> Powered by: ErBW_s");
-
-    // Get uid
-    static uint32_t *addrBase = (uint32_t *) 0x1FFFF7E8;
-    uint64_t uid;
-    memcpy(&uid, addrBase, 8);
-    char str[13];
-    uint64_t uidBackup = uid;
-    const char hex_index[16] = {
-            '0', '1', '2', '3',
-            '4', '5', '6', '7',
-            '8', '9', 'A', 'B',
-            'C', 'D', 'E', 'F'};
-    int8_t data_temp[16];
-    uint8_t bit = 0, i = 0;
-    while (bit < 16)
-    {
-        data_temp[bit++] = (uidBackup & 0xF);
-        uidBackup >>= 4;
-    }
-    for (bit = 12; bit > 0; bit--)
-    {
-        str[i++] = hex_index[data_temp[bit - 1]];
-    }
-    str[i] = '\0';
-    IPS096_ShowStr(8 + 9 * FONT_WIDTH, 54, str);
-
-    // Display profile photo
-    if (time < 5)
-    {
-        x -= step;
-        time++;
-    } else
-        x = 115;
-    EasyUIDisplayBMP((int16_t) x, (SCREEN_HEIGHT - 56) / 2, 29, 28, ErBW_s_2928);
-    if (opnExit)
-    {
-        time = 0;
-        x = SCREEN_WIDTH;
-    }
-}
 
 //extern paramType motor1Speed, motor2Speed;
 //extern bool motor1Dir, motor2Dir;
@@ -196,45 +198,22 @@ bool motor1Dir = true, motor2Dir = true;
 void MenuInit()
 {
     EasyUIAddPage(&pageMain, PAGE_LIST);
-    EasyUIAddPage(&pageSpdPID, PAGE_LIST);
-    EasyUIAddPage(&pageDirPID, PAGE_LIST);
-    EasyUIAddPage(&pageImage, PAGE_CUSTOM, PageImage);
-    EasyUIAddPage(&pageCam, PAGE_CUSTOM);
-    EasyUIAddPage(&pageElement, PAGE_LIST);
+    EasyUIAddPage(&pageTeach, PAGE_CUSTOM, PageTeach);
     EasyUIAddPage(&pageSetting, PAGE_LIST);
-    EasyUIAddPage(&pageAbout, PAGE_CUSTOM, PageAbout);
 
     // Page Main
-//    EasyUIAddItem(&pageMain, &titleMain, "[Main]", ITEM_PAGE_DESCRIPTION);
-////    EasyUIAddItem(&pageMain, &itemRun, "Run", ITEM_MESSAGE, "Running...", EventMainLoop);
-//    EasyUIAddItem(&pageMain, &itemSpdPID, "Speed PID", ITEM_JUMP_PAGE, pageSpdPID.id);
-//    EasyUIAddItem(&pageMain, &itemDirPID, "Direction PID", ITEM_JUMP_PAGE, pageDirPID.id);
-//    EasyUIAddItem(&pageMain, &itemImage, "Show Image", ITEM_JUMP_PAGE, pageImage.id);
-//    EasyUIAddItem(&pageMain, &itemEle, "Select Elements", ITEM_JUMP_PAGE, pageElement.id);
-//    EasyUIAddItem(&pageMain, &itemSetting, "Settings", ITEM_JUMP_PAGE, pageSetting.id);
-
     EasyUIAddItem(&pageMain, &titleMain, "[Main]", ITEM_PAGE_DESCRIPTION);
-//    EasyUIAddItem(&pageMain, &itemRun, "Run", ITEM_MESSAGE, "Running...", EventMainLoop);
-    EasyUIAddItem(&pageMain, &itemSpdPID, "Motor1 Spd", ITEM_CHANGE_VALUE, &motor1Speed, EasyUIEventChangeUint);
-    EasyUIAddItem(&pageMain, &itemDirPID, "Motor1 Dir", ITEM_CHECKBOX, &motor1Dir);
-    EasyUIAddItem(&pageMain, &itemImage, "Motor2 Spd", ITEM_CHANGE_VALUE, &motor2Speed, EasyUIEventChangeUint);
-    EasyUIAddItem(&pageMain, &itemEle, "Motor2 Dir", ITEM_CHECKBOX, &motor2Dir);
+    EasyUIAddItem(&pageMain, &itemRunSquare, "Run square", ITEM_MESSAGE, "Running...", EventSquareLoop);
+    EasyUIAddItem(&pageMain, &itemRun, "Run", ITEM_MESSAGE, "Running...", EventRunLoop);
+    EasyUIAddItem(&pageMain, &itemTeach, "Teach mode", ITEM_JUMP_PAGE, pageTeach.id);
     EasyUIAddItem(&pageMain, &itemSetting, "Settings", ITEM_JUMP_PAGE, pageSetting.id);
 
-    // Page speed pid
-    EasyUIAddItem(&pageSpdPID, &titleSpdPID, "[Speed PID]", ITEM_PAGE_DESCRIPTION);
+    // Page Teach
 
-    // Page direction pid
-    EasyUIAddItem(&pageDirPID, &titleDirPID, "[Direction PID]", ITEM_PAGE_DESCRIPTION);
-
-    // Page elements
-    EasyUIAddItem(&pageElement, &titleEle, "[Select Elements]", ITEM_PAGE_DESCRIPTION);
     // Page setting
     EasyUIAddItem(&pageSetting, &titleSetting, "[Settings]", ITEM_PAGE_DESCRIPTION);
     EasyUIAddItem(&pageSetting, &itemColor, "Reversed Color", ITEM_SWITCH, &reversedColor);
     EasyUIAddItem(&pageSetting, &itemListLoop, "List Loop", ITEM_SWITCH, &listLoop);
-//    EasyUIAddItem(&pageSetting, &itemBuzzer, "Buzzer Volume", ITEM_PROGRESS_BAR, &buzzerVolume, EventChangeBuzzerVolume);
     EasyUIAddItem(&pageSetting, &itemSave, "Save Settings", ITEM_MESSAGE, "Saving...", EasyUIEventSaveSettings);
     EasyUIAddItem(&pageSetting, &itemReset, "Reset Settings", ITEM_MESSAGE, "Resetting...", EasyUIEventResetSettings);
-    EasyUIAddItem(&pageSetting, &itemAbout, "<About>", ITEM_JUMP_PAGE, pageAbout.id);
 }
