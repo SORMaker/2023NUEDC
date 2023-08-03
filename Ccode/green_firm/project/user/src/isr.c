@@ -109,7 +109,6 @@ void UART4_IRQHandler (void)
 {
     if(USART_GetITStatus(UART4, USART_IT_RXNE) != RESET)
     {
-
         USART_ClearITPendingBit(UART4, USART_IT_RXNE);
     }
 }
@@ -117,7 +116,7 @@ void UART5_IRQHandler (void)
 {
     if(USART_GetITStatus(UART5, USART_IT_RXNE) != RESET)
     {
-        camera_uart_handler();
+//        camera_uart_handler();
         USART_ClearITPendingBit(UART5, USART_IT_RXNE);
     }
 }
@@ -315,6 +314,7 @@ void TIM1_UP_IRQHandler(void)
     {
         TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
         ServoControl();
+        cursorHandler(&global_cursor);
     }
 }
 
@@ -334,6 +334,9 @@ void TIM3_IRQHandler(void)
     if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
     {
        TIM_ClearITPendingBit(TIM3, TIM_IT_Update );
+//       EasyKeyScanKeyState();
+//       EasyKeyUserApp();
+//       EasyUIKeyActionMonitor();
         Beep();
     }
 }

@@ -56,7 +56,7 @@ all: Seekfree_CH32V307VCT6_Opensource_Library.elf secondary-outputs
 
 # Tool invocations
 Seekfree_CH32V307VCT6_Opensource_Library.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\sdk\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\libraries\zf_device" -Wl,-Map,"Seekfree_CH32V307VCT6_Opensource_Library.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "Seekfree_CH32V307VCT6_Opensource_Library.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\sdk\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_device" -Wl,-Map,"Seekfree_CH32V307VCT6_Opensource_Library.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "Seekfree_CH32V307VCT6_Opensource_Library.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 Seekfree_CH32V307VCT6_Opensource_Library.hex: Seekfree_CH32V307VCT6_Opensource_Library.elf
 	@	riscv-none-embed-objcopy -O ihex "Seekfree_CH32V307VCT6_Opensource_Library.elf"  "Seekfree_CH32V307VCT6_Opensource_Library.hex"

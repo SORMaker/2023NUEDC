@@ -56,10 +56,10 @@ RM = "E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = F:\电赛\Firmware\2023NUEDC\Ccode\red_firm
+CMAKE_SOURCE_DIR = F:\TICup\Firmware\2023NUEDC\Ccode\green_firm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\cmake-build-debug
+CMAKE_BINARY_DIR = F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\cmake-build-debug\CMakeFiles F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\电赛\Firmware\2023NUEDC\Ccode\red_firm\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named red_firm
+# Target rules for targets named green_firm
 
 # Build rule for target.
-red_firm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 red_firm
-.PHONY : red_firm
+green_firm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 green_firm
+.PHONY : green_firm
 
 # fast build rule for target.
-red_firm/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/build
-.PHONY : red_firm/fast
+green_firm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/build
+.PHONY : green_firm/fast
 
 libraries/sdk/Core/core_riscv.obj: libraries/sdk/Core/core_riscv.c.obj
 .PHONY : libraries/sdk/Core/core_riscv.obj
 
 # target to build an object file
 libraries/sdk/Core/core_riscv.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Core/core_riscv.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Core/core_riscv.c.obj
 .PHONY : libraries/sdk/Core/core_riscv.c.obj
 
 libraries/sdk/Core/core_riscv.i: libraries/sdk/Core/core_riscv.c.i
@@ -141,7 +141,7 @@ libraries/sdk/Core/core_riscv.i: libraries/sdk/Core/core_riscv.c.i
 
 # target to preprocess a source file
 libraries/sdk/Core/core_riscv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Core/core_riscv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Core/core_riscv.c.i
 .PHONY : libraries/sdk/Core/core_riscv.c.i
 
 libraries/sdk/Core/core_riscv.s: libraries/sdk/Core/core_riscv.c.s
@@ -149,7 +149,7 @@ libraries/sdk/Core/core_riscv.s: libraries/sdk/Core/core_riscv.c.s
 
 # target to generate assembly for a file
 libraries/sdk/Core/core_riscv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Core/core_riscv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Core/core_riscv.c.s
 .PHONY : libraries/sdk/Core/core_riscv.c.s
 
 libraries/sdk/Peripheral/ch32v30x_adc.obj: libraries/sdk/Peripheral/ch32v30x_adc.c.obj
@@ -157,7 +157,7 @@ libraries/sdk/Peripheral/ch32v30x_adc.obj: libraries/sdk/Peripheral/ch32v30x_adc
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_adc.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_adc.i: libraries/sdk/Peripheral/ch32v30x_adc.c.i
@@ -165,7 +165,7 @@ libraries/sdk/Peripheral/ch32v30x_adc.i: libraries/sdk/Peripheral/ch32v30x_adc.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_adc.c.i
 
 libraries/sdk/Peripheral/ch32v30x_adc.s: libraries/sdk/Peripheral/ch32v30x_adc.c.s
@@ -173,7 +173,7 @@ libraries/sdk/Peripheral/ch32v30x_adc.s: libraries/sdk/Peripheral/ch32v30x_adc.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_adc.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_adc.c.s
 
 libraries/sdk/Peripheral/ch32v30x_bkp.obj: libraries/sdk/Peripheral/ch32v30x_bkp.c.obj
@@ -181,7 +181,7 @@ libraries/sdk/Peripheral/ch32v30x_bkp.obj: libraries/sdk/Peripheral/ch32v30x_bkp
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_bkp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_bkp.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_bkp.i: libraries/sdk/Peripheral/ch32v30x_bkp.c.i
@@ -189,7 +189,7 @@ libraries/sdk/Peripheral/ch32v30x_bkp.i: libraries/sdk/Peripheral/ch32v30x_bkp.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_bkp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_bkp.c.i
 
 libraries/sdk/Peripheral/ch32v30x_bkp.s: libraries/sdk/Peripheral/ch32v30x_bkp.c.s
@@ -197,7 +197,7 @@ libraries/sdk/Peripheral/ch32v30x_bkp.s: libraries/sdk/Peripheral/ch32v30x_bkp.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_bkp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_bkp.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_bkp.c.s
 
 libraries/sdk/Peripheral/ch32v30x_can.obj: libraries/sdk/Peripheral/ch32v30x_can.c.obj
@@ -205,7 +205,7 @@ libraries/sdk/Peripheral/ch32v30x_can.obj: libraries/sdk/Peripheral/ch32v30x_can
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_can.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_can.i: libraries/sdk/Peripheral/ch32v30x_can.c.i
@@ -213,7 +213,7 @@ libraries/sdk/Peripheral/ch32v30x_can.i: libraries/sdk/Peripheral/ch32v30x_can.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_can.c.i
 
 libraries/sdk/Peripheral/ch32v30x_can.s: libraries/sdk/Peripheral/ch32v30x_can.c.s
@@ -221,7 +221,7 @@ libraries/sdk/Peripheral/ch32v30x_can.s: libraries/sdk/Peripheral/ch32v30x_can.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_can.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_can.c.s
 
 libraries/sdk/Peripheral/ch32v30x_crc.obj: libraries/sdk/Peripheral/ch32v30x_crc.c.obj
@@ -229,7 +229,7 @@ libraries/sdk/Peripheral/ch32v30x_crc.obj: libraries/sdk/Peripheral/ch32v30x_crc
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_crc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_crc.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_crc.i: libraries/sdk/Peripheral/ch32v30x_crc.c.i
@@ -237,7 +237,7 @@ libraries/sdk/Peripheral/ch32v30x_crc.i: libraries/sdk/Peripheral/ch32v30x_crc.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_crc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_crc.c.i
 
 libraries/sdk/Peripheral/ch32v30x_crc.s: libraries/sdk/Peripheral/ch32v30x_crc.c.s
@@ -245,7 +245,7 @@ libraries/sdk/Peripheral/ch32v30x_crc.s: libraries/sdk/Peripheral/ch32v30x_crc.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_crc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_crc.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_crc.c.s
 
 libraries/sdk/Peripheral/ch32v30x_dac.obj: libraries/sdk/Peripheral/ch32v30x_dac.c.obj
@@ -253,7 +253,7 @@ libraries/sdk/Peripheral/ch32v30x_dac.obj: libraries/sdk/Peripheral/ch32v30x_dac
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_dac.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dac.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_dac.i: libraries/sdk/Peripheral/ch32v30x_dac.c.i
@@ -261,7 +261,7 @@ libraries/sdk/Peripheral/ch32v30x_dac.i: libraries/sdk/Peripheral/ch32v30x_dac.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_dac.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dac.c.i
 
 libraries/sdk/Peripheral/ch32v30x_dac.s: libraries/sdk/Peripheral/ch32v30x_dac.c.s
@@ -269,7 +269,7 @@ libraries/sdk/Peripheral/ch32v30x_dac.s: libraries/sdk/Peripheral/ch32v30x_dac.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_dac.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dac.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dac.c.s
 
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.obj: libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.obj
@@ -277,7 +277,7 @@ libraries/sdk/Peripheral/ch32v30x_dbgmcu.obj: libraries/sdk/Peripheral/ch32v30x_
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.i: libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.i
@@ -285,7 +285,7 @@ libraries/sdk/Peripheral/ch32v30x_dbgmcu.i: libraries/sdk/Peripheral/ch32v30x_db
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.i
 
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.s: libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.s
@@ -293,7 +293,7 @@ libraries/sdk/Peripheral/ch32v30x_dbgmcu.s: libraries/sdk/Peripheral/ch32v30x_db
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dbgmcu.c.s
 
 libraries/sdk/Peripheral/ch32v30x_dma.obj: libraries/sdk/Peripheral/ch32v30x_dma.c.obj
@@ -301,7 +301,7 @@ libraries/sdk/Peripheral/ch32v30x_dma.obj: libraries/sdk/Peripheral/ch32v30x_dma
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dma.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_dma.i: libraries/sdk/Peripheral/ch32v30x_dma.c.i
@@ -309,7 +309,7 @@ libraries/sdk/Peripheral/ch32v30x_dma.i: libraries/sdk/Peripheral/ch32v30x_dma.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dma.c.i
 
 libraries/sdk/Peripheral/ch32v30x_dma.s: libraries/sdk/Peripheral/ch32v30x_dma.c.s
@@ -317,7 +317,7 @@ libraries/sdk/Peripheral/ch32v30x_dma.s: libraries/sdk/Peripheral/ch32v30x_dma.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dma.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dma.c.s
 
 libraries/sdk/Peripheral/ch32v30x_dvp.obj: libraries/sdk/Peripheral/ch32v30x_dvp.c.obj
@@ -325,7 +325,7 @@ libraries/sdk/Peripheral/ch32v30x_dvp.obj: libraries/sdk/Peripheral/ch32v30x_dvp
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_dvp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dvp.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_dvp.i: libraries/sdk/Peripheral/ch32v30x_dvp.c.i
@@ -333,7 +333,7 @@ libraries/sdk/Peripheral/ch32v30x_dvp.i: libraries/sdk/Peripheral/ch32v30x_dvp.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_dvp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dvp.c.i
 
 libraries/sdk/Peripheral/ch32v30x_dvp.s: libraries/sdk/Peripheral/ch32v30x_dvp.c.s
@@ -341,7 +341,7 @@ libraries/sdk/Peripheral/ch32v30x_dvp.s: libraries/sdk/Peripheral/ch32v30x_dvp.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_dvp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_dvp.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_dvp.c.s
 
 libraries/sdk/Peripheral/ch32v30x_eth.obj: libraries/sdk/Peripheral/ch32v30x_eth.c.obj
@@ -349,7 +349,7 @@ libraries/sdk/Peripheral/ch32v30x_eth.obj: libraries/sdk/Peripheral/ch32v30x_eth
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_eth.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_eth.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_eth.i: libraries/sdk/Peripheral/ch32v30x_eth.c.i
@@ -357,7 +357,7 @@ libraries/sdk/Peripheral/ch32v30x_eth.i: libraries/sdk/Peripheral/ch32v30x_eth.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_eth.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_eth.c.i
 
 libraries/sdk/Peripheral/ch32v30x_eth.s: libraries/sdk/Peripheral/ch32v30x_eth.c.s
@@ -365,7 +365,7 @@ libraries/sdk/Peripheral/ch32v30x_eth.s: libraries/sdk/Peripheral/ch32v30x_eth.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_eth.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_eth.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_eth.c.s
 
 libraries/sdk/Peripheral/ch32v30x_exti.obj: libraries/sdk/Peripheral/ch32v30x_exti.c.obj
@@ -373,7 +373,7 @@ libraries/sdk/Peripheral/ch32v30x_exti.obj: libraries/sdk/Peripheral/ch32v30x_ex
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_exti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_exti.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_exti.i: libraries/sdk/Peripheral/ch32v30x_exti.c.i
@@ -381,7 +381,7 @@ libraries/sdk/Peripheral/ch32v30x_exti.i: libraries/sdk/Peripheral/ch32v30x_exti
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_exti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_exti.c.i
 
 libraries/sdk/Peripheral/ch32v30x_exti.s: libraries/sdk/Peripheral/ch32v30x_exti.c.s
@@ -389,7 +389,7 @@ libraries/sdk/Peripheral/ch32v30x_exti.s: libraries/sdk/Peripheral/ch32v30x_exti
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_exti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_exti.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_exti.c.s
 
 libraries/sdk/Peripheral/ch32v30x_flash.obj: libraries/sdk/Peripheral/ch32v30x_flash.c.obj
@@ -397,7 +397,7 @@ libraries/sdk/Peripheral/ch32v30x_flash.obj: libraries/sdk/Peripheral/ch32v30x_f
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_flash.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_flash.i: libraries/sdk/Peripheral/ch32v30x_flash.c.i
@@ -405,7 +405,7 @@ libraries/sdk/Peripheral/ch32v30x_flash.i: libraries/sdk/Peripheral/ch32v30x_fla
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_flash.c.i
 
 libraries/sdk/Peripheral/ch32v30x_flash.s: libraries/sdk/Peripheral/ch32v30x_flash.c.s
@@ -413,7 +413,7 @@ libraries/sdk/Peripheral/ch32v30x_flash.s: libraries/sdk/Peripheral/ch32v30x_fla
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_flash.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_flash.c.s
 
 libraries/sdk/Peripheral/ch32v30x_fsmc.obj: libraries/sdk/Peripheral/ch32v30x_fsmc.c.obj
@@ -421,7 +421,7 @@ libraries/sdk/Peripheral/ch32v30x_fsmc.obj: libraries/sdk/Peripheral/ch32v30x_fs
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_fsmc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_fsmc.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_fsmc.i: libraries/sdk/Peripheral/ch32v30x_fsmc.c.i
@@ -429,7 +429,7 @@ libraries/sdk/Peripheral/ch32v30x_fsmc.i: libraries/sdk/Peripheral/ch32v30x_fsmc
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_fsmc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_fsmc.c.i
 
 libraries/sdk/Peripheral/ch32v30x_fsmc.s: libraries/sdk/Peripheral/ch32v30x_fsmc.c.s
@@ -437,7 +437,7 @@ libraries/sdk/Peripheral/ch32v30x_fsmc.s: libraries/sdk/Peripheral/ch32v30x_fsmc
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_fsmc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_fsmc.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_fsmc.c.s
 
 libraries/sdk/Peripheral/ch32v30x_gpio.obj: libraries/sdk/Peripheral/ch32v30x_gpio.c.obj
@@ -445,7 +445,7 @@ libraries/sdk/Peripheral/ch32v30x_gpio.obj: libraries/sdk/Peripheral/ch32v30x_gp
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_gpio.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_gpio.i: libraries/sdk/Peripheral/ch32v30x_gpio.c.i
@@ -453,7 +453,7 @@ libraries/sdk/Peripheral/ch32v30x_gpio.i: libraries/sdk/Peripheral/ch32v30x_gpio
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_gpio.c.i
 
 libraries/sdk/Peripheral/ch32v30x_gpio.s: libraries/sdk/Peripheral/ch32v30x_gpio.c.s
@@ -461,7 +461,7 @@ libraries/sdk/Peripheral/ch32v30x_gpio.s: libraries/sdk/Peripheral/ch32v30x_gpio
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_gpio.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_gpio.c.s
 
 libraries/sdk/Peripheral/ch32v30x_i2c.obj: libraries/sdk/Peripheral/ch32v30x_i2c.c.obj
@@ -469,7 +469,7 @@ libraries/sdk/Peripheral/ch32v30x_i2c.obj: libraries/sdk/Peripheral/ch32v30x_i2c
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_i2c.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_i2c.i: libraries/sdk/Peripheral/ch32v30x_i2c.c.i
@@ -477,7 +477,7 @@ libraries/sdk/Peripheral/ch32v30x_i2c.i: libraries/sdk/Peripheral/ch32v30x_i2c.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_i2c.c.i
 
 libraries/sdk/Peripheral/ch32v30x_i2c.s: libraries/sdk/Peripheral/ch32v30x_i2c.c.s
@@ -485,7 +485,7 @@ libraries/sdk/Peripheral/ch32v30x_i2c.s: libraries/sdk/Peripheral/ch32v30x_i2c.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_i2c.c.s
 
 libraries/sdk/Peripheral/ch32v30x_iwdg.obj: libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj
@@ -493,7 +493,7 @@ libraries/sdk/Peripheral/ch32v30x_iwdg.obj: libraries/sdk/Peripheral/ch32v30x_iw
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_iwdg.i: libraries/sdk/Peripheral/ch32v30x_iwdg.c.i
@@ -501,7 +501,7 @@ libraries/sdk/Peripheral/ch32v30x_iwdg.i: libraries/sdk/Peripheral/ch32v30x_iwdg
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_iwdg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_iwdg.c.i
 
 libraries/sdk/Peripheral/ch32v30x_iwdg.s: libraries/sdk/Peripheral/ch32v30x_iwdg.c.s
@@ -509,7 +509,7 @@ libraries/sdk/Peripheral/ch32v30x_iwdg.s: libraries/sdk/Peripheral/ch32v30x_iwdg
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_iwdg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_iwdg.c.s
 
 libraries/sdk/Peripheral/ch32v30x_opa.obj: libraries/sdk/Peripheral/ch32v30x_opa.c.obj
@@ -517,7 +517,7 @@ libraries/sdk/Peripheral/ch32v30x_opa.obj: libraries/sdk/Peripheral/ch32v30x_opa
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_opa.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_opa.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_opa.i: libraries/sdk/Peripheral/ch32v30x_opa.c.i
@@ -525,7 +525,7 @@ libraries/sdk/Peripheral/ch32v30x_opa.i: libraries/sdk/Peripheral/ch32v30x_opa.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_opa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_opa.c.i
 
 libraries/sdk/Peripheral/ch32v30x_opa.s: libraries/sdk/Peripheral/ch32v30x_opa.c.s
@@ -533,7 +533,7 @@ libraries/sdk/Peripheral/ch32v30x_opa.s: libraries/sdk/Peripheral/ch32v30x_opa.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_opa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_opa.c.s
 
 libraries/sdk/Peripheral/ch32v30x_pwr.obj: libraries/sdk/Peripheral/ch32v30x_pwr.c.obj
@@ -541,7 +541,7 @@ libraries/sdk/Peripheral/ch32v30x_pwr.obj: libraries/sdk/Peripheral/ch32v30x_pwr
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_pwr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_pwr.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_pwr.i: libraries/sdk/Peripheral/ch32v30x_pwr.c.i
@@ -549,7 +549,7 @@ libraries/sdk/Peripheral/ch32v30x_pwr.i: libraries/sdk/Peripheral/ch32v30x_pwr.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_pwr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_pwr.c.i
 
 libraries/sdk/Peripheral/ch32v30x_pwr.s: libraries/sdk/Peripheral/ch32v30x_pwr.c.s
@@ -557,7 +557,7 @@ libraries/sdk/Peripheral/ch32v30x_pwr.s: libraries/sdk/Peripheral/ch32v30x_pwr.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_pwr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_pwr.c.s
 
 libraries/sdk/Peripheral/ch32v30x_rcc.obj: libraries/sdk/Peripheral/ch32v30x_rcc.c.obj
@@ -565,7 +565,7 @@ libraries/sdk/Peripheral/ch32v30x_rcc.obj: libraries/sdk/Peripheral/ch32v30x_rcc
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_rcc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rcc.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_rcc.i: libraries/sdk/Peripheral/ch32v30x_rcc.c.i
@@ -573,7 +573,7 @@ libraries/sdk/Peripheral/ch32v30x_rcc.i: libraries/sdk/Peripheral/ch32v30x_rcc.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_rcc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rcc.c.i
 
 libraries/sdk/Peripheral/ch32v30x_rcc.s: libraries/sdk/Peripheral/ch32v30x_rcc.c.s
@@ -581,7 +581,7 @@ libraries/sdk/Peripheral/ch32v30x_rcc.s: libraries/sdk/Peripheral/ch32v30x_rcc.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_rcc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rcc.c.s
 
 libraries/sdk/Peripheral/ch32v30x_rng.obj: libraries/sdk/Peripheral/ch32v30x_rng.c.obj
@@ -589,7 +589,7 @@ libraries/sdk/Peripheral/ch32v30x_rng.obj: libraries/sdk/Peripheral/ch32v30x_rng
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_rng.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rng.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_rng.i: libraries/sdk/Peripheral/ch32v30x_rng.c.i
@@ -597,7 +597,7 @@ libraries/sdk/Peripheral/ch32v30x_rng.i: libraries/sdk/Peripheral/ch32v30x_rng.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_rng.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rng.c.i
 
 libraries/sdk/Peripheral/ch32v30x_rng.s: libraries/sdk/Peripheral/ch32v30x_rng.c.s
@@ -605,7 +605,7 @@ libraries/sdk/Peripheral/ch32v30x_rng.s: libraries/sdk/Peripheral/ch32v30x_rng.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_rng.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rng.c.s
 
 libraries/sdk/Peripheral/ch32v30x_rtc.obj: libraries/sdk/Peripheral/ch32v30x_rtc.c.obj
@@ -613,7 +613,7 @@ libraries/sdk/Peripheral/ch32v30x_rtc.obj: libraries/sdk/Peripheral/ch32v30x_rtc
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_rtc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rtc.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_rtc.i: libraries/sdk/Peripheral/ch32v30x_rtc.c.i
@@ -621,7 +621,7 @@ libraries/sdk/Peripheral/ch32v30x_rtc.i: libraries/sdk/Peripheral/ch32v30x_rtc.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_rtc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rtc.c.i
 
 libraries/sdk/Peripheral/ch32v30x_rtc.s: libraries/sdk/Peripheral/ch32v30x_rtc.c.s
@@ -629,7 +629,7 @@ libraries/sdk/Peripheral/ch32v30x_rtc.s: libraries/sdk/Peripheral/ch32v30x_rtc.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_rtc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_rtc.c.s
 
 libraries/sdk/Peripheral/ch32v30x_sdio.obj: libraries/sdk/Peripheral/ch32v30x_sdio.c.obj
@@ -637,7 +637,7 @@ libraries/sdk/Peripheral/ch32v30x_sdio.obj: libraries/sdk/Peripheral/ch32v30x_sd
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_sdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_sdio.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_sdio.i: libraries/sdk/Peripheral/ch32v30x_sdio.c.i
@@ -645,7 +645,7 @@ libraries/sdk/Peripheral/ch32v30x_sdio.i: libraries/sdk/Peripheral/ch32v30x_sdio
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_sdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_sdio.c.i
 
 libraries/sdk/Peripheral/ch32v30x_sdio.s: libraries/sdk/Peripheral/ch32v30x_sdio.c.s
@@ -653,7 +653,7 @@ libraries/sdk/Peripheral/ch32v30x_sdio.s: libraries/sdk/Peripheral/ch32v30x_sdio
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_sdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_sdio.c.s
 
 libraries/sdk/Peripheral/ch32v30x_spi.obj: libraries/sdk/Peripheral/ch32v30x_spi.c.obj
@@ -661,7 +661,7 @@ libraries/sdk/Peripheral/ch32v30x_spi.obj: libraries/sdk/Peripheral/ch32v30x_spi
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_spi.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_spi.i: libraries/sdk/Peripheral/ch32v30x_spi.c.i
@@ -669,7 +669,7 @@ libraries/sdk/Peripheral/ch32v30x_spi.i: libraries/sdk/Peripheral/ch32v30x_spi.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_spi.c.i
 
 libraries/sdk/Peripheral/ch32v30x_spi.s: libraries/sdk/Peripheral/ch32v30x_spi.c.s
@@ -677,7 +677,7 @@ libraries/sdk/Peripheral/ch32v30x_spi.s: libraries/sdk/Peripheral/ch32v30x_spi.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_spi.c.s
 
 libraries/sdk/Peripheral/ch32v30x_tim.obj: libraries/sdk/Peripheral/ch32v30x_tim.c.obj
@@ -685,7 +685,7 @@ libraries/sdk/Peripheral/ch32v30x_tim.obj: libraries/sdk/Peripheral/ch32v30x_tim
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_tim.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_tim.i: libraries/sdk/Peripheral/ch32v30x_tim.c.i
@@ -693,7 +693,7 @@ libraries/sdk/Peripheral/ch32v30x_tim.i: libraries/sdk/Peripheral/ch32v30x_tim.c
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_tim.c.i
 
 libraries/sdk/Peripheral/ch32v30x_tim.s: libraries/sdk/Peripheral/ch32v30x_tim.c.s
@@ -701,7 +701,7 @@ libraries/sdk/Peripheral/ch32v30x_tim.s: libraries/sdk/Peripheral/ch32v30x_tim.c
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_tim.c.s
 
 libraries/sdk/Peripheral/ch32v30x_usart.obj: libraries/sdk/Peripheral/ch32v30x_usart.c.obj
@@ -709,7 +709,7 @@ libraries/sdk/Peripheral/ch32v30x_usart.obj: libraries/sdk/Peripheral/ch32v30x_u
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usart.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_usart.i: libraries/sdk/Peripheral/ch32v30x_usart.c.i
@@ -717,7 +717,7 @@ libraries/sdk/Peripheral/ch32v30x_usart.i: libraries/sdk/Peripheral/ch32v30x_usa
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usart.c.i
 
 libraries/sdk/Peripheral/ch32v30x_usart.s: libraries/sdk/Peripheral/ch32v30x_usart.c.s
@@ -725,7 +725,7 @@ libraries/sdk/Peripheral/ch32v30x_usart.s: libraries/sdk/Peripheral/ch32v30x_usa
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usart.c.s
 
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.obj: libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj
@@ -733,7 +733,7 @@ libraries/sdk/Peripheral/ch32v30x_usbotg_device.obj: libraries/sdk/Peripheral/ch
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.i: libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.i
@@ -741,7 +741,7 @@ libraries/sdk/Peripheral/ch32v30x_usbotg_device.i: libraries/sdk/Peripheral/ch32
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.i
 
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.s: libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.s
@@ -749,7 +749,7 @@ libraries/sdk/Peripheral/ch32v30x_usbotg_device.s: libraries/sdk/Peripheral/ch32
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.s
 
 libraries/sdk/Peripheral/ch32v30x_wwdg.obj: libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj
@@ -757,7 +757,7 @@ libraries/sdk/Peripheral/ch32v30x_wwdg.obj: libraries/sdk/Peripheral/ch32v30x_ww
 
 # target to build an object file
 libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj
 .PHONY : libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj
 
 libraries/sdk/Peripheral/ch32v30x_wwdg.i: libraries/sdk/Peripheral/ch32v30x_wwdg.c.i
@@ -765,7 +765,7 @@ libraries/sdk/Peripheral/ch32v30x_wwdg.i: libraries/sdk/Peripheral/ch32v30x_wwdg
 
 # target to preprocess a source file
 libraries/sdk/Peripheral/ch32v30x_wwdg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.i
 .PHONY : libraries/sdk/Peripheral/ch32v30x_wwdg.c.i
 
 libraries/sdk/Peripheral/ch32v30x_wwdg.s: libraries/sdk/Peripheral/ch32v30x_wwdg.c.s
@@ -773,7 +773,7 @@ libraries/sdk/Peripheral/ch32v30x_wwdg.s: libraries/sdk/Peripheral/ch32v30x_wwdg
 
 # target to generate assembly for a file
 libraries/sdk/Peripheral/ch32v30x_wwdg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.s
 .PHONY : libraries/sdk/Peripheral/ch32v30x_wwdg.c.s
 
 libraries/zf_common/zf_common_clock.obj: libraries/zf_common/zf_common_clock.c.obj
@@ -781,7 +781,7 @@ libraries/zf_common/zf_common_clock.obj: libraries/zf_common/zf_common_clock.c.o
 
 # target to build an object file
 libraries/zf_common/zf_common_clock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_clock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_clock.c.obj
 .PHONY : libraries/zf_common/zf_common_clock.c.obj
 
 libraries/zf_common/zf_common_clock.i: libraries/zf_common/zf_common_clock.c.i
@@ -789,7 +789,7 @@ libraries/zf_common/zf_common_clock.i: libraries/zf_common/zf_common_clock.c.i
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_clock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_clock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_clock.c.i
 .PHONY : libraries/zf_common/zf_common_clock.c.i
 
 libraries/zf_common/zf_common_clock.s: libraries/zf_common/zf_common_clock.c.s
@@ -797,7 +797,7 @@ libraries/zf_common/zf_common_clock.s: libraries/zf_common/zf_common_clock.c.s
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_clock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_clock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_clock.c.s
 .PHONY : libraries/zf_common/zf_common_clock.c.s
 
 libraries/zf_common/zf_common_debug.obj: libraries/zf_common/zf_common_debug.c.obj
@@ -805,7 +805,7 @@ libraries/zf_common/zf_common_debug.obj: libraries/zf_common/zf_common_debug.c.o
 
 # target to build an object file
 libraries/zf_common/zf_common_debug.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_debug.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_debug.c.obj
 .PHONY : libraries/zf_common/zf_common_debug.c.obj
 
 libraries/zf_common/zf_common_debug.i: libraries/zf_common/zf_common_debug.c.i
@@ -813,7 +813,7 @@ libraries/zf_common/zf_common_debug.i: libraries/zf_common/zf_common_debug.c.i
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_debug.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_debug.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_debug.c.i
 .PHONY : libraries/zf_common/zf_common_debug.c.i
 
 libraries/zf_common/zf_common_debug.s: libraries/zf_common/zf_common_debug.c.s
@@ -821,7 +821,7 @@ libraries/zf_common/zf_common_debug.s: libraries/zf_common/zf_common_debug.c.s
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_debug.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_debug.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_debug.c.s
 .PHONY : libraries/zf_common/zf_common_debug.c.s
 
 libraries/zf_common/zf_common_fifo.obj: libraries/zf_common/zf_common_fifo.c.obj
@@ -829,7 +829,7 @@ libraries/zf_common/zf_common_fifo.obj: libraries/zf_common/zf_common_fifo.c.obj
 
 # target to build an object file
 libraries/zf_common/zf_common_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_fifo.c.obj
 .PHONY : libraries/zf_common/zf_common_fifo.c.obj
 
 libraries/zf_common/zf_common_fifo.i: libraries/zf_common/zf_common_fifo.c.i
@@ -837,7 +837,7 @@ libraries/zf_common/zf_common_fifo.i: libraries/zf_common/zf_common_fifo.c.i
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_fifo.c.i
 .PHONY : libraries/zf_common/zf_common_fifo.c.i
 
 libraries/zf_common/zf_common_fifo.s: libraries/zf_common/zf_common_fifo.c.s
@@ -845,7 +845,7 @@ libraries/zf_common/zf_common_fifo.s: libraries/zf_common/zf_common_fifo.c.s
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_fifo.c.s
 .PHONY : libraries/zf_common/zf_common_fifo.c.s
 
 libraries/zf_common/zf_common_font.obj: libraries/zf_common/zf_common_font.c.obj
@@ -853,7 +853,7 @@ libraries/zf_common/zf_common_font.obj: libraries/zf_common/zf_common_font.c.obj
 
 # target to build an object file
 libraries/zf_common/zf_common_font.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_font.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_font.c.obj
 .PHONY : libraries/zf_common/zf_common_font.c.obj
 
 libraries/zf_common/zf_common_font.i: libraries/zf_common/zf_common_font.c.i
@@ -861,7 +861,7 @@ libraries/zf_common/zf_common_font.i: libraries/zf_common/zf_common_font.c.i
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_font.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_font.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_font.c.i
 .PHONY : libraries/zf_common/zf_common_font.c.i
 
 libraries/zf_common/zf_common_font.s: libraries/zf_common/zf_common_font.c.s
@@ -869,7 +869,7 @@ libraries/zf_common/zf_common_font.s: libraries/zf_common/zf_common_font.c.s
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_font.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_font.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_font.c.s
 .PHONY : libraries/zf_common/zf_common_font.c.s
 
 libraries/zf_common/zf_common_function.obj: libraries/zf_common/zf_common_function.c.obj
@@ -877,7 +877,7 @@ libraries/zf_common/zf_common_function.obj: libraries/zf_common/zf_common_functi
 
 # target to build an object file
 libraries/zf_common/zf_common_function.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_function.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_function.c.obj
 .PHONY : libraries/zf_common/zf_common_function.c.obj
 
 libraries/zf_common/zf_common_function.i: libraries/zf_common/zf_common_function.c.i
@@ -885,7 +885,7 @@ libraries/zf_common/zf_common_function.i: libraries/zf_common/zf_common_function
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_function.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_function.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_function.c.i
 .PHONY : libraries/zf_common/zf_common_function.c.i
 
 libraries/zf_common/zf_common_function.s: libraries/zf_common/zf_common_function.c.s
@@ -893,7 +893,7 @@ libraries/zf_common/zf_common_function.s: libraries/zf_common/zf_common_function
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_function.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_function.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_function.c.s
 .PHONY : libraries/zf_common/zf_common_function.c.s
 
 libraries/zf_common/zf_common_interrupt.obj: libraries/zf_common/zf_common_interrupt.c.obj
@@ -901,7 +901,7 @@ libraries/zf_common/zf_common_interrupt.obj: libraries/zf_common/zf_common_inter
 
 # target to build an object file
 libraries/zf_common/zf_common_interrupt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_interrupt.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_interrupt.c.obj
 .PHONY : libraries/zf_common/zf_common_interrupt.c.obj
 
 libraries/zf_common/zf_common_interrupt.i: libraries/zf_common/zf_common_interrupt.c.i
@@ -909,7 +909,7 @@ libraries/zf_common/zf_common_interrupt.i: libraries/zf_common/zf_common_interru
 
 # target to preprocess a source file
 libraries/zf_common/zf_common_interrupt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_interrupt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_interrupt.c.i
 .PHONY : libraries/zf_common/zf_common_interrupt.c.i
 
 libraries/zf_common/zf_common_interrupt.s: libraries/zf_common/zf_common_interrupt.c.s
@@ -917,7 +917,7 @@ libraries/zf_common/zf_common_interrupt.s: libraries/zf_common/zf_common_interru
 
 # target to generate assembly for a file
 libraries/zf_common/zf_common_interrupt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_common/zf_common_interrupt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_interrupt.c.s
 .PHONY : libraries/zf_common/zf_common_interrupt.c.s
 
 libraries/zf_device/zf_device_absolute_encoder.obj: libraries/zf_device/zf_device_absolute_encoder.c.obj
@@ -925,7 +925,7 @@ libraries/zf_device/zf_device_absolute_encoder.obj: libraries/zf_device/zf_devic
 
 # target to build an object file
 libraries/zf_device/zf_device_absolute_encoder.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.obj
 .PHONY : libraries/zf_device/zf_device_absolute_encoder.c.obj
 
 libraries/zf_device/zf_device_absolute_encoder.i: libraries/zf_device/zf_device_absolute_encoder.c.i
@@ -933,7 +933,7 @@ libraries/zf_device/zf_device_absolute_encoder.i: libraries/zf_device/zf_device_
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_absolute_encoder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.i
 .PHONY : libraries/zf_device/zf_device_absolute_encoder.c.i
 
 libraries/zf_device/zf_device_absolute_encoder.s: libraries/zf_device/zf_device_absolute_encoder.c.s
@@ -941,7 +941,7 @@ libraries/zf_device/zf_device_absolute_encoder.s: libraries/zf_device/zf_device_
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_absolute_encoder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_absolute_encoder.c.s
 .PHONY : libraries/zf_device/zf_device_absolute_encoder.c.s
 
 libraries/zf_device/zf_device_aht20.obj: libraries/zf_device/zf_device_aht20.c.obj
@@ -949,7 +949,7 @@ libraries/zf_device/zf_device_aht20.obj: libraries/zf_device/zf_device_aht20.c.o
 
 # target to build an object file
 libraries/zf_device/zf_device_aht20.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_aht20.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_aht20.c.obj
 .PHONY : libraries/zf_device/zf_device_aht20.c.obj
 
 libraries/zf_device/zf_device_aht20.i: libraries/zf_device/zf_device_aht20.c.i
@@ -957,7 +957,7 @@ libraries/zf_device/zf_device_aht20.i: libraries/zf_device/zf_device_aht20.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_aht20.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_aht20.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_aht20.c.i
 .PHONY : libraries/zf_device/zf_device_aht20.c.i
 
 libraries/zf_device/zf_device_aht20.s: libraries/zf_device/zf_device_aht20.c.s
@@ -965,7 +965,7 @@ libraries/zf_device/zf_device_aht20.s: libraries/zf_device/zf_device_aht20.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_aht20.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_aht20.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_aht20.c.s
 .PHONY : libraries/zf_device/zf_device_aht20.c.s
 
 libraries/zf_device/zf_device_bluetooth_ch9141.obj: libraries/zf_device/zf_device_bluetooth_ch9141.c.obj
@@ -973,7 +973,7 @@ libraries/zf_device/zf_device_bluetooth_ch9141.obj: libraries/zf_device/zf_devic
 
 # target to build an object file
 libraries/zf_device/zf_device_bluetooth_ch9141.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.obj
 .PHONY : libraries/zf_device/zf_device_bluetooth_ch9141.c.obj
 
 libraries/zf_device/zf_device_bluetooth_ch9141.i: libraries/zf_device/zf_device_bluetooth_ch9141.c.i
@@ -981,7 +981,7 @@ libraries/zf_device/zf_device_bluetooth_ch9141.i: libraries/zf_device/zf_device_
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_bluetooth_ch9141.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.i
 .PHONY : libraries/zf_device/zf_device_bluetooth_ch9141.c.i
 
 libraries/zf_device/zf_device_bluetooth_ch9141.s: libraries/zf_device/zf_device_bluetooth_ch9141.c.s
@@ -989,7 +989,7 @@ libraries/zf_device/zf_device_bluetooth_ch9141.s: libraries/zf_device/zf_device_
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_bluetooth_ch9141.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_bluetooth_ch9141.c.s
 .PHONY : libraries/zf_device/zf_device_bluetooth_ch9141.c.s
 
 libraries/zf_device/zf_device_camera.obj: libraries/zf_device/zf_device_camera.c.obj
@@ -997,7 +997,7 @@ libraries/zf_device/zf_device_camera.obj: libraries/zf_device/zf_device_camera.c
 
 # target to build an object file
 libraries/zf_device/zf_device_camera.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_camera.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_camera.c.obj
 .PHONY : libraries/zf_device/zf_device_camera.c.obj
 
 libraries/zf_device/zf_device_camera.i: libraries/zf_device/zf_device_camera.c.i
@@ -1005,7 +1005,7 @@ libraries/zf_device/zf_device_camera.i: libraries/zf_device/zf_device_camera.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_camera.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_camera.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_camera.c.i
 .PHONY : libraries/zf_device/zf_device_camera.c.i
 
 libraries/zf_device/zf_device_camera.s: libraries/zf_device/zf_device_camera.c.s
@@ -1013,7 +1013,7 @@ libraries/zf_device/zf_device_camera.s: libraries/zf_device/zf_device_camera.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_camera.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_camera.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_camera.c.s
 .PHONY : libraries/zf_device/zf_device_camera.c.s
 
 libraries/zf_device/zf_device_detector.obj: libraries/zf_device/zf_device_detector.c.obj
@@ -1021,7 +1021,7 @@ libraries/zf_device/zf_device_detector.obj: libraries/zf_device/zf_device_detect
 
 # target to build an object file
 libraries/zf_device/zf_device_detector.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_detector.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_detector.c.obj
 .PHONY : libraries/zf_device/zf_device_detector.c.obj
 
 libraries/zf_device/zf_device_detector.i: libraries/zf_device/zf_device_detector.c.i
@@ -1029,7 +1029,7 @@ libraries/zf_device/zf_device_detector.i: libraries/zf_device/zf_device_detector
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_detector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_detector.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_detector.c.i
 .PHONY : libraries/zf_device/zf_device_detector.c.i
 
 libraries/zf_device/zf_device_detector.s: libraries/zf_device/zf_device_detector.c.s
@@ -1037,7 +1037,7 @@ libraries/zf_device/zf_device_detector.s: libraries/zf_device/zf_device_detector
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_detector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_detector.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_detector.c.s
 .PHONY : libraries/zf_device/zf_device_detector.c.s
 
 libraries/zf_device/zf_device_dl1a.obj: libraries/zf_device/zf_device_dl1a.c.obj
@@ -1045,7 +1045,7 @@ libraries/zf_device/zf_device_dl1a.obj: libraries/zf_device/zf_device_dl1a.c.obj
 
 # target to build an object file
 libraries/zf_device/zf_device_dl1a.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1a.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1a.c.obj
 .PHONY : libraries/zf_device/zf_device_dl1a.c.obj
 
 libraries/zf_device/zf_device_dl1a.i: libraries/zf_device/zf_device_dl1a.c.i
@@ -1053,7 +1053,7 @@ libraries/zf_device/zf_device_dl1a.i: libraries/zf_device/zf_device_dl1a.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_dl1a.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1a.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1a.c.i
 .PHONY : libraries/zf_device/zf_device_dl1a.c.i
 
 libraries/zf_device/zf_device_dl1a.s: libraries/zf_device/zf_device_dl1a.c.s
@@ -1061,7 +1061,7 @@ libraries/zf_device/zf_device_dl1a.s: libraries/zf_device/zf_device_dl1a.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_dl1a.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1a.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1a.c.s
 .PHONY : libraries/zf_device/zf_device_dl1a.c.s
 
 libraries/zf_device/zf_device_dl1b.obj: libraries/zf_device/zf_device_dl1b.c.obj
@@ -1069,7 +1069,7 @@ libraries/zf_device/zf_device_dl1b.obj: libraries/zf_device/zf_device_dl1b.c.obj
 
 # target to build an object file
 libraries/zf_device/zf_device_dl1b.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1b.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1b.c.obj
 .PHONY : libraries/zf_device/zf_device_dl1b.c.obj
 
 libraries/zf_device/zf_device_dl1b.i: libraries/zf_device/zf_device_dl1b.c.i
@@ -1077,7 +1077,7 @@ libraries/zf_device/zf_device_dl1b.i: libraries/zf_device/zf_device_dl1b.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_dl1b.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1b.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1b.c.i
 .PHONY : libraries/zf_device/zf_device_dl1b.c.i
 
 libraries/zf_device/zf_device_dl1b.s: libraries/zf_device/zf_device_dl1b.c.s
@@ -1085,7 +1085,7 @@ libraries/zf_device/zf_device_dl1b.s: libraries/zf_device/zf_device_dl1b.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_dl1b.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dl1b.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dl1b.c.s
 .PHONY : libraries/zf_device/zf_device_dl1b.c.s
 
 libraries/zf_device/zf_device_dm1xa.obj: libraries/zf_device/zf_device_dm1xa.c.obj
@@ -1093,7 +1093,7 @@ libraries/zf_device/zf_device_dm1xa.obj: libraries/zf_device/zf_device_dm1xa.c.o
 
 # target to build an object file
 libraries/zf_device/zf_device_dm1xa.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dm1xa.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dm1xa.c.obj
 .PHONY : libraries/zf_device/zf_device_dm1xa.c.obj
 
 libraries/zf_device/zf_device_dm1xa.i: libraries/zf_device/zf_device_dm1xa.c.i
@@ -1101,7 +1101,7 @@ libraries/zf_device/zf_device_dm1xa.i: libraries/zf_device/zf_device_dm1xa.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_dm1xa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dm1xa.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dm1xa.c.i
 .PHONY : libraries/zf_device/zf_device_dm1xa.c.i
 
 libraries/zf_device/zf_device_dm1xa.s: libraries/zf_device/zf_device_dm1xa.c.s
@@ -1109,7 +1109,7 @@ libraries/zf_device/zf_device_dm1xa.s: libraries/zf_device/zf_device_dm1xa.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_dm1xa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_dm1xa.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_dm1xa.c.s
 .PHONY : libraries/zf_device/zf_device_dm1xa.c.s
 
 libraries/zf_device/zf_device_gps_tau1201.obj: libraries/zf_device/zf_device_gps_tau1201.c.obj
@@ -1117,7 +1117,7 @@ libraries/zf_device/zf_device_gps_tau1201.obj: libraries/zf_device/zf_device_gps
 
 # target to build an object file
 libraries/zf_device/zf_device_gps_tau1201.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.obj
 .PHONY : libraries/zf_device/zf_device_gps_tau1201.c.obj
 
 libraries/zf_device/zf_device_gps_tau1201.i: libraries/zf_device/zf_device_gps_tau1201.c.i
@@ -1125,7 +1125,7 @@ libraries/zf_device/zf_device_gps_tau1201.i: libraries/zf_device/zf_device_gps_t
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_gps_tau1201.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.i
 .PHONY : libraries/zf_device/zf_device_gps_tau1201.c.i
 
 libraries/zf_device/zf_device_gps_tau1201.s: libraries/zf_device/zf_device_gps_tau1201.c.s
@@ -1133,7 +1133,7 @@ libraries/zf_device/zf_device_gps_tau1201.s: libraries/zf_device/zf_device_gps_t
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_gps_tau1201.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_gps_tau1201.c.s
 .PHONY : libraries/zf_device/zf_device_gps_tau1201.c.s
 
 libraries/zf_device/zf_device_icm20602.obj: libraries/zf_device/zf_device_icm20602.c.obj
@@ -1141,7 +1141,7 @@ libraries/zf_device/zf_device_icm20602.obj: libraries/zf_device/zf_device_icm206
 
 # target to build an object file
 libraries/zf_device/zf_device_icm20602.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_icm20602.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_icm20602.c.obj
 .PHONY : libraries/zf_device/zf_device_icm20602.c.obj
 
 libraries/zf_device/zf_device_icm20602.i: libraries/zf_device/zf_device_icm20602.c.i
@@ -1149,7 +1149,7 @@ libraries/zf_device/zf_device_icm20602.i: libraries/zf_device/zf_device_icm20602
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_icm20602.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_icm20602.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_icm20602.c.i
 .PHONY : libraries/zf_device/zf_device_icm20602.c.i
 
 libraries/zf_device/zf_device_icm20602.s: libraries/zf_device/zf_device_icm20602.c.s
@@ -1157,7 +1157,7 @@ libraries/zf_device/zf_device_icm20602.s: libraries/zf_device/zf_device_icm20602
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_icm20602.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_icm20602.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_icm20602.c.s
 .PHONY : libraries/zf_device/zf_device_icm20602.c.s
 
 libraries/zf_device/zf_device_imu660ra.obj: libraries/zf_device/zf_device_imu660ra.c.obj
@@ -1165,7 +1165,7 @@ libraries/zf_device/zf_device_imu660ra.obj: libraries/zf_device/zf_device_imu660
 
 # target to build an object file
 libraries/zf_device/zf_device_imu660ra.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu660ra.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu660ra.c.obj
 .PHONY : libraries/zf_device/zf_device_imu660ra.c.obj
 
 libraries/zf_device/zf_device_imu660ra.i: libraries/zf_device/zf_device_imu660ra.c.i
@@ -1173,7 +1173,7 @@ libraries/zf_device/zf_device_imu660ra.i: libraries/zf_device/zf_device_imu660ra
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_imu660ra.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu660ra.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu660ra.c.i
 .PHONY : libraries/zf_device/zf_device_imu660ra.c.i
 
 libraries/zf_device/zf_device_imu660ra.s: libraries/zf_device/zf_device_imu660ra.c.s
@@ -1181,7 +1181,7 @@ libraries/zf_device/zf_device_imu660ra.s: libraries/zf_device/zf_device_imu660ra
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_imu660ra.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu660ra.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu660ra.c.s
 .PHONY : libraries/zf_device/zf_device_imu660ra.c.s
 
 libraries/zf_device/zf_device_imu963ra.obj: libraries/zf_device/zf_device_imu963ra.c.obj
@@ -1189,7 +1189,7 @@ libraries/zf_device/zf_device_imu963ra.obj: libraries/zf_device/zf_device_imu963
 
 # target to build an object file
 libraries/zf_device/zf_device_imu963ra.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu963ra.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu963ra.c.obj
 .PHONY : libraries/zf_device/zf_device_imu963ra.c.obj
 
 libraries/zf_device/zf_device_imu963ra.i: libraries/zf_device/zf_device_imu963ra.c.i
@@ -1197,7 +1197,7 @@ libraries/zf_device/zf_device_imu963ra.i: libraries/zf_device/zf_device_imu963ra
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_imu963ra.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu963ra.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu963ra.c.i
 .PHONY : libraries/zf_device/zf_device_imu963ra.c.i
 
 libraries/zf_device/zf_device_imu963ra.s: libraries/zf_device/zf_device_imu963ra.c.s
@@ -1205,7 +1205,7 @@ libraries/zf_device/zf_device_imu963ra.s: libraries/zf_device/zf_device_imu963ra
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_imu963ra.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_imu963ra.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_imu963ra.c.s
 .PHONY : libraries/zf_device/zf_device_imu963ra.c.s
 
 libraries/zf_device/zf_device_ips114.obj: libraries/zf_device/zf_device_ips114.c.obj
@@ -1213,7 +1213,7 @@ libraries/zf_device/zf_device_ips114.obj: libraries/zf_device/zf_device_ips114.c
 
 # target to build an object file
 libraries/zf_device/zf_device_ips114.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips114.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips114.c.obj
 .PHONY : libraries/zf_device/zf_device_ips114.c.obj
 
 libraries/zf_device/zf_device_ips114.i: libraries/zf_device/zf_device_ips114.c.i
@@ -1221,7 +1221,7 @@ libraries/zf_device/zf_device_ips114.i: libraries/zf_device/zf_device_ips114.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_ips114.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips114.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips114.c.i
 .PHONY : libraries/zf_device/zf_device_ips114.c.i
 
 libraries/zf_device/zf_device_ips114.s: libraries/zf_device/zf_device_ips114.c.s
@@ -1229,7 +1229,7 @@ libraries/zf_device/zf_device_ips114.s: libraries/zf_device/zf_device_ips114.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_ips114.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips114.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips114.c.s
 .PHONY : libraries/zf_device/zf_device_ips114.c.s
 
 libraries/zf_device/zf_device_ips200.obj: libraries/zf_device/zf_device_ips200.c.obj
@@ -1237,7 +1237,7 @@ libraries/zf_device/zf_device_ips200.obj: libraries/zf_device/zf_device_ips200.c
 
 # target to build an object file
 libraries/zf_device/zf_device_ips200.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips200.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips200.c.obj
 .PHONY : libraries/zf_device/zf_device_ips200.c.obj
 
 libraries/zf_device/zf_device_ips200.i: libraries/zf_device/zf_device_ips200.c.i
@@ -1245,7 +1245,7 @@ libraries/zf_device/zf_device_ips200.i: libraries/zf_device/zf_device_ips200.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_ips200.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips200.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips200.c.i
 .PHONY : libraries/zf_device/zf_device_ips200.c.i
 
 libraries/zf_device/zf_device_ips200.s: libraries/zf_device/zf_device_ips200.c.s
@@ -1253,7 +1253,7 @@ libraries/zf_device/zf_device_ips200.s: libraries/zf_device/zf_device_ips200.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_ips200.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_ips200.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_ips200.c.s
 .PHONY : libraries/zf_device/zf_device_ips200.c.s
 
 libraries/zf_device/zf_device_k24c02.obj: libraries/zf_device/zf_device_k24c02.c.obj
@@ -1261,7 +1261,7 @@ libraries/zf_device/zf_device_k24c02.obj: libraries/zf_device/zf_device_k24c02.c
 
 # target to build an object file
 libraries/zf_device/zf_device_k24c02.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_k24c02.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_k24c02.c.obj
 .PHONY : libraries/zf_device/zf_device_k24c02.c.obj
 
 libraries/zf_device/zf_device_k24c02.i: libraries/zf_device/zf_device_k24c02.c.i
@@ -1269,7 +1269,7 @@ libraries/zf_device/zf_device_k24c02.i: libraries/zf_device/zf_device_k24c02.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_k24c02.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_k24c02.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_k24c02.c.i
 .PHONY : libraries/zf_device/zf_device_k24c02.c.i
 
 libraries/zf_device/zf_device_k24c02.s: libraries/zf_device/zf_device_k24c02.c.s
@@ -1277,7 +1277,7 @@ libraries/zf_device/zf_device_k24c02.s: libraries/zf_device/zf_device_k24c02.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_k24c02.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_k24c02.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_k24c02.c.s
 .PHONY : libraries/zf_device/zf_device_k24c02.c.s
 
 libraries/zf_device/zf_device_key.obj: libraries/zf_device/zf_device_key.c.obj
@@ -1285,7 +1285,7 @@ libraries/zf_device/zf_device_key.obj: libraries/zf_device/zf_device_key.c.obj
 
 # target to build an object file
 libraries/zf_device/zf_device_key.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_key.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_key.c.obj
 .PHONY : libraries/zf_device/zf_device_key.c.obj
 
 libraries/zf_device/zf_device_key.i: libraries/zf_device/zf_device_key.c.i
@@ -1293,7 +1293,7 @@ libraries/zf_device/zf_device_key.i: libraries/zf_device/zf_device_key.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_key.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_key.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_key.c.i
 .PHONY : libraries/zf_device/zf_device_key.c.i
 
 libraries/zf_device/zf_device_key.s: libraries/zf_device/zf_device_key.c.s
@@ -1301,7 +1301,7 @@ libraries/zf_device/zf_device_key.s: libraries/zf_device/zf_device_key.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_key.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_key.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_key.c.s
 .PHONY : libraries/zf_device/zf_device_key.c.s
 
 libraries/zf_device/zf_device_mpu6050.obj: libraries/zf_device/zf_device_mpu6050.c.obj
@@ -1309,7 +1309,7 @@ libraries/zf_device/zf_device_mpu6050.obj: libraries/zf_device/zf_device_mpu6050
 
 # target to build an object file
 libraries/zf_device/zf_device_mpu6050.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mpu6050.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mpu6050.c.obj
 .PHONY : libraries/zf_device/zf_device_mpu6050.c.obj
 
 libraries/zf_device/zf_device_mpu6050.i: libraries/zf_device/zf_device_mpu6050.c.i
@@ -1317,7 +1317,7 @@ libraries/zf_device/zf_device_mpu6050.i: libraries/zf_device/zf_device_mpu6050.c
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_mpu6050.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mpu6050.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mpu6050.c.i
 .PHONY : libraries/zf_device/zf_device_mpu6050.c.i
 
 libraries/zf_device/zf_device_mpu6050.s: libraries/zf_device/zf_device_mpu6050.c.s
@@ -1325,7 +1325,7 @@ libraries/zf_device/zf_device_mpu6050.s: libraries/zf_device/zf_device_mpu6050.c
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_mpu6050.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mpu6050.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mpu6050.c.s
 .PHONY : libraries/zf_device/zf_device_mpu6050.c.s
 
 libraries/zf_device/zf_device_mt9v03x_dvp.obj: libraries/zf_device/zf_device_mt9v03x_dvp.c.obj
@@ -1333,7 +1333,7 @@ libraries/zf_device/zf_device_mt9v03x_dvp.obj: libraries/zf_device/zf_device_mt9
 
 # target to build an object file
 libraries/zf_device/zf_device_mt9v03x_dvp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.obj
 .PHONY : libraries/zf_device/zf_device_mt9v03x_dvp.c.obj
 
 libraries/zf_device/zf_device_mt9v03x_dvp.i: libraries/zf_device/zf_device_mt9v03x_dvp.c.i
@@ -1341,7 +1341,7 @@ libraries/zf_device/zf_device_mt9v03x_dvp.i: libraries/zf_device/zf_device_mt9v0
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_mt9v03x_dvp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.i
 .PHONY : libraries/zf_device/zf_device_mt9v03x_dvp.c.i
 
 libraries/zf_device/zf_device_mt9v03x_dvp.s: libraries/zf_device/zf_device_mt9v03x_dvp.c.s
@@ -1349,7 +1349,7 @@ libraries/zf_device/zf_device_mt9v03x_dvp.s: libraries/zf_device/zf_device_mt9v0
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_mt9v03x_dvp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_mt9v03x_dvp.c.s
 .PHONY : libraries/zf_device/zf_device_mt9v03x_dvp.c.s
 
 libraries/zf_device/zf_device_oled.obj: libraries/zf_device/zf_device_oled.c.obj
@@ -1357,7 +1357,7 @@ libraries/zf_device/zf_device_oled.obj: libraries/zf_device/zf_device_oled.c.obj
 
 # target to build an object file
 libraries/zf_device/zf_device_oled.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_oled.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_oled.c.obj
 .PHONY : libraries/zf_device/zf_device_oled.c.obj
 
 libraries/zf_device/zf_device_oled.i: libraries/zf_device/zf_device_oled.c.i
@@ -1365,7 +1365,7 @@ libraries/zf_device/zf_device_oled.i: libraries/zf_device/zf_device_oled.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_oled.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_oled.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_oled.c.i
 .PHONY : libraries/zf_device/zf_device_oled.c.i
 
 libraries/zf_device/zf_device_oled.s: libraries/zf_device/zf_device_oled.c.s
@@ -1373,7 +1373,7 @@ libraries/zf_device/zf_device_oled.s: libraries/zf_device/zf_device_oled.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_oled.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_oled.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_oled.c.s
 .PHONY : libraries/zf_device/zf_device_oled.c.s
 
 libraries/zf_device/zf_device_scc8660_dvp.obj: libraries/zf_device/zf_device_scc8660_dvp.c.obj
@@ -1381,7 +1381,7 @@ libraries/zf_device/zf_device_scc8660_dvp.obj: libraries/zf_device/zf_device_scc
 
 # target to build an object file
 libraries/zf_device/zf_device_scc8660_dvp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.obj
 .PHONY : libraries/zf_device/zf_device_scc8660_dvp.c.obj
 
 libraries/zf_device/zf_device_scc8660_dvp.i: libraries/zf_device/zf_device_scc8660_dvp.c.i
@@ -1389,7 +1389,7 @@ libraries/zf_device/zf_device_scc8660_dvp.i: libraries/zf_device/zf_device_scc86
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_scc8660_dvp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.i
 .PHONY : libraries/zf_device/zf_device_scc8660_dvp.c.i
 
 libraries/zf_device/zf_device_scc8660_dvp.s: libraries/zf_device/zf_device_scc8660_dvp.c.s
@@ -1397,7 +1397,7 @@ libraries/zf_device/zf_device_scc8660_dvp.s: libraries/zf_device/zf_device_scc86
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_scc8660_dvp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_scc8660_dvp.c.s
 .PHONY : libraries/zf_device/zf_device_scc8660_dvp.c.s
 
 libraries/zf_device/zf_device_tft180.obj: libraries/zf_device/zf_device_tft180.c.obj
@@ -1405,7 +1405,7 @@ libraries/zf_device/zf_device_tft180.obj: libraries/zf_device/zf_device_tft180.c
 
 # target to build an object file
 libraries/zf_device/zf_device_tft180.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_tft180.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_tft180.c.obj
 .PHONY : libraries/zf_device/zf_device_tft180.c.obj
 
 libraries/zf_device/zf_device_tft180.i: libraries/zf_device/zf_device_tft180.c.i
@@ -1413,7 +1413,7 @@ libraries/zf_device/zf_device_tft180.i: libraries/zf_device/zf_device_tft180.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_tft180.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_tft180.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_tft180.c.i
 .PHONY : libraries/zf_device/zf_device_tft180.c.i
 
 libraries/zf_device/zf_device_tft180.s: libraries/zf_device/zf_device_tft180.c.s
@@ -1421,7 +1421,7 @@ libraries/zf_device/zf_device_tft180.s: libraries/zf_device/zf_device_tft180.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_tft180.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_tft180.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_tft180.c.s
 .PHONY : libraries/zf_device/zf_device_tft180.c.s
 
 libraries/zf_device/zf_device_type.obj: libraries/zf_device/zf_device_type.c.obj
@@ -1429,7 +1429,7 @@ libraries/zf_device/zf_device_type.obj: libraries/zf_device/zf_device_type.c.obj
 
 # target to build an object file
 libraries/zf_device/zf_device_type.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_type.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_type.c.obj
 .PHONY : libraries/zf_device/zf_device_type.c.obj
 
 libraries/zf_device/zf_device_type.i: libraries/zf_device/zf_device_type.c.i
@@ -1437,7 +1437,7 @@ libraries/zf_device/zf_device_type.i: libraries/zf_device/zf_device_type.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_type.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_type.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_type.c.i
 .PHONY : libraries/zf_device/zf_device_type.c.i
 
 libraries/zf_device/zf_device_type.s: libraries/zf_device/zf_device_type.c.s
@@ -1445,7 +1445,7 @@ libraries/zf_device/zf_device_type.s: libraries/zf_device/zf_device_type.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_type.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_type.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_type.c.s
 .PHONY : libraries/zf_device/zf_device_type.c.s
 
 libraries/zf_device/zf_device_virtual_oscilloscope.obj: libraries/zf_device/zf_device_virtual_oscilloscope.c.obj
@@ -1453,7 +1453,7 @@ libraries/zf_device/zf_device_virtual_oscilloscope.obj: libraries/zf_device/zf_d
 
 # target to build an object file
 libraries/zf_device/zf_device_virtual_oscilloscope.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.obj
 .PHONY : libraries/zf_device/zf_device_virtual_oscilloscope.c.obj
 
 libraries/zf_device/zf_device_virtual_oscilloscope.i: libraries/zf_device/zf_device_virtual_oscilloscope.c.i
@@ -1461,7 +1461,7 @@ libraries/zf_device/zf_device_virtual_oscilloscope.i: libraries/zf_device/zf_dev
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_virtual_oscilloscope.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.i
 .PHONY : libraries/zf_device/zf_device_virtual_oscilloscope.c.i
 
 libraries/zf_device/zf_device_virtual_oscilloscope.s: libraries/zf_device/zf_device_virtual_oscilloscope.c.s
@@ -1469,7 +1469,7 @@ libraries/zf_device/zf_device_virtual_oscilloscope.s: libraries/zf_device/zf_dev
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_virtual_oscilloscope.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_virtual_oscilloscope.c.s
 .PHONY : libraries/zf_device/zf_device_virtual_oscilloscope.c.s
 
 libraries/zf_device/zf_device_w25q32.obj: libraries/zf_device/zf_device_w25q32.c.obj
@@ -1477,7 +1477,7 @@ libraries/zf_device/zf_device_w25q32.obj: libraries/zf_device/zf_device_w25q32.c
 
 # target to build an object file
 libraries/zf_device/zf_device_w25q32.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_w25q32.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_w25q32.c.obj
 .PHONY : libraries/zf_device/zf_device_w25q32.c.obj
 
 libraries/zf_device/zf_device_w25q32.i: libraries/zf_device/zf_device_w25q32.c.i
@@ -1485,7 +1485,7 @@ libraries/zf_device/zf_device_w25q32.i: libraries/zf_device/zf_device_w25q32.c.i
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_w25q32.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_w25q32.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_w25q32.c.i
 .PHONY : libraries/zf_device/zf_device_w25q32.c.i
 
 libraries/zf_device/zf_device_w25q32.s: libraries/zf_device/zf_device_w25q32.c.s
@@ -1493,7 +1493,7 @@ libraries/zf_device/zf_device_w25q32.s: libraries/zf_device/zf_device_w25q32.c.s
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_w25q32.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_w25q32.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_w25q32.c.s
 .PHONY : libraries/zf_device/zf_device_w25q32.c.s
 
 libraries/zf_device/zf_device_wifi_spi.obj: libraries/zf_device/zf_device_wifi_spi.c.obj
@@ -1501,7 +1501,7 @@ libraries/zf_device/zf_device_wifi_spi.obj: libraries/zf_device/zf_device_wifi_s
 
 # target to build an object file
 libraries/zf_device/zf_device_wifi_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.obj
 .PHONY : libraries/zf_device/zf_device_wifi_spi.c.obj
 
 libraries/zf_device/zf_device_wifi_spi.i: libraries/zf_device/zf_device_wifi_spi.c.i
@@ -1509,7 +1509,7 @@ libraries/zf_device/zf_device_wifi_spi.i: libraries/zf_device/zf_device_wifi_spi
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_wifi_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.i
 .PHONY : libraries/zf_device/zf_device_wifi_spi.c.i
 
 libraries/zf_device/zf_device_wifi_spi.s: libraries/zf_device/zf_device_wifi_spi.c.s
@@ -1517,7 +1517,7 @@ libraries/zf_device/zf_device_wifi_spi.s: libraries/zf_device/zf_device_wifi_spi
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_wifi_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_spi.c.s
 .PHONY : libraries/zf_device/zf_device_wifi_spi.c.s
 
 libraries/zf_device/zf_device_wifi_uart.obj: libraries/zf_device/zf_device_wifi_uart.c.obj
@@ -1525,7 +1525,7 @@ libraries/zf_device/zf_device_wifi_uart.obj: libraries/zf_device/zf_device_wifi_
 
 # target to build an object file
 libraries/zf_device/zf_device_wifi_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.obj
 .PHONY : libraries/zf_device/zf_device_wifi_uart.c.obj
 
 libraries/zf_device/zf_device_wifi_uart.i: libraries/zf_device/zf_device_wifi_uart.c.i
@@ -1533,7 +1533,7 @@ libraries/zf_device/zf_device_wifi_uart.i: libraries/zf_device/zf_device_wifi_ua
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_wifi_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.i
 .PHONY : libraries/zf_device/zf_device_wifi_uart.c.i
 
 libraries/zf_device/zf_device_wifi_uart.s: libraries/zf_device/zf_device_wifi_uart.c.s
@@ -1541,7 +1541,7 @@ libraries/zf_device/zf_device_wifi_uart.s: libraries/zf_device/zf_device_wifi_ua
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_wifi_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wifi_uart.c.s
 .PHONY : libraries/zf_device/zf_device_wifi_uart.c.s
 
 libraries/zf_device/zf_device_wireless_ch573.obj: libraries/zf_device/zf_device_wireless_ch573.c.obj
@@ -1549,7 +1549,7 @@ libraries/zf_device/zf_device_wireless_ch573.obj: libraries/zf_device/zf_device_
 
 # target to build an object file
 libraries/zf_device/zf_device_wireless_ch573.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.obj
 .PHONY : libraries/zf_device/zf_device_wireless_ch573.c.obj
 
 libraries/zf_device/zf_device_wireless_ch573.i: libraries/zf_device/zf_device_wireless_ch573.c.i
@@ -1557,7 +1557,7 @@ libraries/zf_device/zf_device_wireless_ch573.i: libraries/zf_device/zf_device_wi
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_wireless_ch573.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.i
 .PHONY : libraries/zf_device/zf_device_wireless_ch573.c.i
 
 libraries/zf_device/zf_device_wireless_ch573.s: libraries/zf_device/zf_device_wireless_ch573.c.s
@@ -1565,7 +1565,7 @@ libraries/zf_device/zf_device_wireless_ch573.s: libraries/zf_device/zf_device_wi
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_wireless_ch573.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_ch573.c.s
 .PHONY : libraries/zf_device/zf_device_wireless_ch573.c.s
 
 libraries/zf_device/zf_device_wireless_uart.obj: libraries/zf_device/zf_device_wireless_uart.c.obj
@@ -1573,7 +1573,7 @@ libraries/zf_device/zf_device_wireless_uart.obj: libraries/zf_device/zf_device_w
 
 # target to build an object file
 libraries/zf_device/zf_device_wireless_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.obj
 .PHONY : libraries/zf_device/zf_device_wireless_uart.c.obj
 
 libraries/zf_device/zf_device_wireless_uart.i: libraries/zf_device/zf_device_wireless_uart.c.i
@@ -1581,7 +1581,7 @@ libraries/zf_device/zf_device_wireless_uart.i: libraries/zf_device/zf_device_wir
 
 # target to preprocess a source file
 libraries/zf_device/zf_device_wireless_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.i
 .PHONY : libraries/zf_device/zf_device_wireless_uart.c.i
 
 libraries/zf_device/zf_device_wireless_uart.s: libraries/zf_device/zf_device_wireless_uart.c.s
@@ -1589,7 +1589,7 @@ libraries/zf_device/zf_device_wireless_uart.s: libraries/zf_device/zf_device_wir
 
 # target to generate assembly for a file
 libraries/zf_device/zf_device_wireless_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_device/zf_device_wireless_uart.c.s
 .PHONY : libraries/zf_device/zf_device_wireless_uart.c.s
 
 libraries/zf_driver/zf_driver_adc.obj: libraries/zf_driver/zf_driver_adc.c.obj
@@ -1597,7 +1597,7 @@ libraries/zf_driver/zf_driver_adc.obj: libraries/zf_driver/zf_driver_adc.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_adc.c.obj
 .PHONY : libraries/zf_driver/zf_driver_adc.c.obj
 
 libraries/zf_driver/zf_driver_adc.i: libraries/zf_driver/zf_driver_adc.c.i
@@ -1605,7 +1605,7 @@ libraries/zf_driver/zf_driver_adc.i: libraries/zf_driver/zf_driver_adc.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_adc.c.i
 .PHONY : libraries/zf_driver/zf_driver_adc.c.i
 
 libraries/zf_driver/zf_driver_adc.s: libraries/zf_driver/zf_driver_adc.c.s
@@ -1613,7 +1613,7 @@ libraries/zf_driver/zf_driver_adc.s: libraries/zf_driver/zf_driver_adc.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_adc.c.s
 .PHONY : libraries/zf_driver/zf_driver_adc.c.s
 
 libraries/zf_driver/zf_driver_delay.obj: libraries/zf_driver/zf_driver_delay.c.obj
@@ -1621,7 +1621,7 @@ libraries/zf_driver/zf_driver_delay.obj: libraries/zf_driver/zf_driver_delay.c.o
 
 # target to build an object file
 libraries/zf_driver/zf_driver_delay.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_delay.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_delay.c.obj
 .PHONY : libraries/zf_driver/zf_driver_delay.c.obj
 
 libraries/zf_driver/zf_driver_delay.i: libraries/zf_driver/zf_driver_delay.c.i
@@ -1629,7 +1629,7 @@ libraries/zf_driver/zf_driver_delay.i: libraries/zf_driver/zf_driver_delay.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_delay.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_delay.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_delay.c.i
 .PHONY : libraries/zf_driver/zf_driver_delay.c.i
 
 libraries/zf_driver/zf_driver_delay.s: libraries/zf_driver/zf_driver_delay.c.s
@@ -1637,7 +1637,7 @@ libraries/zf_driver/zf_driver_delay.s: libraries/zf_driver/zf_driver_delay.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_delay.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_delay.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_delay.c.s
 .PHONY : libraries/zf_driver/zf_driver_delay.c.s
 
 libraries/zf_driver/zf_driver_dvp.obj: libraries/zf_driver/zf_driver_dvp.c.obj
@@ -1645,7 +1645,7 @@ libraries/zf_driver/zf_driver_dvp.obj: libraries/zf_driver/zf_driver_dvp.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_dvp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_dvp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_dvp.c.obj
 .PHONY : libraries/zf_driver/zf_driver_dvp.c.obj
 
 libraries/zf_driver/zf_driver_dvp.i: libraries/zf_driver/zf_driver_dvp.c.i
@@ -1653,7 +1653,7 @@ libraries/zf_driver/zf_driver_dvp.i: libraries/zf_driver/zf_driver_dvp.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_dvp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_dvp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_dvp.c.i
 .PHONY : libraries/zf_driver/zf_driver_dvp.c.i
 
 libraries/zf_driver/zf_driver_dvp.s: libraries/zf_driver/zf_driver_dvp.c.s
@@ -1661,7 +1661,7 @@ libraries/zf_driver/zf_driver_dvp.s: libraries/zf_driver/zf_driver_dvp.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_dvp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_dvp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_dvp.c.s
 .PHONY : libraries/zf_driver/zf_driver_dvp.c.s
 
 libraries/zf_driver/zf_driver_encoder.obj: libraries/zf_driver/zf_driver_encoder.c.obj
@@ -1669,7 +1669,7 @@ libraries/zf_driver/zf_driver_encoder.obj: libraries/zf_driver/zf_driver_encoder
 
 # target to build an object file
 libraries/zf_driver/zf_driver_encoder.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_encoder.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_encoder.c.obj
 .PHONY : libraries/zf_driver/zf_driver_encoder.c.obj
 
 libraries/zf_driver/zf_driver_encoder.i: libraries/zf_driver/zf_driver_encoder.c.i
@@ -1677,7 +1677,7 @@ libraries/zf_driver/zf_driver_encoder.i: libraries/zf_driver/zf_driver_encoder.c
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_encoder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_encoder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_encoder.c.i
 .PHONY : libraries/zf_driver/zf_driver_encoder.c.i
 
 libraries/zf_driver/zf_driver_encoder.s: libraries/zf_driver/zf_driver_encoder.c.s
@@ -1685,7 +1685,7 @@ libraries/zf_driver/zf_driver_encoder.s: libraries/zf_driver/zf_driver_encoder.c
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_encoder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_encoder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_encoder.c.s
 .PHONY : libraries/zf_driver/zf_driver_encoder.c.s
 
 libraries/zf_driver/zf_driver_exti.obj: libraries/zf_driver/zf_driver_exti.c.obj
@@ -1693,7 +1693,7 @@ libraries/zf_driver/zf_driver_exti.obj: libraries/zf_driver/zf_driver_exti.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_exti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_exti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_exti.c.obj
 .PHONY : libraries/zf_driver/zf_driver_exti.c.obj
 
 libraries/zf_driver/zf_driver_exti.i: libraries/zf_driver/zf_driver_exti.c.i
@@ -1701,7 +1701,7 @@ libraries/zf_driver/zf_driver_exti.i: libraries/zf_driver/zf_driver_exti.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_exti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_exti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_exti.c.i
 .PHONY : libraries/zf_driver/zf_driver_exti.c.i
 
 libraries/zf_driver/zf_driver_exti.s: libraries/zf_driver/zf_driver_exti.c.s
@@ -1709,7 +1709,7 @@ libraries/zf_driver/zf_driver_exti.s: libraries/zf_driver/zf_driver_exti.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_exti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_exti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_exti.c.s
 .PHONY : libraries/zf_driver/zf_driver_exti.c.s
 
 libraries/zf_driver/zf_driver_flash.obj: libraries/zf_driver/zf_driver_flash.c.obj
@@ -1717,7 +1717,7 @@ libraries/zf_driver/zf_driver_flash.obj: libraries/zf_driver/zf_driver_flash.c.o
 
 # target to build an object file
 libraries/zf_driver/zf_driver_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_flash.c.obj
 .PHONY : libraries/zf_driver/zf_driver_flash.c.obj
 
 libraries/zf_driver/zf_driver_flash.i: libraries/zf_driver/zf_driver_flash.c.i
@@ -1725,7 +1725,7 @@ libraries/zf_driver/zf_driver_flash.i: libraries/zf_driver/zf_driver_flash.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_flash.c.i
 .PHONY : libraries/zf_driver/zf_driver_flash.c.i
 
 libraries/zf_driver/zf_driver_flash.s: libraries/zf_driver/zf_driver_flash.c.s
@@ -1733,7 +1733,7 @@ libraries/zf_driver/zf_driver_flash.s: libraries/zf_driver/zf_driver_flash.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_flash.c.s
 .PHONY : libraries/zf_driver/zf_driver_flash.c.s
 
 libraries/zf_driver/zf_driver_gpio.obj: libraries/zf_driver/zf_driver_gpio.c.obj
@@ -1741,7 +1741,7 @@ libraries/zf_driver/zf_driver_gpio.obj: libraries/zf_driver/zf_driver_gpio.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_gpio.c.obj
 .PHONY : libraries/zf_driver/zf_driver_gpio.c.obj
 
 libraries/zf_driver/zf_driver_gpio.i: libraries/zf_driver/zf_driver_gpio.c.i
@@ -1749,7 +1749,7 @@ libraries/zf_driver/zf_driver_gpio.i: libraries/zf_driver/zf_driver_gpio.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_gpio.c.i
 .PHONY : libraries/zf_driver/zf_driver_gpio.c.i
 
 libraries/zf_driver/zf_driver_gpio.s: libraries/zf_driver/zf_driver_gpio.c.s
@@ -1757,7 +1757,7 @@ libraries/zf_driver/zf_driver_gpio.s: libraries/zf_driver/zf_driver_gpio.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_gpio.c.s
 .PHONY : libraries/zf_driver/zf_driver_gpio.c.s
 
 libraries/zf_driver/zf_driver_iic.obj: libraries/zf_driver/zf_driver_iic.c.obj
@@ -1765,7 +1765,7 @@ libraries/zf_driver/zf_driver_iic.obj: libraries/zf_driver/zf_driver_iic.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_iic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_iic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_iic.c.obj
 .PHONY : libraries/zf_driver/zf_driver_iic.c.obj
 
 libraries/zf_driver/zf_driver_iic.i: libraries/zf_driver/zf_driver_iic.c.i
@@ -1773,7 +1773,7 @@ libraries/zf_driver/zf_driver_iic.i: libraries/zf_driver/zf_driver_iic.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_iic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_iic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_iic.c.i
 .PHONY : libraries/zf_driver/zf_driver_iic.c.i
 
 libraries/zf_driver/zf_driver_iic.s: libraries/zf_driver/zf_driver_iic.c.s
@@ -1781,7 +1781,7 @@ libraries/zf_driver/zf_driver_iic.s: libraries/zf_driver/zf_driver_iic.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_iic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_iic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_iic.c.s
 .PHONY : libraries/zf_driver/zf_driver_iic.c.s
 
 libraries/zf_driver/zf_driver_pit.obj: libraries/zf_driver/zf_driver_pit.c.obj
@@ -1789,7 +1789,7 @@ libraries/zf_driver/zf_driver_pit.obj: libraries/zf_driver/zf_driver_pit.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_pit.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pit.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pit.c.obj
 .PHONY : libraries/zf_driver/zf_driver_pit.c.obj
 
 libraries/zf_driver/zf_driver_pit.i: libraries/zf_driver/zf_driver_pit.c.i
@@ -1797,7 +1797,7 @@ libraries/zf_driver/zf_driver_pit.i: libraries/zf_driver/zf_driver_pit.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_pit.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pit.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pit.c.i
 .PHONY : libraries/zf_driver/zf_driver_pit.c.i
 
 libraries/zf_driver/zf_driver_pit.s: libraries/zf_driver/zf_driver_pit.c.s
@@ -1805,7 +1805,7 @@ libraries/zf_driver/zf_driver_pit.s: libraries/zf_driver/zf_driver_pit.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_pit.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pit.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pit.c.s
 .PHONY : libraries/zf_driver/zf_driver_pit.c.s
 
 libraries/zf_driver/zf_driver_pwm.obj: libraries/zf_driver/zf_driver_pwm.c.obj
@@ -1813,7 +1813,7 @@ libraries/zf_driver/zf_driver_pwm.obj: libraries/zf_driver/zf_driver_pwm.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_pwm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pwm.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pwm.c.obj
 .PHONY : libraries/zf_driver/zf_driver_pwm.c.obj
 
 libraries/zf_driver/zf_driver_pwm.i: libraries/zf_driver/zf_driver_pwm.c.i
@@ -1821,7 +1821,7 @@ libraries/zf_driver/zf_driver_pwm.i: libraries/zf_driver/zf_driver_pwm.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_pwm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pwm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pwm.c.i
 .PHONY : libraries/zf_driver/zf_driver_pwm.c.i
 
 libraries/zf_driver/zf_driver_pwm.s: libraries/zf_driver/zf_driver_pwm.c.s
@@ -1829,7 +1829,7 @@ libraries/zf_driver/zf_driver_pwm.s: libraries/zf_driver/zf_driver_pwm.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_pwm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_pwm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_pwm.c.s
 .PHONY : libraries/zf_driver/zf_driver_pwm.c.s
 
 libraries/zf_driver/zf_driver_soft_iic.obj: libraries/zf_driver/zf_driver_soft_iic.c.obj
@@ -1837,7 +1837,7 @@ libraries/zf_driver/zf_driver_soft_iic.obj: libraries/zf_driver/zf_driver_soft_i
 
 # target to build an object file
 libraries/zf_driver/zf_driver_soft_iic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.obj
 .PHONY : libraries/zf_driver/zf_driver_soft_iic.c.obj
 
 libraries/zf_driver/zf_driver_soft_iic.i: libraries/zf_driver/zf_driver_soft_iic.c.i
@@ -1845,7 +1845,7 @@ libraries/zf_driver/zf_driver_soft_iic.i: libraries/zf_driver/zf_driver_soft_iic
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_soft_iic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.i
 .PHONY : libraries/zf_driver/zf_driver_soft_iic.c.i
 
 libraries/zf_driver/zf_driver_soft_iic.s: libraries/zf_driver/zf_driver_soft_iic.c.s
@@ -1853,7 +1853,7 @@ libraries/zf_driver/zf_driver_soft_iic.s: libraries/zf_driver/zf_driver_soft_iic
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_soft_iic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_iic.c.s
 .PHONY : libraries/zf_driver/zf_driver_soft_iic.c.s
 
 libraries/zf_driver/zf_driver_soft_spi.obj: libraries/zf_driver/zf_driver_soft_spi.c.obj
@@ -1861,7 +1861,7 @@ libraries/zf_driver/zf_driver_soft_spi.obj: libraries/zf_driver/zf_driver_soft_s
 
 # target to build an object file
 libraries/zf_driver/zf_driver_soft_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.obj
 .PHONY : libraries/zf_driver/zf_driver_soft_spi.c.obj
 
 libraries/zf_driver/zf_driver_soft_spi.i: libraries/zf_driver/zf_driver_soft_spi.c.i
@@ -1869,7 +1869,7 @@ libraries/zf_driver/zf_driver_soft_spi.i: libraries/zf_driver/zf_driver_soft_spi
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_soft_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.i
 .PHONY : libraries/zf_driver/zf_driver_soft_spi.c.i
 
 libraries/zf_driver/zf_driver_soft_spi.s: libraries/zf_driver/zf_driver_soft_spi.c.s
@@ -1877,7 +1877,7 @@ libraries/zf_driver/zf_driver_soft_spi.s: libraries/zf_driver/zf_driver_soft_spi
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_soft_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_soft_spi.c.s
 .PHONY : libraries/zf_driver/zf_driver_soft_spi.c.s
 
 libraries/zf_driver/zf_driver_spi.obj: libraries/zf_driver/zf_driver_spi.c.obj
@@ -1885,7 +1885,7 @@ libraries/zf_driver/zf_driver_spi.obj: libraries/zf_driver/zf_driver_spi.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_spi.c.obj
 .PHONY : libraries/zf_driver/zf_driver_spi.c.obj
 
 libraries/zf_driver/zf_driver_spi.i: libraries/zf_driver/zf_driver_spi.c.i
@@ -1893,7 +1893,7 @@ libraries/zf_driver/zf_driver_spi.i: libraries/zf_driver/zf_driver_spi.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_spi.c.i
 .PHONY : libraries/zf_driver/zf_driver_spi.c.i
 
 libraries/zf_driver/zf_driver_spi.s: libraries/zf_driver/zf_driver_spi.c.s
@@ -1901,7 +1901,7 @@ libraries/zf_driver/zf_driver_spi.s: libraries/zf_driver/zf_driver_spi.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_spi.c.s
 .PHONY : libraries/zf_driver/zf_driver_spi.c.s
 
 libraries/zf_driver/zf_driver_timer.obj: libraries/zf_driver/zf_driver_timer.c.obj
@@ -1909,7 +1909,7 @@ libraries/zf_driver/zf_driver_timer.obj: libraries/zf_driver/zf_driver_timer.c.o
 
 # target to build an object file
 libraries/zf_driver/zf_driver_timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_timer.c.obj
 .PHONY : libraries/zf_driver/zf_driver_timer.c.obj
 
 libraries/zf_driver/zf_driver_timer.i: libraries/zf_driver/zf_driver_timer.c.i
@@ -1917,7 +1917,7 @@ libraries/zf_driver/zf_driver_timer.i: libraries/zf_driver/zf_driver_timer.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_timer.c.i
 .PHONY : libraries/zf_driver/zf_driver_timer.c.i
 
 libraries/zf_driver/zf_driver_timer.s: libraries/zf_driver/zf_driver_timer.c.s
@@ -1925,7 +1925,7 @@ libraries/zf_driver/zf_driver_timer.s: libraries/zf_driver/zf_driver_timer.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_timer.c.s
 .PHONY : libraries/zf_driver/zf_driver_timer.c.s
 
 libraries/zf_driver/zf_driver_uart.obj: libraries/zf_driver/zf_driver_uart.c.obj
@@ -1933,7 +1933,7 @@ libraries/zf_driver/zf_driver_uart.obj: libraries/zf_driver/zf_driver_uart.c.obj
 
 # target to build an object file
 libraries/zf_driver/zf_driver_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_uart.c.obj
 .PHONY : libraries/zf_driver/zf_driver_uart.c.obj
 
 libraries/zf_driver/zf_driver_uart.i: libraries/zf_driver/zf_driver_uart.c.i
@@ -1941,7 +1941,7 @@ libraries/zf_driver/zf_driver_uart.i: libraries/zf_driver/zf_driver_uart.c.i
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_uart.c.i
 .PHONY : libraries/zf_driver/zf_driver_uart.c.i
 
 libraries/zf_driver/zf_driver_uart.s: libraries/zf_driver/zf_driver_uart.c.s
@@ -1949,7 +1949,7 @@ libraries/zf_driver/zf_driver_uart.s: libraries/zf_driver/zf_driver_uart.c.s
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_uart.c.s
 .PHONY : libraries/zf_driver/zf_driver_uart.c.s
 
 libraries/zf_driver/zf_driver_usb_cdc.obj: libraries/zf_driver/zf_driver_usb_cdc.c.obj
@@ -1957,7 +1957,7 @@ libraries/zf_driver/zf_driver_usb_cdc.obj: libraries/zf_driver/zf_driver_usb_cdc
 
 # target to build an object file
 libraries/zf_driver/zf_driver_usb_cdc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.obj
 .PHONY : libraries/zf_driver/zf_driver_usb_cdc.c.obj
 
 libraries/zf_driver/zf_driver_usb_cdc.i: libraries/zf_driver/zf_driver_usb_cdc.c.i
@@ -1965,7 +1965,7 @@ libraries/zf_driver/zf_driver_usb_cdc.i: libraries/zf_driver/zf_driver_usb_cdc.c
 
 # target to preprocess a source file
 libraries/zf_driver/zf_driver_usb_cdc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.i
 .PHONY : libraries/zf_driver/zf_driver_usb_cdc.c.i
 
 libraries/zf_driver/zf_driver_usb_cdc.s: libraries/zf_driver/zf_driver_usb_cdc.c.s
@@ -1973,7 +1973,7 @@ libraries/zf_driver/zf_driver_usb_cdc.s: libraries/zf_driver/zf_driver_usb_cdc.c
 
 # target to generate assembly for a file
 libraries/zf_driver/zf_driver_usb_cdc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/libraries/zf_driver/zf_driver_usb_cdc.c.s
 .PHONY : libraries/zf_driver/zf_driver_usb_cdc.c.s
 
 project/code/ctrl.obj: project/code/ctrl.c.obj
@@ -1981,7 +1981,7 @@ project/code/ctrl.obj: project/code/ctrl.c.obj
 
 # target to build an object file
 project/code/ctrl.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/ctrl.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/ctrl.c.obj
 .PHONY : project/code/ctrl.c.obj
 
 project/code/ctrl.i: project/code/ctrl.c.i
@@ -1989,7 +1989,7 @@ project/code/ctrl.i: project/code/ctrl.c.i
 
 # target to preprocess a source file
 project/code/ctrl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/ctrl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/ctrl.c.i
 .PHONY : project/code/ctrl.c.i
 
 project/code/ctrl.s: project/code/ctrl.c.s
@@ -1997,15 +1997,39 @@ project/code/ctrl.s: project/code/ctrl.c.s
 
 # target to generate assembly for a file
 project/code/ctrl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/ctrl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/ctrl.c.s
 .PHONY : project/code/ctrl.c.s
+
+project/code/cursor.obj: project/code/cursor.c.obj
+.PHONY : project/code/cursor.obj
+
+# target to build an object file
+project/code/cursor.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/cursor.c.obj
+.PHONY : project/code/cursor.c.obj
+
+project/code/cursor.i: project/code/cursor.c.i
+.PHONY : project/code/cursor.i
+
+# target to preprocess a source file
+project/code/cursor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/cursor.c.i
+.PHONY : project/code/cursor.c.i
+
+project/code/cursor.s: project/code/cursor.c.s
+.PHONY : project/code/cursor.s
+
+# target to generate assembly for a file
+project/code/cursor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/cursor.c.s
+.PHONY : project/code/cursor.c.s
 
 project/code/moto.obj: project/code/moto.c.obj
 .PHONY : project/code/moto.obj
 
 # target to build an object file
 project/code/moto.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/moto.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/moto.c.obj
 .PHONY : project/code/moto.c.obj
 
 project/code/moto.i: project/code/moto.c.i
@@ -2013,7 +2037,7 @@ project/code/moto.i: project/code/moto.c.i
 
 # target to preprocess a source file
 project/code/moto.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/moto.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/moto.c.i
 .PHONY : project/code/moto.c.i
 
 project/code/moto.s: project/code/moto.c.s
@@ -2021,7 +2045,7 @@ project/code/moto.s: project/code/moto.c.s
 
 # target to generate assembly for a file
 project/code/moto.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/moto.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/moto.c.s
 .PHONY : project/code/moto.c.s
 
 project/code/pid.obj: project/code/pid.c.obj
@@ -2029,7 +2053,7 @@ project/code/pid.obj: project/code/pid.c.obj
 
 # target to build an object file
 project/code/pid.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/pid.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/pid.c.obj
 .PHONY : project/code/pid.c.obj
 
 project/code/pid.i: project/code/pid.c.i
@@ -2037,7 +2061,7 @@ project/code/pid.i: project/code/pid.c.i
 
 # target to preprocess a source file
 project/code/pid.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/pid.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/pid.c.i
 .PHONY : project/code/pid.c.i
 
 project/code/pid.s: project/code/pid.c.s
@@ -2045,15 +2069,39 @@ project/code/pid.s: project/code/pid.c.s
 
 # target to generate assembly for a file
 project/code/pid.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/code/pid.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/pid.c.s
 .PHONY : project/code/pid.c.s
+
+project/code/upacker.obj: project/code/upacker.c.obj
+.PHONY : project/code/upacker.obj
+
+# target to build an object file
+project/code/upacker.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/upacker.c.obj
+.PHONY : project/code/upacker.c.obj
+
+project/code/upacker.i: project/code/upacker.c.i
+.PHONY : project/code/upacker.i
+
+# target to preprocess a source file
+project/code/upacker.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/upacker.c.i
+.PHONY : project/code/upacker.c.i
+
+project/code/upacker.s: project/code/upacker.c.s
+.PHONY : project/code/upacker.s
+
+# target to generate assembly for a file
+project/code/upacker.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/upacker.c.s
+.PHONY : project/code/upacker.c.s
 
 project/user/src/isr.obj: project/user/src/isr.c.obj
 .PHONY : project/user/src/isr.obj
 
 # target to build an object file
 project/user/src/isr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/isr.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/isr.c.obj
 .PHONY : project/user/src/isr.c.obj
 
 project/user/src/isr.i: project/user/src/isr.c.i
@@ -2061,7 +2109,7 @@ project/user/src/isr.i: project/user/src/isr.c.i
 
 # target to preprocess a source file
 project/user/src/isr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/isr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/isr.c.i
 .PHONY : project/user/src/isr.c.i
 
 project/user/src/isr.s: project/user/src/isr.c.s
@@ -2069,7 +2117,7 @@ project/user/src/isr.s: project/user/src/isr.c.s
 
 # target to generate assembly for a file
 project/user/src/isr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/isr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/isr.c.s
 .PHONY : project/user/src/isr.c.s
 
 project/user/src/main.obj: project/user/src/main.c.obj
@@ -2077,7 +2125,7 @@ project/user/src/main.obj: project/user/src/main.c.obj
 
 # target to build an object file
 project/user/src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/main.c.obj
 .PHONY : project/user/src/main.c.obj
 
 project/user/src/main.i: project/user/src/main.c.i
@@ -2085,7 +2133,7 @@ project/user/src/main.i: project/user/src/main.c.i
 
 # target to preprocess a source file
 project/user/src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/main.c.i
 .PHONY : project/user/src/main.c.i
 
 project/user/src/main.s: project/user/src/main.c.s
@@ -2093,7 +2141,7 @@ project/user/src/main.s: project/user/src/main.c.s
 
 # target to generate assembly for a file
 project/user/src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\red_firm.dir\build.make CMakeFiles/red_firm.dir/project/user/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/user/src/main.c.s
 .PHONY : project/user/src/main.c.s
 
 # Help Target
@@ -2104,7 +2152,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... red_firm
+	@echo ... green_firm
 	@echo ... libraries/sdk/Core/core_riscv.obj
 	@echo ... libraries/sdk/Core/core_riscv.i
 	@echo ... libraries/sdk/Core/core_riscv.s
@@ -2339,12 +2387,18 @@ help:
 	@echo ... project/code/ctrl.obj
 	@echo ... project/code/ctrl.i
 	@echo ... project/code/ctrl.s
+	@echo ... project/code/cursor.obj
+	@echo ... project/code/cursor.i
+	@echo ... project/code/cursor.s
 	@echo ... project/code/moto.obj
 	@echo ... project/code/moto.i
 	@echo ... project/code/moto.s
 	@echo ... project/code/pid.obj
 	@echo ... project/code/pid.i
 	@echo ... project/code/pid.s
+	@echo ... project/code/upacker.obj
+	@echo ... project/code/upacker.i
+	@echo ... project/code/upacker.s
 	@echo ... project/user/src/isr.obj
 	@echo ... project/user/src/isr.i
 	@echo ... project/user/src/isr.s

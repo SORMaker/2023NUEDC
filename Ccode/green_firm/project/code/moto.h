@@ -21,19 +21,22 @@
  *              1000 / freq
  * 
  */
-#define GetServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.59 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetYawServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.57 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetPitchServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.54 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 
 
-#define SERVO_MID           GetServoDuty(0)                     // Middle duty of servo motor
-#define SERVO_DUTY_MAX      (GetServoDuty(14) - SERVO_MID)      // Maximum turning angle of servo motor
-#define SERVO_YAW_PIN           TIM2_PWM_MAP3_CH1_A15                    // Servo YAW output pin
-#define SERVO_PITCH_PIN         TIM2_PWM_MAP3_CH1_A15                    // Servo PITCH pwm output pin
+#define SERVO_YAW_MID           (GetYawServoDuty(0))
+#define SERVO_PITCH_MID         (GetPitchServoDuty(0))
+#define SERVO_DUTY_MAX          (GetServoDuty(14) - SERVO_MID)                                  // Maximum turning angle of servo motor
+#define SERVO_YAW_PIN           TIM2_PWM_MAP0_CH1_A0                                        // Servo YAW output pin
+#define SERVO_PITCH_PIN         TIM2_PWM_MAP0_CH2_A1                                        // Servo PITCH pwm output pin
 
 
 
 extern uint8 servo_sport_update_flag;
 extern uint16 servo_current_duty;
 void pwmInit(void);
+void angleSet(pwm_channel_enum pin,float angle);
 void ServoSportSet(uint16_t duty_value,int32_t ticks);
 void ServoSportHandler(uint16 *duty_input);
 #define myABS(x) (x>0?x:-x)

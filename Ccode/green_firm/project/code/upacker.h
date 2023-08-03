@@ -53,9 +53,11 @@ extern rx_data_st rxData;
 extern uint8_t BufferFinish;
 extern uint8_t Buffer[MAX_PACK_SIZE];
 
-        int upacker_init(upacker_inst_t packer, PACKER_CB handle, PACKER_CB send);
-        void upacker_pack(upacker_inst_t packer, uint8_t *buff, uint16_t size);
-        void upacker_unpack(upacker_inst_t packer, uint8_t *buff, uint16_t size);
+int upacker_init(upacker_inst_t packer, PACKER_CB handle, PACKER_CB send);
+
+void upacker_pack(upacker_inst_t packer, uint8_t *buff, uint16_t size);
+
+void upacker_unpack(upacker_inst_t packer, uint8_t *buff, uint16_t size);
 
 #ifdef __cplusplus
 }

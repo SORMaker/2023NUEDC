@@ -1,0 +1,3 @@
+F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/green_firm.dir
+F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/rebuild_cache.dir

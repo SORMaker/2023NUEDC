@@ -4,15 +4,22 @@
 
 
 void pwmInit(void) {
-    pwm_init(SERVO_YAW_PIN, SERVO_FREQ, SERVO_MID);
-    pwm_init(SERVO_PITCH_PIN, SERVO_FREQ, SERVO_MID);
+    pwm_init(SERVO_YAW_PIN, SERVO_FREQ, SERVO_YAW_MID);
+    pwm_init(SERVO_PITCH_PIN, SERVO_FREQ, SERVO_PITCH_MID);
 }
 
+void angleSet(pwm_channel_enum pin,float angle){
+    if(pin==SERVO_YAW_PIN){
+        pwm_set_duty(SERVO_YAW_PIN, (uint32) GetYawServoDuty(-angle));
+    } else if(pin==SERVO_PITCH_PIN){
+        pwm_set_duty(SERVO_PITCH_PIN, (uint32) GetPitchServoDuty(-angle));
+    }
+}
 static uint16_t duty_target = 0;
 static int32_t servo_step_duty;
 static int32_t duty_err;
 uint8 servo_sport_update_flag = 0;//若该标志位置1，则外部不能有强行修改servo_current_duty的行为；
-uint16 servo_current_duty = GetServoDuty(0);
+uint16 servo_current_duty = GetYawServoDuty(0);
 
 void ServoSportSet(uint16_t duty_value, int32_t ticks) {
     duty_target = duty_value;

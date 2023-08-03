@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(red_firm C)
+project(green_firm C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -11,7 +11,7 @@ include_directories(libraries/zf_driver)
 include_directories(project/code)
 include_directories(project/user/inc)
 
-add_executable(red_firm
+add_executable(green_firm
         libraries/sdk/Core/core_riscv.c
         libraries/sdk/Core/core_riscv.h
         libraries/sdk/Peripheral/ch32v30x.h
@@ -170,11 +170,17 @@ add_executable(red_firm
         libraries/zf_driver/zf_driver_uart.h
         libraries/zf_driver/zf_driver_usb_cdc.c
         libraries/zf_driver/zf_driver_usb_cdc.h
+        project/code/ctrl.c
+        project/code/ctrl.h
+        project/code/cursor.c
+        project/code/cursor.h
         project/code/inc_all.h
         project/code/moto.c
         project/code/moto.h
         project/code/pid.c
         project/code/pid.h
+        project/code/upacker.c
+        project/code/upacker.h
         project/user/inc/isr.h
         project/user/src/isr.c
-        project/user/src/main.c project/code/ctrl.c /buzzer.c project/code/buzzer.c project/code/buzzer.c)
+        project/user/src/main.c)

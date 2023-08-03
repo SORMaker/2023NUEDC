@@ -34,25 +34,19 @@
 ********************************************************************************************************************/
 #include "zf_common_headfile.h"
 #include "inc_all.h"
-
-
-
-void packReceiveHandle(uint8_t *d, uint16_t s)
-{
+void packReceiveHandle(uint8_t *d, uint16_t s) {
     rxData.cx = (d[1] << 8) | d[0];
-    rxData.cy =  ((d[3] << 8)| d[2]);
-    printf("%d %d\n",rxData.cx,rxData.cy);
+    rxData.cy = ((d[3] << 8) | d[2]);
+    printf("%d %d\n", rxData.cx, rxData.cy);
 }
 
-void packSendHandle(uint8_t *d, uint16_t s)
-{
+void packSendHandle(uint8_t *d, uint16_t s) {
     uart_write_buffer(UART_7, d, s);
 //    for (int i = 0; i < s; i++)
 //    {
 //        printf("%c\n",i);
 //    }
 }
-
 int main (void)
 {
     clock_init(SYSTEM_CLOCK_120M);      // 初始化芯片时钟 工作频率为 120MHz
@@ -61,25 +55,47 @@ int main (void)
     uart_init(UART_7, 115200, UART7_MAP3_TX_E12, UART7_MAP3_RX_E13);
     upacker_inst myPack;
     upacker_inst_t myPackPtr = &myPack;
-    upacker_init(myPackPtr,&packReceiveHandle,&packSendHandle);
+    upacker_init(myPackPtr, &packReceiveHandle, &packSendHandle);
     // 此处编写用户代码 例如外设初始化代码等
+//    MenuInit();
+//    EasyUIInit(1);
     pwmInit();
     pidAllInit();
     BuzzerInit();
+    cursorInit(&global_cursor, 0, 0, 0, 0);
     // 此处编写用户代码 例如外设初始化代码等
     taskTimAllInit();
-    uart_rx_interrupt(UART_7,ENABLE);
-    while(1)
-    {
+    system_delay_ms(2000);
+    angleSet(SERVO_YAW_PIN, 0);
+    angleSet(SERVO_PITCH_PIN, 0);
+    cursorSetPointSport(&global_cursor, 25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, 25, -25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, -25, -25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, -25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, 25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 500;
+    cursorSetPointSport(&global_cursor, 0, 0, 100);
+
+
+    uart_rx_interrupt(UART_7, ENABLE);
+    while (1) {
+//        EasyUI(20);
         // 此处编写需要循环执行的代码
-        if(BufferFinish == 1)
-        {
-            upacker_unpack(myPackPtr,Buffer,sizeof(Buffer));
-            upacker_pack(myPackPtr,(uint8_t*)&rxData,sizeof(rxData));
+        if (BufferFinish == 1) {
+            upacker_unpack(myPackPtr, Buffer, sizeof(Buffer));
+            upacker_pack(myPackPtr, (uint8_t *) &rxData, sizeof(rxData));
             BufferFinish = 0;
-            uart_rx_interrupt(UART_7,ENABLE);
+            uart_rx_interrupt(UART_7, ENABLE);
         }
-//        printf("aaaa\n");
 //        system_delay_ms(500);
         // 此处编写需要循环执行的代码
     }

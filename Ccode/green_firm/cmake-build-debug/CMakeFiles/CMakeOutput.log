@@ -10,15 +10,15 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
 
-The C compiler identification is GNU, found in "F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe"
+The C compiler identification is GNU, found in "F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d6db8/fast && E:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_d6db8.dir\build.make CMakeFiles/cmTC_d6db8.dir/build
-mingw32-make.exe[1]: Entering directory 'F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d6db8.dir/CMakeCCompilerABI.c.obj
-"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj -c "E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c"
+Run Build Command(s):E:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_69608/fast && E:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_69608.dir\build.make CMakeFiles/cmTC_69608.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69608.dir/CMakeCCompilerABI.c.obj
+"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj -c "E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c"
 Using built-in specs.
 COLLECT_GCC=E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe
 Target: x86_64-w64-mingw32
@@ -26,8 +26,8 @@ Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\'
- E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_d6db8.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Mr.WU\AppData\Local\Temp\ccgE6HKT.s
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\'
+ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_69608.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Mr.WU\AppData\Local\Temp\ccBbnecb.s
 GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -48,17 +48,17 @@ GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 23424b72d090e8b977a96775bde79257
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\'
- as -v -o CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj C:\Users\Mr.WU\AppData\Local\Temp\ccgE6HKT.s
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\'
+ as -v -o CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj C:\Users\Mr.WU\AppData\Local\Temp\ccBbnecb.s
 GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
 COMPILER_PATH=E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.'
-Linking C executable cmTC_d6db8.exe
-"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d6db8.dir\link.txt --verbose=1
-"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d6db8.dir/objects.a
-"E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_d6db8.dir/objects.a @CMakeFiles\cmTC_d6db8.dir\objects1.rsp
-"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_d6db8.dir/objects.a -Wl,--no-whole-archive -o cmTC_d6db8.exe -Wl,--out-implib,libcmTC_d6db8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_69608.exe
+"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_69608.dir\link.txt --verbose=1
+"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_69608.dir/objects.a
+"E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_69608.dir/objects.a @CMakeFiles\cmTC_69608.dir\objects1.rsp
+"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_69608.dir/objects.a -Wl,--no-whole-archive -o cmTC_69608.exe -Wl,--out-implib,libcmTC_69608.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe
 COLLECT_LTO_WRAPPER=E:/CLion\ 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -69,10 +69,10 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
 COMPILER_PATH=E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6db8.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d6db8.'
- E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_d6db8.exe E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_d6db8.dir/objects.a --no-whole-archive --out-implib libcmTC_d6db8.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6db8.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d6db8.'
-mingw32-make.exe[1]: Leaving directory 'F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_69608.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69608.'
+ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_69608.exe E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_69608.dir/objects.a --no-whole-archive --out-implib libcmTC_69608.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_69608.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69608.'
+mingw32-make.exe[1]: Leaving directory 'F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 
@@ -93,12 +93,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):E:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d6db8/fast && E:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_d6db8.dir\build.make CMakeFiles/cmTC_d6db8.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_d6db8.dir/CMakeCCompilerABI.c.obj]
-  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj -c "E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Run Build Command(s):E:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_69608/fast && E:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_69608.dir\build.make CMakeFiles/cmTC_69608.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_69608.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj -c "E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c"]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -106,8 +106,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\']
-  ignore line: [ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_d6db8.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Mr.WU\AppData\Local\Temp\ccgE6HKT.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\']
+  ignore line: [ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:\CLion 2022.3.2\bin\cmake\win\x64\share\cmake-3.24\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_69608.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Mr.WU\AppData\Local\Temp\ccBbnecb.s]
   ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -128,8 +128,8 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 23424b72d090e8b977a96775bde79257]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\']
-  ignore line: [ as -v -o CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj C:\Users\Mr.WU\AppData\Local\Temp\ccgE6HKT.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\']
+  ignore line: [ as -v -o CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj C:\Users\Mr.WU\AppData\Local\Temp\ccBbnecb.s]
   ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
   ignore line: [COMPILER_PATH=E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/]
@@ -139,12 +139,12 @@ Parsed C implicit link information from above output:
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_d6db8.dir\CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_d6db8.exe]
-  ignore line: ["E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d6db8.dir\link.txt --verbose=1]
-  ignore line: ["E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d6db8.dir/objects.a]
-  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_d6db8.dir/objects.a @CMakeFiles\cmTC_d6db8.dir\objects1.rsp]
-  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_d6db8.dir/objects.a -Wl --no-whole-archive -o cmTC_d6db8.exe -Wl --out-implib libcmTC_d6db8.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_69608.dir\CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_69608.exe]
+  ignore line: ["E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_69608.dir\link.txt --verbose=1]
+  ignore line: ["E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_69608.dir/objects.a]
+  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_69608.dir/objects.a @CMakeFiles\cmTC_69608.dir\objects1.rsp]
+  ignore line: ["E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_69608.dir/objects.a -Wl --no-whole-archive -o cmTC_69608.exe -Wl --out-implib libcmTC_69608.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=E:/CLion\ 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -161,10 +161,10 @@ Parsed C implicit link information from above output:
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6db8.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d6db8.']
-  ignore line: [ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_d6db8.exe E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_d6db8.dir/objects.a --no-whole-archive --out-implib libcmTC_d6db8.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6db8.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d6db8.']
-  ignore line: [mingw32-make.exe[1]: Leaving directory 'F:/电赛/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_69608.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69608.']
+  ignore line: [ E:/CLion 2022.3.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_69608.exe E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_69608.dir/objects.a --no-whole-archive --out-implib libcmTC_69608.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_69608.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69608.']
+  ignore line: [mingw32-make.exe[1]: Leaving directory 'F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/cmake-build-debug/CMakeFiles/CMakeTmp']
   ignore line: []
   ignore line: []
   implicit libs: []

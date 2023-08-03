@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="green_firm" targetName="green_firm" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2cbeebac-3148-4070-af6c-888821d467a5" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/green_firm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/code/cursor.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/code/cursor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/customTargets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/red_firm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/red_firm.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/inc_all.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/inc_all.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/moto.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/moto.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/moto.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/moto.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/upacker.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/upacker.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/.project" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/.settings/language.settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/.settings/language.settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/moto.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/moto.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/pid.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/pid.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/upacker.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/upacker.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/upacker.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/upacker.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/core_riscv.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/core_riscv.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/core_riscv.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/core_riscv.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_can.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_can.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_can.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_can.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/startup_ch32v30x_D8C.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/startup_ch32v30x_D8C.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sources.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sources.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_clock.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_clock.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_clock.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_clock.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_debug.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_debug.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_debug.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_debug.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_fifo.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_fifo.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_fifo.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_fifo.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_font.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_font.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_font.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_font.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_function.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_function.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_function.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_function.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_interrupt.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_interrupt.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_interrupt.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/zf_common_interrupt.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_absolute_encoder.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_absolute_encoder.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_absolute_encoder.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_absolute_encoder.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_aht20.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_aht20.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_aht20.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_aht20.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_camera.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_camera.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_camera.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_camera.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_detector.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_detector.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_detector.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_detector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1a.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1a.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1a.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1a.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1b.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1b.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1b.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dl1b.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dm1xa.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dm1xa.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dm1xa.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_dm1xa.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_gps_tau1201.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_gps_tau1201.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_gps_tau1201.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_gps_tau1201.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_icm20602.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_icm20602.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_icm20602.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_icm20602.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu660ra.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu660ra.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu660ra.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu660ra.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu963ra.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu963ra.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu963ra.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_imu963ra.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips200.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips200.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips200.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips200.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_k24c02.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_k24c02.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_k24c02.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_k24c02.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_key.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_key.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_key.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_key.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mpu6050.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mpu6050.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mpu6050.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mpu6050.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_oled.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_oled.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_oled.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_oled.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_scc8660_dvp.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_scc8660_dvp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_scc8660_dvp.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_scc8660_dvp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_tft180.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_tft180.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_tft180.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_tft180.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_type.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_type.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_type.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_type.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_w25q32.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_w25q32.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_w25q32.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_w25q32.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_spi.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_spi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_spi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_uart.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_uart.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wifi_uart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_ch573.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_ch573.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_ch573.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_ch573.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_uart.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_uart.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_wireless_uart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_adc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_adc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_adc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_delay.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_delay.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_delay.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_delay.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_dvp.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_dvp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_dvp.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_dvp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_encoder.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_encoder.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_encoder.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_encoder.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_exti.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_exti.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_exti.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_flash.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_flash.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_gpio.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_gpio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_iic.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_iic.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_iic.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_iic.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pit.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pit.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pit.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pit.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pwm.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pwm.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pwm.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_pwm.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_iic.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_iic.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_iic.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_iic.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_spi.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_spi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_soft_spi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_spi.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_spi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_spi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_timer.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_timer.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_timer.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_timer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_uart.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_uart.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_uart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_usb_cdc.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_usb_cdc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_usb_cdc.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/zf_driver_usb_cdc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/user/src/isr.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/isr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/user/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/customTargets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/red_firm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/toolchains.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/cmake-build-debug/red_firm.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/doc/GPL3_permission_statement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/doc/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Core/core_riscv.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Core/core_riscv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Ld/Link.ld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_adc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_adc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_bkp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_bkp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_can.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_can.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_crc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_crc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dac.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dac.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dbgmcu.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dbgmcu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dma.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dvp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_dvp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_eth.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_eth.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_exti.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_flash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_flash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_fsmc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_fsmc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_i2c.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_i2c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_iwdg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_iwdg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_opa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_opa.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_pwr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_pwr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rcc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rng.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rng.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rtc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_rtc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_sdio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_sdio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_tim.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_tim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_usart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_usbotg_device.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_wwdg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Peripheral/ch32v30x_wwdg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/sdk/Startup/startup_ch32v30x_D8C.S" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_clock.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_clock.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_debug.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_debug.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_fifo.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_fifo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_font.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_font.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_function.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_function.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_headfile.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_interrupt.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_interrupt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_common/zf_common_typedef.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/libzf_device_config.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_absolute_encoder.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_absolute_encoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_aht20.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_aht20.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_bluetooth_ch9141.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_bluetooth_ch9141.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_camera.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_config.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_detector.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_detector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dl1a.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dl1a.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dl1b.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dl1b.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dm1xa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_dm1xa.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_gps_tau1201.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_gps_tau1201.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_icm20602.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_icm20602.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_imu660ra.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_imu660ra.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_imu963ra.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_imu963ra.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_ips114.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_ips114.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_ips200.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_ips200.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_k24c02.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_k24c02.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_key.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_key.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_mpu6050.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_mpu6050.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_mt9v03x_dvp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_mt9v03x_dvp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_oled.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_oled.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_scc8660_dvp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_scc8660_dvp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_tft180.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_tft180.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_type.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_type.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_virtual_oscilloscope.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_virtual_oscilloscope.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_w25q32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_w25q32.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wifi_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wifi_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wifi_uart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wifi_uart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wireless_ch573.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wireless_ch573.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wireless_uart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_device/zf_device_wireless_uart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_adc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_adc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_delay.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_delay.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_dvp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_dvp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_encoder.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_encoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_exti.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_flash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_flash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_iic.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_iic.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_pit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_pit.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_pwm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_pwm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_soft_iic.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_soft_iic.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_soft_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_soft_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_spi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_timer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_timer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_uart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_uart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_usb_cdc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/libraries/zf_driver/zf_driver_usb_cdc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/buzzer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/buzzer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/ctrl.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/ctrl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/inc_all.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/moto.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/moto.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/pid.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/pid.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/upacker.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/code/upacker.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.settings/language.settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/.删除临时文件.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/Seekfree_CH32V307VCT6_Opensource_Library.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/Seekfree_CH32V307VCT6_Opensource_Library.wvproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/buzzer.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/buzzer.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/ctrl.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/ctrl.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/moto.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/moto.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/pid.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/pid.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/upacker.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/code/upacker.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/objects.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Core/core_riscv.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Core/core_riscv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Core/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_adc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_bkp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_can.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_can.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_crc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dac.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dbgmcu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dma.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_dvp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_eth.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_exti.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_flash.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_fsmc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_gpio.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_i2c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_iwdg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_opa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_pwr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rcc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rng.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_rtc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_sdio.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_spi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_tim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_usart.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_usbotg_device.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/ch32v30x_wwdg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Peripheral/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Startup/startup_ch32v30x_D8C.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sdk/Startup/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/sources.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/user_c/isr.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/user_c/isr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/user_c/main.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/user_c/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/user_c/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_clock.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_clock.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_debug.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_debug.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_fifo.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_fifo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_font.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_font.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_function.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_function.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_interrupt.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_common/zf_common_interrupt.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_absolute_encoder.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_absolute_encoder.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_aht20.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_aht20.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_bluetooth_ch9141.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_camera.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_camera.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_detector.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_detector.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dl1a.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dl1a.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dl1b.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dl1b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dm1xa.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_dm1xa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_gps_tau1201.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_gps_tau1201.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_icm20602.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_icm20602.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_imu660ra.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_imu660ra.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_imu963ra.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_imu963ra.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_ips114.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_ips114.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_ips200.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_ips200.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_k24c02.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_k24c02.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_key.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_key.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_mpu6050.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_mpu6050.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_mt9v03x_dvp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_oled.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_oled.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_scc8660_dvp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_scc8660_dvp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_tft180.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_tft180.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_type.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_type.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_virtual_oscilloscope.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_w25q32.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_w25q32.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wifi_spi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wifi_spi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wifi_uart.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wifi_uart.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wireless_ch573.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wireless_ch573.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wireless_uart.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_device/zf_device_wireless_uart.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_adc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_adc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_delay.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_delay.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_dvp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_dvp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_encoder.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_encoder.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_exti.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_exti.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_flash.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_flash.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_gpio.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_gpio.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_iic.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_iic.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_pit.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_pit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_pwm.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_pwm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_soft_iic.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_soft_iic.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_soft_spi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_soft_spi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_spi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_spi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_timer.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_timer.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_uart.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_uart.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_usb_cdc.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/mrs/obj/zf_driver/zf_driver_usb_cdc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/user/inc/isr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/user/src/isr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/user/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_firm/project/第十七届 智能车推荐引脚分配.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="Make.Settings">
+    <option name="path" value="E:\MounRiver\MounRiver_Studio\toolchain\Build Tools\bin\make.exe" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectId" id="2TTQ9DBcFv5qrv6fIu40AcUqlZv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/user/src",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.make"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\user\src" />
+      <recent name="F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="OpenOCD 下载并运行.flash">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="green_firm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="green_firm" TARGET_NAME="green_firm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="green_firm" RUN_TARGET_NAME="green_firm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="make" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\mrs\obj\makefile" target="all" workingDirectory="F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\mrs\obj" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="nim.task.build.to.cache" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="flash" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="green_firm" TARGET_NAME="green_firm" CONFIG_NAME="Debug" version="1" RUN_PATH="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="E:\MounRiver\MounRiver_Studio\toolchain\OpenOCD\bin\wch-riscv.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+        <debugger kind="GDB">E:\MounRiver\MounRiver_Studio\toolchain\RISC-V Embedded GCC\bin\riscv-none-embed-gdb.exe</debugger>
+      </openocd>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="make" run_configuration_type="MAKEFILE_TARGET_RUN_CONFIGURATION" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.green_firm" />
+      <item itemvalue="Makefile 目标.make" />
+      <item itemvalue="OpenOCD 下载并运行.flash" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="2cbeebac-3148-4070-af6c-888821d467a5" name="变更" comment="" />
+      <created>1691064436295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691064436295</updated>
+      <workItem from="1691064437491" duration="435000" />
+      <workItem from="1691064885682" duration="563000" />
+      <workItem from="1691065672783" duration="903000" />
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="CMakeLineBreakpoint">
+          <url>file://$PROJECT_DIR$/CMakeLists.txt</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
