@@ -14,7 +14,7 @@
 #include "upacker.h"
 #include "easy_ui.h"
 
-#define SERVO_FREQ          300                                  // Servo frequency(50-300)
+#define SERVO_FREQ          50                                  // Servo frequency(50-300)
 /*
  * Calculate servo PWM duty from turning angle.
  *
@@ -31,9 +31,9 @@
  * duty = ------------------------   (-90 <= x <= 90)
  *              1000 / freq
  */
-#define GetServoDuty(x)    ((float)(10000 * (1.56 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
-#define GetBottomServoDuty(x)    ((float)(10000 * (1.54 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
-#define GetUpServoDuty(x)    ((float)(10000 * (1.58 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetServoDuty(x)    (roundf((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ)))
+#define GetBottomServoDuty(x)    ((float)(10000 * (1.53 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetUpServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 
 //#define GetServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 //#define GetBottomServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))

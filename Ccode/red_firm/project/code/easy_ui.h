@@ -79,7 +79,7 @@ extern float GetBatteryVoltage();
 #define EasyUIGetBatVoltage()                                   (GetBatteryVoltage())
 #define EasyUIDelay_ms(time)                                    (system_delay_ms(time))
 
-typedef     double      paramType;
+typedef     float      paramType;
 
 typedef enum
 {

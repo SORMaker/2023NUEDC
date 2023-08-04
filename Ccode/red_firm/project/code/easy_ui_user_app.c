@@ -43,6 +43,16 @@ void EventSquareLoop(EasyUIItem_t *item)
 void EventRunLoop(EasyUIItem_t *item)
 {
     BufferFinish = 2;
+//    vofaData[4] = GetUpServoDuty(
+//            atanf(heightPerPixel * servoCoord[pointIndex][1] / 100.0f) * RAD_TO_DEGREE);
+//    dutyUp = PWM_CalServoDuty(vofaData[4]);
+//    if (dutyUpLast == 0)
+//        dutyUpLast = dutyUp;
+//    vofaData[5] = GetBottomServoDuty(
+//            -atanf(widthPerPixel * servoCoord[pointIndex++][0] / 100.0f) * RAD_TO_DEGREE);
+//    dutyDown = PWM_CalServoDuty(vofaData[5]);
+//    if (dutyDownLast == 0)
+//        dutyDownLast = dutyDown;
     pit_enable(TIM2_PIT);
 //    if (receiveSuccess)
 //    {
@@ -75,6 +85,7 @@ void CornerUpLeftHandler(void)
     EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
     pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[0][1]));
+//    system_delay_ms(300);
     pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[0][0]));
 
     if (opnUp)
@@ -110,6 +121,7 @@ void CornerUpRightHandler(void)
     EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
     pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[1][1]));
+//    system_delay_ms(300);
     pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[1][0]));
 
     if (opnUp)
@@ -145,6 +157,7 @@ void CornerDownRightHandler(void)
     EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
     pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[2][1]));
+//    system_delay_ms(300);
     pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[2][0]));
 
     if (opnUp)

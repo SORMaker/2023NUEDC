@@ -32,23 +32,23 @@
 
 typedef struct
 {
-    double kp;           // Kp
-    double ki;           // Ki
-    double kd;           // Kd
-    double targetVal;    // Target value
-    double outputLimit;  // Output limitation defined by device
-    double integralMax;  // Max of PID output which is used to limit integral error
-    double errMax;       // Error larger than this will separate the integral
-    double errMin;       // Error larger than this and smaller than errMax will decrease the coefficient of integral
+    float kp;           // Kp
+    float ki;           // Ki
+    float kd;           // Kd
+    float targetVal;    // Target value
+    float outputLimit;  // Output limitation defined by device
+    float integralMax;  // Max of PID output which is used to limit integral error
+    float errMax;       // Error larger than this will separate the integral
+    float errMin;       // Error larger than this and smaller than errMax will decrease the coefficient of integral
 
-    double lastErr;      // Last time error
-    double preLastErr;   // Last time error of last time
-    double out;          // Output
+    float lastErr;      // Last time error
+    float preLastErr;   // Last time error of last time
+    float out;          // Output
 } PidParam_t;
 
-double ConfigIntegral(double error, PidParam_t *pid);
+paramType ConfigIntegral(paramType error, PidParam_t *pid);
 
-int32_t PidIncControl(PidParam_t *pid, double nowData);
-int32_t PidPosControl(PidParam_t *pid, double nowData);
+int32_t PidIncControl(PidParam_t *pid, paramType nowData);
+int32_t PidPosControl(PidParam_t *pid, paramType nowData);
 
 #endif
