@@ -19,9 +19,9 @@
 #include "upacker.h"
 #include "ctrl.h"
 #include "cursor.h"
-//#include "easy_ui_user_app.h"
-//#include "easy_ui.h"
-//#include "easy_key.h"
+#include "easy_ui_user_app.h"
+#include "easy_ui.h"
+#include "easy_key.h"
 
 extern uint32 now_tick;
 #define BEEP_PWM_PIN TIM8_PWM_MAP1_CH4_C13

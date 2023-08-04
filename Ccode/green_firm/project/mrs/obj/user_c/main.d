@@ -87,7 +87,16 @@ user_c/main.o: \
  F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/inc_all.h \
  F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/buzzer.h \
  F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/upacker.h \
- F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/cursor.h
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/cursor.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_ui_user_app.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_ui.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_key.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/user_flash.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/user_ips114.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_common/zf_common_font.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_common/zf_common_function.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_driver/zf_driver_soft_spi.h \
+ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/profile_photo_erbws.h
 
 F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_common/zf_common_headfile.h:
 
@@ -264,3 +273,21 @@ F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/buzzer.h:
 F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/upacker.h:
 
 F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/cursor.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_ui_user_app.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_ui.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/easy_key.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/user_flash.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/user_ips114.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_common/zf_common_font.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_common/zf_common_function.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\libraries\zf_driver/zf_driver_soft_spi.h:
+
+F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code/profile_photo_erbws.h:

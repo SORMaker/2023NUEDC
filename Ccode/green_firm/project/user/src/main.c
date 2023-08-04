@@ -34,10 +34,13 @@
 ********************************************************************************************************************/
 #include "zf_common_headfile.h"
 #include "inc_all.h"
+
 void packReceiveHandle(uint8_t *d, uint16_t s) {
     rxData.cx = (d[1] << 8) | d[0];
     rxData.cy = ((d[3] << 8) | d[2]);
-    printf("%d %d\n", rxData.cx, rxData.cy);
+    if(rxData.cx!=0||rxData.cy!=0)
+        beepTime=100;
+//    printf("%d %d\n", rxData.cx, rxData.cy);
 }
 
 void packSendHandle(uint8_t *d, uint16_t s) {
@@ -47,8 +50,8 @@ void packSendHandle(uint8_t *d, uint16_t s) {
 //        printf("%c\n",i);
 //    }
 }
-int main (void)
-{
+
+int main(void) {
     clock_init(SYSTEM_CLOCK_120M);      // 初始化芯片时钟 工作频率为 120MHz
     debug_init();                       // 务必保留，本函数用于初始化MPU 时钟 调试串口
 
@@ -57,14 +60,16 @@ int main (void)
     upacker_inst_t myPackPtr = &myPack;
     upacker_init(myPackPtr, &packReceiveHandle, &packSendHandle);
     // 此处编写用户代码 例如外设初始化代码等
-//    MenuInit();
-//    EasyUIInit(1);
+    gpio_init(A8,GPI,1,GPI_PULL_UP);
+    MenuInit();
+    EasyUIInit(1);
     pwmInit();
     pidAllInit();
     BuzzerInit();
-    cursorInit(&global_cursor, 0, 0, 0, 0);
+    cursorInit(&global_cursor, 0, 0, 0, 0, 0, 0);
     // 此处编写用户代码 例如外设初始化代码等
     taskTimAllInit();
+    cursorResume(&global_cursor);
     system_delay_ms(2000);
     angleSet(SERVO_YAW_PIN, 0);
     angleSet(SERVO_PITCH_PIN, 0);
@@ -77,18 +82,16 @@ int main (void)
     cursorSetPointSport(&global_cursor, -25, -25, 2000);
     while (global_cursor.is_sporting);
     beepTime = 100;
-    cursorSetPointSport(&global_cursor, -25, 25, 2000);
+    cursorSetPointSport(&global_cursor, -25, 25,2000);
     while (global_cursor.is_sporting);
     beepTime = 100;
     cursorSetPointSport(&global_cursor, 25, 25, 2000);
     while (global_cursor.is_sporting);
     beepTime = 500;
-    cursorSetPointSport(&global_cursor, 0, 0, 100);
-
-
+    cursorSetPointSport(&global_cursor, 0, 0, 500);
     uart_rx_interrupt(UART_7, ENABLE);
     while (1) {
-//        EasyUI(20);
+        EasyUI(20);
         // 此处编写需要循环执行的代码
         if (BufferFinish == 1) {
             upacker_unpack(myPackPtr, Buffer, sizeof(Buffer));

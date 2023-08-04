@@ -3,8 +3,8 @@
 #include "zf_common_headfile.h"
 #include "inc_all.h"
 
-
+extern bool chase_enable;
 void taskTimAllInit(void);
-void ServoControl(void);
+void ChasingControl(void);
 
 #endif

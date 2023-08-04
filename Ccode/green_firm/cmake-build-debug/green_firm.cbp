@@ -576,6 +576,24 @@
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/cursor.h">
 			<Option target="green_firm"/>
 		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_key.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_key.h">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui.h">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui_user_app.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui_user_app.h">
+			<Option target="green_firm"/>
+		</Unit>
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/inc_all.h">
 			<Option target="green_firm"/>
 		</Unit>
@@ -591,10 +609,28 @@
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/pid.h">
 			<Option target="green_firm"/>
 		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/profile_photo_erbws.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/profile_photo_erbws.h">
+			<Option target="green_firm"/>
+		</Unit>
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/upacker.c">
 			<Option target="green_firm"/>
 		</Unit>
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/upacker.h">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_flash.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_flash.h">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_ips114.c">
+			<Option target="green_firm"/>
+		</Unit>
+		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_ips114.h">
 			<Option target="green_firm"/>
 		</Unit>
 		<Unit filename="F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/user/inc/isr.h">

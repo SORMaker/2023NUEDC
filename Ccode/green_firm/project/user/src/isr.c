@@ -313,7 +313,7 @@ void TIM1_UP_IRQHandler(void)
     if(TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
     {
         TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
-        ServoControl();
+        ChasingControl();
         cursorHandler(&global_cursor);
     }
 }
@@ -334,10 +334,10 @@ void TIM3_IRQHandler(void)
     if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
     {
        TIM_ClearITPendingBit(TIM3, TIM_IT_Update );
-//       EasyKeyScanKeyState();
-//       EasyKeyUserApp();
-//       EasyUIKeyActionMonitor();
-        Beep();
+       EasyKeyScanKeyState();
+       EasyKeyUserApp();
+       EasyUIKeyActionMonitor();
+       Beep();
     }
 }
 

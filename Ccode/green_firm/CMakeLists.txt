@@ -183,4 +183,14 @@ add_executable(green_firm
         project/code/upacker.h
         project/user/inc/isr.h
         project/user/src/isr.c
-        project/user/src/main.c)
+        project/user/src/main.c
+        project/code/user_ips114.c
+        project/code/user_ips114.h
+        project/code/easy_ui.c
+        project/code/easy_ui.h
+        project/code/profile_photo_erbws.c
+        project/code/profile_photo_erbws.h
+        project/code/easy_ui_user_app.c
+        project/code/easy_ui_user_app.h
+        project/code/easy_key.c
+        project/code/user_flash.c)

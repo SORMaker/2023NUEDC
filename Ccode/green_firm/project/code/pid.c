@@ -13,8 +13,8 @@
 
 bool preset1 = false, preset2 = false, preset3 = false;
 // PID struct define
-PID_TypeDef dirYawPid;
-PID_TypeDef dirPitchPid;
+PID_TypeDef chaseXPid;
+PID_TypeDef chaseYPid;
 void PID_Reset(PID_TypeDef	*pid, float kp, float ki, float kd)
 {
     pid->Kp = kp;
@@ -36,12 +36,12 @@ void PID_Reset(PID_TypeDef	*pid, float kp, float ki, float kd)
   */
 void PID_Init(
     PID_TypeDef*	pid,
-    uint32_t 			mode,
+    uint32_t 		mode,
     float 			maxout,
     float 			intergral_limit,
-    float 				kp,
-    float 				ki,
-    float 				kd)
+    float 			kp,
+    float 			ki,
+    float 			kd)
 {
     pid->IntegralLimit = intergral_limit;
     pid->MaxOutput = maxout;
@@ -113,11 +113,11 @@ float PID_Calculate(PID_TypeDef *pid, float target, float feedback)
 }
 void pidClear(PID_TypeDef *pid)
 {
-    pid->err[NOW] = 0;
-    pid->err[LAST] = 0;
-    pid->err[LLAST] = 0;
+    memset(pid->err,0, sizeof(float)*3);
+    memset(pid->target,0, sizeof(float)*3);
     pid->last_delta_out = 0;
     pid->delta_u = 0;
+    pid->delta_out = 0;
     pid->dout = 0;
     pid->iout = 0;
     pid->pout = 0;
@@ -139,7 +139,6 @@ void pidAllInit(void)
   * @retval None
   */
 
-#define SERVO_MAX_ANGLE 10.0
-	PID_Init(&dirYawPid,POSITION_PID,SERVO_MAX_ANGLE,0,-0.045f,0,0);//¶æ»úYAW   PD
-    PID_Init(&dirYawPid,POSITION_PID,SERVO_MAX_ANGLE,0,-0.045f,0,0);//¶æ»úPITCH PD
+	PID_Init(&chaseXPid,DELTA_PID,GetYawServoDuty(45),0,-1.0f,0,0);  // P
+    PID_Init(&chaseYPid,DELTA_PID, GetPitchServoDuty(45),0,-1.0f,0,0);  // P
 }

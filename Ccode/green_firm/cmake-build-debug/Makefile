@@ -2024,6 +2024,78 @@ project/code/cursor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/cursor.c.s
 .PHONY : project/code/cursor.c.s
 
+project/code/easy_key.obj: project/code/easy_key.c.obj
+.PHONY : project/code/easy_key.obj
+
+# target to build an object file
+project/code/easy_key.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_key.c.obj
+.PHONY : project/code/easy_key.c.obj
+
+project/code/easy_key.i: project/code/easy_key.c.i
+.PHONY : project/code/easy_key.i
+
+# target to preprocess a source file
+project/code/easy_key.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_key.c.i
+.PHONY : project/code/easy_key.c.i
+
+project/code/easy_key.s: project/code/easy_key.c.s
+.PHONY : project/code/easy_key.s
+
+# target to generate assembly for a file
+project/code/easy_key.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_key.c.s
+.PHONY : project/code/easy_key.c.s
+
+project/code/easy_ui.obj: project/code/easy_ui.c.obj
+.PHONY : project/code/easy_ui.obj
+
+# target to build an object file
+project/code/easy_ui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj
+.PHONY : project/code/easy_ui.c.obj
+
+project/code/easy_ui.i: project/code/easy_ui.c.i
+.PHONY : project/code/easy_ui.i
+
+# target to preprocess a source file
+project/code/easy_ui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui.c.i
+.PHONY : project/code/easy_ui.c.i
+
+project/code/easy_ui.s: project/code/easy_ui.c.s
+.PHONY : project/code/easy_ui.s
+
+# target to generate assembly for a file
+project/code/easy_ui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui.c.s
+.PHONY : project/code/easy_ui.c.s
+
+project/code/easy_ui_user_app.obj: project/code/easy_ui_user_app.c.obj
+.PHONY : project/code/easy_ui_user_app.obj
+
+# target to build an object file
+project/code/easy_ui_user_app.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj
+.PHONY : project/code/easy_ui_user_app.c.obj
+
+project/code/easy_ui_user_app.i: project/code/easy_ui_user_app.c.i
+.PHONY : project/code/easy_ui_user_app.i
+
+# target to preprocess a source file
+project/code/easy_ui_user_app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.i
+.PHONY : project/code/easy_ui_user_app.c.i
+
+project/code/easy_ui_user_app.s: project/code/easy_ui_user_app.c.s
+.PHONY : project/code/easy_ui_user_app.s
+
+# target to generate assembly for a file
+project/code/easy_ui_user_app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.s
+.PHONY : project/code/easy_ui_user_app.c.s
+
 project/code/moto.obj: project/code/moto.c.obj
 .PHONY : project/code/moto.obj
 
@@ -2072,6 +2144,30 @@ project/code/pid.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/pid.c.s
 .PHONY : project/code/pid.c.s
 
+project/code/profile_photo_erbws.obj: project/code/profile_photo_erbws.c.obj
+.PHONY : project/code/profile_photo_erbws.obj
+
+# target to build an object file
+project/code/profile_photo_erbws.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj
+.PHONY : project/code/profile_photo_erbws.c.obj
+
+project/code/profile_photo_erbws.i: project/code/profile_photo_erbws.c.i
+.PHONY : project/code/profile_photo_erbws.i
+
+# target to preprocess a source file
+project/code/profile_photo_erbws.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.i
+.PHONY : project/code/profile_photo_erbws.c.i
+
+project/code/profile_photo_erbws.s: project/code/profile_photo_erbws.c.s
+.PHONY : project/code/profile_photo_erbws.s
+
+# target to generate assembly for a file
+project/code/profile_photo_erbws.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.s
+.PHONY : project/code/profile_photo_erbws.c.s
+
 project/code/upacker.obj: project/code/upacker.c.obj
 .PHONY : project/code/upacker.obj
 
@@ -2095,6 +2191,54 @@ project/code/upacker.s: project/code/upacker.c.s
 project/code/upacker.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/upacker.c.s
 .PHONY : project/code/upacker.c.s
+
+project/code/user_flash.obj: project/code/user_flash.c.obj
+.PHONY : project/code/user_flash.obj
+
+# target to build an object file
+project/code/user_flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_flash.c.obj
+.PHONY : project/code/user_flash.c.obj
+
+project/code/user_flash.i: project/code/user_flash.c.i
+.PHONY : project/code/user_flash.i
+
+# target to preprocess a source file
+project/code/user_flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_flash.c.i
+.PHONY : project/code/user_flash.c.i
+
+project/code/user_flash.s: project/code/user_flash.c.s
+.PHONY : project/code/user_flash.s
+
+# target to generate assembly for a file
+project/code/user_flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_flash.c.s
+.PHONY : project/code/user_flash.c.s
+
+project/code/user_ips114.obj: project/code/user_ips114.c.obj
+.PHONY : project/code/user_ips114.obj
+
+# target to build an object file
+project/code/user_ips114.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj
+.PHONY : project/code/user_ips114.c.obj
+
+project/code/user_ips114.i: project/code/user_ips114.c.i
+.PHONY : project/code/user_ips114.i
+
+# target to preprocess a source file
+project/code/user_ips114.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_ips114.c.i
+.PHONY : project/code/user_ips114.c.i
+
+project/code/user_ips114.s: project/code/user_ips114.c.s
+.PHONY : project/code/user_ips114.s
+
+# target to generate assembly for a file
+project/code/user_ips114.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\green_firm.dir\build.make CMakeFiles/green_firm.dir/project/code/user_ips114.c.s
+.PHONY : project/code/user_ips114.c.s
 
 project/user/src/isr.obj: project/user/src/isr.c.obj
 .PHONY : project/user/src/isr.obj
@@ -2390,15 +2534,33 @@ help:
 	@echo ... project/code/cursor.obj
 	@echo ... project/code/cursor.i
 	@echo ... project/code/cursor.s
+	@echo ... project/code/easy_key.obj
+	@echo ... project/code/easy_key.i
+	@echo ... project/code/easy_key.s
+	@echo ... project/code/easy_ui.obj
+	@echo ... project/code/easy_ui.i
+	@echo ... project/code/easy_ui.s
+	@echo ... project/code/easy_ui_user_app.obj
+	@echo ... project/code/easy_ui_user_app.i
+	@echo ... project/code/easy_ui_user_app.s
 	@echo ... project/code/moto.obj
 	@echo ... project/code/moto.i
 	@echo ... project/code/moto.s
 	@echo ... project/code/pid.obj
 	@echo ... project/code/pid.i
 	@echo ... project/code/pid.s
+	@echo ... project/code/profile_photo_erbws.obj
+	@echo ... project/code/profile_photo_erbws.i
+	@echo ... project/code/profile_photo_erbws.s
 	@echo ... project/code/upacker.obj
 	@echo ... project/code/upacker.i
 	@echo ... project/code/upacker.s
+	@echo ... project/code/user_flash.obj
+	@echo ... project/code/user_flash.i
+	@echo ... project/code/user_flash.s
+	@echo ... project/code/user_ips114.obj
+	@echo ... project/code/user_ips114.i
+	@echo ... project/code/user_ips114.s
 	@echo ... project/user/src/isr.obj
 	@echo ... project/user/src/isr.i
 	@echo ... project/user/src/isr.s

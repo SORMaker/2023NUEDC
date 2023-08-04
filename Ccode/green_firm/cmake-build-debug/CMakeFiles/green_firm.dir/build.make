@@ -1328,6 +1328,96 @@ CMakeFiles/green_firm.dir/project/user/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/user/src/main.c.s"
 	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\user\src\main.c -o CMakeFiles\green_firm.dir\project\user\src\main.c.s
 
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_ips114.c
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj -MF CMakeFiles\green_firm.dir\project\code\user_ips114.c.obj.d -o CMakeFiles\green_firm.dir\project\code\user_ips114.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_ips114.c
+
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/user_ips114.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_ips114.c > CMakeFiles\green_firm.dir\project\code\user_ips114.c.i
+
+CMakeFiles/green_firm.dir/project/code/user_ips114.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/user_ips114.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_ips114.c -o CMakeFiles\green_firm.dir\project\code\user_ips114.c.s
+
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui.c
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj -MF CMakeFiles\green_firm.dir\project\code\easy_ui.c.obj.d -o CMakeFiles\green_firm.dir\project\code\easy_ui.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui.c
+
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/easy_ui.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui.c > CMakeFiles\green_firm.dir\project\code\easy_ui.c.i
+
+CMakeFiles/green_firm.dir/project/code/easy_ui.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/easy_ui.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui.c -o CMakeFiles\green_firm.dir\project\code\easy_ui.c.s
+
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/profile_photo_erbws.c
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj -MF CMakeFiles\green_firm.dir\project\code\profile_photo_erbws.c.obj.d -o CMakeFiles\green_firm.dir\project\code\profile_photo_erbws.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\profile_photo_erbws.c
+
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\profile_photo_erbws.c > CMakeFiles\green_firm.dir\project\code\profile_photo_erbws.c.i
+
+CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\profile_photo_erbws.c -o CMakeFiles\green_firm.dir\project\code\profile_photo_erbws.c.s
+
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_ui_user_app.c
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj -MF CMakeFiles\green_firm.dir\project\code\easy_ui_user_app.c.obj.d -o CMakeFiles\green_firm.dir\project\code\easy_ui_user_app.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui_user_app.c
+
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui_user_app.c > CMakeFiles\green_firm.dir\project\code\easy_ui_user_app.c.i
+
+CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_ui_user_app.c -o CMakeFiles\green_firm.dir\project\code\easy_ui_user_app.c.s
+
+CMakeFiles/green_firm.dir/project/code/easy_key.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/easy_key.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/easy_key.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/easy_key.c
+CMakeFiles/green_firm.dir/project/code/easy_key.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/green_firm.dir/project/code/easy_key.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/easy_key.c.obj -MF CMakeFiles\green_firm.dir\project\code\easy_key.c.obj.d -o CMakeFiles\green_firm.dir\project\code\easy_key.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_key.c
+
+CMakeFiles/green_firm.dir/project/code/easy_key.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/easy_key.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_key.c > CMakeFiles\green_firm.dir\project\code\easy_key.c.i
+
+CMakeFiles/green_firm.dir/project/code/easy_key.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/easy_key.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\easy_key.c -o CMakeFiles\green_firm.dir\project\code\easy_key.c.s
+
+CMakeFiles/green_firm.dir/project/code/user_flash.c.obj: CMakeFiles/green_firm.dir/flags.make
+CMakeFiles/green_firm.dir/project/code/user_flash.c.obj: CMakeFiles/green_firm.dir/includes_C.rsp
+CMakeFiles/green_firm.dir/project/code/user_flash.c.obj: F:/TICup/Firmware/2023NUEDC/Ccode/green_firm/project/code/user_flash.c
+CMakeFiles/green_firm.dir/project/code/user_flash.c.obj: CMakeFiles/green_firm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/green_firm.dir/project/code/user_flash.c.obj"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/green_firm.dir/project/code/user_flash.c.obj -MF CMakeFiles\green_firm.dir\project\code\user_flash.c.obj.d -o CMakeFiles\green_firm.dir\project\code\user_flash.c.obj -c F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_flash.c
+
+CMakeFiles/green_firm.dir/project/code/user_flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/green_firm.dir/project/code/user_flash.c.i"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_flash.c > CMakeFiles\green_firm.dir\project\code\user_flash.c.i
+
+CMakeFiles/green_firm.dir/project/code/user_flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/green_firm.dir/project/code/user_flash.c.s"
+	"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\code\user_flash.c -o CMakeFiles\green_firm.dir\project\code\user_flash.c.s
+
 # Object files for target green_firm
 green_firm_OBJECTS = \
 "CMakeFiles/green_firm.dir/libraries/sdk/Core/core_riscv.c.obj" \
@@ -1413,7 +1503,13 @@ green_firm_OBJECTS = \
 "CMakeFiles/green_firm.dir/project/code/pid.c.obj" \
 "CMakeFiles/green_firm.dir/project/code/upacker.c.obj" \
 "CMakeFiles/green_firm.dir/project/user/src/isr.c.obj" \
-"CMakeFiles/green_firm.dir/project/user/src/main.c.obj"
+"CMakeFiles/green_firm.dir/project/user/src/main.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/easy_key.c.obj" \
+"CMakeFiles/green_firm.dir/project/code/user_flash.c.obj"
 
 # External object files for target green_firm
 green_firm_EXTERNAL_OBJECTS =
@@ -1502,11 +1598,17 @@ green_firm.exe: CMakeFiles/green_firm.dir/project/code/pid.c.obj
 green_firm.exe: CMakeFiles/green_firm.dir/project/code/upacker.c.obj
 green_firm.exe: CMakeFiles/green_firm.dir/project/user/src/isr.c.obj
 green_firm.exe: CMakeFiles/green_firm.dir/project/user/src/main.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/user_ips114.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/easy_ui.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/profile_photo_erbws.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/easy_ui_user_app.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/easy_key.c.obj
+green_firm.exe: CMakeFiles/green_firm.dir/project/code/user_flash.c.obj
 green_firm.exe: CMakeFiles/green_firm.dir/build.make
 green_firm.exe: CMakeFiles/green_firm.dir/linklibs.rsp
 green_firm.exe: CMakeFiles/green_firm.dir/objects1.rsp
 green_firm.exe: CMakeFiles/green_firm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Linking C executable green_firm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Linking C executable green_firm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\green_firm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

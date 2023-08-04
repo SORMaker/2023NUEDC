@@ -49,8 +49,8 @@ typedef struct _PID_Typedef
 } PID_TypeDef;
 
 // PID struct define
-extern PID_TypeDef dirYawPid;
-extern PID_TypeDef dirPitchPid;
+extern PID_TypeDef chaseXPid;
+extern PID_TypeDef chaseYPid;
 
 void PID_Init(
         PID_TypeDef*	pid,

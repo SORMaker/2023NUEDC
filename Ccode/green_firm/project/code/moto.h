@@ -21,7 +21,7 @@
  *              1000 / freq
  * 
  */
-#define GetYawServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.57 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetYawServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.48 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 #define GetPitchServoDuty(x)    ((float)(PWM_DUTY_MAX * (1.54 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 
 

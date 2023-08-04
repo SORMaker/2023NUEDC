@@ -11,6 +11,10 @@
 typedef struct {
     float biasX;
     float biasY;
+    float biasXLeft;
+    float biasXRight;
+    float biasYTop;
+    float biasYBottom;
     float X;
     float Y;
     float sportX_des;
@@ -27,7 +31,9 @@ typedef struct {
 extern Cursor global_cursor;
 extern float global_X,global_Y,global_yaw,global_pitch;
 void cursorReset(Cursor *cursor);
-void cursorInit(Cursor *cursor, float x0, float y0, float x_bias, float y_bias);
+void cursorResume(Cursor *cursor);
+void cursorHalt(Cursor *cursor);
+void cursorInit(Cursor *cursor, float x0, float y0, float biasXLeft, float biasXRight, float biasYTop, float biasYBottom);
 void cursorSetPoint(Cursor *cursor, float x_des,float y_des);
 void cursorSetPointSport(Cursor *cursor, float x, float y, uint16 ms);
 void cursorHandler(Cursor *cursor);

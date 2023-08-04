@@ -6,19 +6,32 @@ Cursor global_cursor = {0};
 void cursorReset(Cursor *cursor) {
     memset(cursor, 0, sizeof(Cursor));
 }
-
-void cursorInit(Cursor *cursor, float x0, float y0, float x_bias, float y_bias) {
+void cursorResume(Cursor *cursor){
+    cursor->is_halt = false;
+}
+void cursorHalt(Cursor *cursor){
+    cursor->is_halt = true;
+}
+void cursorInit(Cursor *cursor, float x0, float y0, float biasXLeft, float biasXRight, float biasYTop, float biasYBottom) {
     cursorReset(cursor);
-    cursor->biasX = x_bias;
-    cursor->biasY = y_bias;
-    cursorSetPoint(cursor, x0, y0);
+    cursor->biasXLeft = biasXLeft;
+    cursor->biasXRight = biasXRight;
+    cursor->biasYTop = biasYTop;
+    cursor->biasYBottom = biasYBottom;
+    cursor->is_halt = true;
+    cursor->biasX = x0;
+    cursor->biasY = y0;
+    cursorSetPoint(cursor, 0, 0);
 }
 
 void cursorSetPoint(Cursor *cursor, float x_des, float y_des) {
-    if(cursor->is_halt)return;
     float yaw_des, pitch_des;
-    yaw_des = RAD_TO_ANGLE(atanf((float) x_des / 100));
-    pitch_des = RAD_TO_ANGLE(-atanf((float) y_des / 100));
+    float x_des_cali, y_des_cali;
+
+    x_des_cali = cursor->biasX+(x_des<0?(x_des+cursor->biasXLeft* fabsf(x_des)/25.0f):(x_des+cursor->biasXRight* fabsf(x_des)/25.0f));
+    y_des_cali = cursor->biasY+(y_des<0?(y_des+cursor->biasYBottom* fabsf(y_des)/25.0f):(y_des+cursor->biasYTop* fabsf(y_des)/25.0f));
+    yaw_des = RAD_TO_ANGLE(atanf((float) x_des_cali / 100));
+    pitch_des = RAD_TO_ANGLE(-atanf((float) y_des_cali / 100));
     angleSet(SERVO_YAW_PIN, yaw_des);
     angleSet(SERVO_PITCH_PIN, pitch_des);
     cursor->yaw = yaw_des;
@@ -45,21 +58,34 @@ void cursorSetAngle(Cursor *cursor, float yaw, float pitch) {
 }
 
 void cursorHandler(Cursor *cursor) {
-    if (cursor->is_sporting == false && cursor->is_halt==true){
+    static uint8 halt_flag=0;
+    if(gpio_get_level(A8)==0)
+    {
+        while (gpio_get_level(A8)==0);
+        halt_flag++;
+        if(halt_flag%2==0)
+            cursorResume(cursor);
+        else
+            cursorHalt(cursor);
+        beepTime=1000;
+    }
+    if (cursor->is_halt==true){
         if(cursor->timeStamp%200)  // 2ms
         {
-            if(cursor->X!=global_X||cursor->Y!=global_Y){
-                cursorSetPoint(cursor,global_X,global_Y);
-                global_yaw = cursor->yaw;
-                global_pitch = cursor->pitch;
-            }
-            if(cursor->yaw!=global_yaw||cursor->pitch!=global_pitch){
-                cursorSetAngle(cursor,global_yaw,global_pitch);
-                global_X = cursor->X;
-                global_Y = cursor->Y;
-            }
+//            if(cursor->X!=global_X||cursor->Y!=global_Y){
+//                cursorSetPoint(cursor,global_X,global_Y);
+//                global_yaw = cursor->yaw;
+//                global_pitch = cursor->pitch;
+//            }
+//            if(cursor->yaw!=global_yaw||cursor->pitch!=global_pitch){
+//                cursorSetAngle(cursor,global_yaw,global_pitch);
+//                global_X = cursor->X;
+//                global_Y = cursor->Y;
+//            }
         }
+        return;
     }
+    if(cursor->is_sporting==false)return;
     float x_target, y_target;
     x_target = cursor->X;
     y_target = cursor->Y;
