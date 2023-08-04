@@ -34,20 +34,20 @@
 ********************************************************************************************************************/
 #include "zf_common_headfile.h"
 
-uint8_t receiveSuccess = 1;
+uint8_t receiveSuccess = 0;
 
 void packReceiveHandle(uint8_t *d, uint16_t s)
 {
-    rxData.cx = (d[1] << 8) | d[0];
-    rxData.cy =  ((d[3] << 8)| d[2]);
-    cornerPoint[0][0] = (d[5]<<8 | d[4]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[0][1] = FRAME_HEIGHT / 2 - 1 - (d[7]<<8 | d[6]);
-    cornerPoint[1][0] = (d[9]<<8 | d[8]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[1][1] = FRAME_HEIGHT / 2 - 1 - (d[11]<<8 | d[10]);
-    cornerPoint[2][0] = (d[13]<<8 | d[12]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[2][1] = FRAME_HEIGHT / 2 - 1 - (d[15]<<8 | d[14]);
-    cornerPoint[3][0] = (d[17]<<8 | d[16]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[3][1] = FRAME_HEIGHT / 2 - 1 - (d[19]<<8 | d[18]);
+    rxData.cx = (d[1] << 8) | d[0] - FRAME_WIDTH / 2 - 1;
+    rxData.cy =  FRAME_HEIGHT / 2 - 1 - ((d[3] << 8)| d[2]);
+    cornerPoint[3][0] = (d[5]<<8 | d[4]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[3][1] = FRAME_HEIGHT / 2 - 1 - (d[7]<<8 | d[6]);
+    cornerPoint[2][0] = (d[9]<<8 | d[8]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[2][1] = FRAME_HEIGHT / 2 - 1 - (d[11]<<8 | d[10]);
+    cornerPoint[1][0] = (d[13]<<8 | d[12]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[1][1] = FRAME_HEIGHT / 2 - 1 - (d[15]<<8 | d[14]);
+    cornerPoint[0][0] = (d[17]<<8 | d[16]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[0][1] = FRAME_HEIGHT / 2 - 1 - (d[19]<<8 | d[18]);
     receiveSuccess = d[20];
     printf("%d %d %d %d %d %d %d %d %d %d %d\n",rxData.cx,rxData.cy ,
            (d[5]<<8 | d[4]),
@@ -69,10 +69,16 @@ void packSendHandle(uint8_t *d, uint16_t s)
 //    }
 }
 
-void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty)
+uint16_t PWM_CalServoDuty(uint32 duty)
 {
     duty = Limitation(duty, (SERVO_MID-SERVO_DUTY_MAX), (SERVO_MID + SERVO_DUTY_MAX));
-    pwm_set_duty(pin, duty);
+//    pwm_set_duty(pin, duty);
+    uint16_t match_temp;
+    uint16_t period_temp;
+
+    period_temp = TIM4->ATRLR;                             // 获取定时器的周期值
+    match_temp = period_temp * duty / PWM_DUTY_MAX;             // 占空比
+    return match_temp;
 }
 
 int main (void)
@@ -82,18 +88,6 @@ int main (void)
 
     MenuInit();
     EasyUIInit(1);
-//    vofaData[0] = cornerPoint[0][0];
-//    vofaData[1] = cornerPoint[0][1];
-//    VofaSendFrame();
-//    vofaData[0] = cornerPoint[1][0];
-//    vofaData[1] = cornerPoint[1][1];
-//    VofaSendFrame();
-//    vofaData[0] = cornerPoint[2][0];
-//    vofaData[1] = cornerPoint[2][1];
-//    VofaSendFrame();
-//    vofaData[0] = cornerPoint[3][0];
-//    vofaData[1] = cornerPoint[3][1];
-//    VofaSendFrame();
 
     uart_init(UART_7, 115200, UART7_MAP3_TX_E12, UART7_MAP3_RX_E13);
     upacker_inst myPack;
@@ -106,14 +100,13 @@ int main (void)
     pwm_init(TIM4_PWM_MAP1_CH1_D12, SERVO_FREQ, SERVO_UP_MID);          // Upper servo
     pwm_init(TIM4_PWM_MAP1_CH3_D14, SERVO_FREQ, SERVO_BOTTOM_MID);      // Bottom servo
     system_delay_ms(500);
-//    BuzzerInit();
-//    beepTime = 100;
-
-//    system_delay_ms(2000);
+    BuzzerInit();
+    beepTime = 200;
 
     EasyUITransitionAnim();
     pit_ms_init(TIM1_PIT, 10);
     pit_ms_init(TIM2_PIT, 10);
+    interrupt_set_priority(TIM2_IRQn, (1<<5) | 2);
     pit_disable(TIM2_PIT);
     extern uint16_t maxIndex;
 
@@ -127,7 +120,7 @@ int main (void)
             BufferFinish = 0;
             uart_rx_interrupt(UART_7,ENABLE);
         }
-        if (receiveSuccess)
+        if (receiveSuccess && BufferFinish != 2)
         {
             GetRectLine();
             maxIndex = GetLaserPoint();

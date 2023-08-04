@@ -27,13 +27,14 @@ extern void pwm_set_servo_duty(pwm_channel_enum pin, uint32 duty);
 
 void EventSquareLoop(EasyUIItem_t *item)
 {
-    pit_enable(TIM2_PIT);
+    BufferFinish = 2;
     maxIndex = LaserGoSquare();
-    functionIsRunning = false;
-    EasyUIBackgroundBlur();
+    pit_enable(TIM2_PIT);
 
     if (opnExit)
     {
+        pit_disable(TIM2_PIT);
+        BufferFinish = 1;
         functionIsRunning = false;
         EasyUIBackgroundBlur();
     }
@@ -41,6 +42,7 @@ void EventSquareLoop(EasyUIItem_t *item)
 
 void EventRunLoop(EasyUIItem_t *item)
 {
+    BufferFinish = 2;
     pit_enable(TIM2_PIT);
 //    if (receiveSuccess)
 //    {
@@ -52,6 +54,8 @@ void EventRunLoop(EasyUIItem_t *item)
 
     if (opnExit)
     {
+        pit_disable(TIM2_PIT);
+        BufferFinish = 1;
         functionIsRunning = false;
         EasyUIBackgroundBlur();
     }
@@ -61,27 +65,27 @@ void EventRunLoop(EasyUIItem_t *item)
 void CornerUpLeftHandler(void)
 {
     EasyUIDisplayStr(0, 0, "Up left Corner X and Y:");
-    EasyUIDisplayFloat(0, 1 * 16, squarePoint[0][0], 4, 0);
-    EasyUIDisplayFloat(0, 2 * 16, squarePoint[0][1], 4, 0);
-    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
-    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
+    EasyUIDisplayFloat(0, 1 * 10, squarePoint[0][0], 4, 0);
+    EasyUIDisplayFloat(0, 2 * 10, squarePoint[0][1], 4, 0);
+    EasyUIDisplayFloat(5 * 8, 1 * 10, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 10, rxData.cy, 4, 0);
 
-    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
-    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 6);
-    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 6);
+    EasyUIDisplayStr(0, 3 * 10, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 10, widthPerPixel, 4, 6);
+    EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
-    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[0][1]);
-    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[0][0]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[0][1]));
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[0][0]));
 
     if (opnUp)
-        squarePoint[0][1] += 10;
+        squarePoint[0][1] += 1;
     if (opnDown)
-        squarePoint[0][1] -= 10;
+        squarePoint[0][1] -= 1;
 
     if (opnForward)
-        squarePoint[0][0] -= 10;
+        squarePoint[0][0] -= 1;
     if (opnBackward)
-        squarePoint[0][0] += 10;
+        squarePoint[0][0] += 1;
 
     if (opnEnter)
     {
@@ -96,27 +100,27 @@ void CornerUpLeftHandler(void)
 void CornerUpRightHandler(void)
 {
     EasyUIDisplayStr(0, 0, "Up right Corner X and Y:");
-    EasyUIDisplayFloat(0, 1 * 16, squarePoint[1][0], 4, 0);
-    EasyUIDisplayFloat(0, 2 * 16, squarePoint[1][1], 4, 0);
-    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
-    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
+    EasyUIDisplayFloat(0, 1 * 10, squarePoint[1][0], 4, 0);
+    EasyUIDisplayFloat(0, 2 * 10, squarePoint[1][1], 4, 0);
+    EasyUIDisplayFloat(5 * 8, 1 * 10, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 10, rxData.cy, 4, 0);
 
-    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
-    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 6);
-    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 6);
+    EasyUIDisplayStr(0, 3 * 10, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 10, widthPerPixel, 4, 6);
+    EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
-    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[1][1]);
-    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[1][0]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[1][1]));
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[1][0]));
 
     if (opnUp)
-        squarePoint[1][1] += 10;
+        squarePoint[1][1] += 1;
     if (opnDown)
-        squarePoint[1][1] -= 10;
+        squarePoint[1][1] -= 1;
 
     if (opnForward)
-        squarePoint[1][0] -= 10;
+        squarePoint[1][0] -= 1;
     if (opnBackward)
-        squarePoint[1][0] += 10;
+        squarePoint[1][0] += 1;
 
     if (opnEnter)
     {
@@ -131,27 +135,27 @@ void CornerUpRightHandler(void)
 void CornerDownRightHandler(void)
 {
     EasyUIDisplayStr(0, 0, "Down right Corner X and Y:");
-    EasyUIDisplayFloat(0, 1 * 16, squarePoint[2][0], 4, 6);
-    EasyUIDisplayFloat(0, 2 * 16, squarePoint[2][1], 4, 6);
-    EasyUIDisplayFloat(5 * 8, 1 * 16, rxData.cx, 4, 0);
-    EasyUIDisplayFloat(5 * 8, 2 * 16, rxData.cy, 4, 0);
+    EasyUIDisplayFloat(0, 1 * 10, squarePoint[2][0], 4, 0);
+    EasyUIDisplayFloat(0, 2 * 10, squarePoint[2][1], 4, 0);
+    EasyUIDisplayFloat(5 * 8, 1 * 10, rxData.cx, 4, 0);
+    EasyUIDisplayFloat(5 * 8, 2 * 10, rxData.cy, 4, 0);
 
-    EasyUIDisplayStr(0, 3 * 16, "Width / Height per pixel:");
-    EasyUIDisplayFloat(0, 4 * 16, widthPerPixel, 4, 0);
-    EasyUIDisplayFloat(0, 5 * 16, heightPerPixel, 4, 0);
+    EasyUIDisplayStr(0, 3 * 10, "Width / Height per pixel:");
+    EasyUIDisplayFloat(0, 4 * 10, widthPerPixel, 4, 6);
+    EasyUIDisplayFloat(0, 5 * 10, heightPerPixel, 4, 6);
 
-    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, (uint32_t)squarePoint[2][1]);
-    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, (uint32_t)squarePoint[2][0]);
+    pwm_set_duty(TIM4_PWM_MAP1_CH1_D12, GetUpServoDuty(squarePoint[2][1]));
+    pwm_set_duty(TIM4_PWM_MAP1_CH3_D14, GetBottomServoDuty(squarePoint[2][0]));
 
     if (opnUp)
-        squarePoint[2][1] += 10;
+        squarePoint[2][1] += 1;
     if (opnDown)
-        squarePoint[2][1] -= 10;
+        squarePoint[2][1] -= 1;
 
     if (opnForward)
-        squarePoint[2][0] -= 10;
+        squarePoint[2][0] -= 1;
     if (opnBackward)
-        squarePoint[2][0] += 10;
+        squarePoint[2][0] += 1;
 
     if (opnEnter)
     {
@@ -172,6 +176,7 @@ void CornerDownRightHandler(void)
  */
 void PageTeach(EasyUIPage_t *page)
 {
+//    pit_disable(TIM2_PIT);
     switch (teachState)
     {
     case 0:
