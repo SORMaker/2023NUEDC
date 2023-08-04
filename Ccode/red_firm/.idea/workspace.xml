@@ -24,21 +24,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/ctrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/easy_ui.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/easy_ui.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/pid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/buzzer.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/user/src/isr.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/isr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/user/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +192,8 @@
       <workItem from="1690959078864" duration="8958000" />
       <workItem from="1690968073954" duration="53079000" />
       <workItem from="1691081493191" duration="31812000" />
+      <workItem from="1691174455850" duration="3434000" />
+      <workItem from="1691178325085" duration="1200000" />
     </task>
     <servers />
   </component>
@@ -236,21 +234,21 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/project/code/ctrl.c</url>
-          <line>173</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/project/user/src/isr.c</url>
+          <line>407</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
-        <watch expression="servoCoord" language="ObjectiveC" />
-        <watch expression="teachCorner" language="ObjectiveC" />
+        <watch expression="l1" language="ObjectiveC" />
+        <watch expression="l2" language="ObjectiveC" />
+        <watch expression="l3" language="ObjectiveC" />
+        <watch expression="l4" language="ObjectiveC" />
         <watch expression="servoCoordBackup" language="ObjectiveC" />
-        <watch expression="dutyUp" language="ObjectiveC" />
-        <watch expression="dutyDown" language="ObjectiveC" />
-        <watch expression="dutyUpLast" language="ObjectiveC" />
-        <watch expression="dutyDownLast" language="ObjectiveC" />
+        <watch expression="maxIndex" language="ObjectiveC" />
+        <watch expression="cornerPoint" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

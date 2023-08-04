@@ -359,11 +359,14 @@ void TIM2_IRQHandler(void)
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
         if (pointIndex < maxIndex && BufferFinish == 2)
         {
-//            if (maxIndex == 6)
-//            {
-                if (tick++ < 40)
+            if (maxIndex == 5)
+            {
+                if (tick++ < 100)
                     return;
-//            }
+            }
+
+//            if (tick < 10)
+//                return;
 
             vofaData[4] = GetUpServoDuty(
                     atanf(heightPerPixel * servoCoord[pointIndex][1] / 100.0f) * RAD_TO_DEGREE);
@@ -400,7 +403,8 @@ void TIM2_IRQHandler(void)
             tick = 0;
         } else
         {
-            pit_disable(TIM2_PIT);
+//            pit_disable(TIM2_PIT);
+//            interrupt_disable(TIM2_IRQn);
             BufferFinish = 1;
             pointIndex = 0;
             maxIndex = 0;

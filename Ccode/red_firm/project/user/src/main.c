@@ -40,14 +40,14 @@ void packReceiveHandle(uint8_t *d, uint16_t s)
 {
     rxData.cx = (d[1] << 8) | d[0] - FRAME_WIDTH / 2 - 1;
     rxData.cy =  FRAME_HEIGHT / 2 - 1 - ((d[3] << 8)| d[2]);
-    cornerPoint[3][0] = (d[5]<<8 | d[4]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[3][1] = FRAME_HEIGHT / 2 - 1 - (d[7]<<8 | d[6]);
-    cornerPoint[2][0] = (d[9]<<8 | d[8]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[2][1] = FRAME_HEIGHT / 2 - 1 - (d[11]<<8 | d[10]);
-    cornerPoint[1][0] = (d[13]<<8 | d[12]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[1][1] = FRAME_HEIGHT / 2 - 1 - (d[15]<<8 | d[14]);
-    cornerPoint[0][0] = (d[17]<<8 | d[16]) - FRAME_WIDTH / 2 - 1;
-    cornerPoint[0][1] = FRAME_HEIGHT / 2 - 1 - (d[19]<<8 | d[18]);
+    cornerPoint[0][0] = (d[5]<<8 | d[4]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[0][1] = FRAME_HEIGHT / 2 - 1 - (d[7]<<8 | d[6]);
+    cornerPoint[1][0] = (d[9]<<8 | d[8]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[1][1] = FRAME_HEIGHT / 2 - 1 - (d[11]<<8 | d[10]);
+    cornerPoint[2][0] = (d[13]<<8 | d[12]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[2][1] = FRAME_HEIGHT / 2 - 1 - (d[15]<<8 | d[14]);
+    cornerPoint[3][0] = (d[17]<<8 | d[16]) - FRAME_WIDTH / 2 - 1;
+    cornerPoint[3][1] = FRAME_HEIGHT / 2 - 1 - (d[19]<<8 | d[18]);
     receiveSuccess = d[20];
     printf("%d %d %d %d %d %d %d %d %d %d %d\n",rxData.cx,rxData.cy ,
            (d[5]<<8 | d[4]),
@@ -105,7 +105,7 @@ int main (void)
 
     EasyUITransitionAnim();
     pit_ms_init(TIM1_PIT, 10);
-    pit_ms_init(TIM2_PIT, 10);
+    pit_ms_init(TIM2_PIT, 4);
     interrupt_set_priority(TIM2_IRQn, (1<<5) | 2);
     pit_disable(TIM2_PIT);
     extern uint16_t maxIndex;
@@ -124,6 +124,8 @@ int main (void)
         {
             GetRectLine();
             maxIndex = GetLaserPoint();
+//            beepTime = 100;
+//            system_delay_ms(200);
         }
         EasyUI(20);
 //        system_delay_ms(20);

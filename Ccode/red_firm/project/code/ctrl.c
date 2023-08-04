@@ -7,10 +7,10 @@
 #include "ctrl.h"
 
 // Test array
-//float cornerPoint[4][2] = {{50 - 111, 111 - 10},
-//                           {200 - 111, 111 - 30},
-//                           {180 - 111, 111 - 210},
-//                           {30 - 111, 111 - 180}};
+//float cornerPoint[4][2] = {{-31, 8},
+//                           {16, 27},
+//                           {27, -5},
+//                           {-18, -24}};
 //float cornerPoint[4][2] = {{20 - 111, 111 - 20},
 //                           {200 - 111, 111 - 20},
 //                           {200 - 111, 111 - 200},
@@ -30,11 +30,11 @@ volatile int8_t servoCoord[2000][2] = {0};    // [][1] Upper servo, [][0] Bottom
 uint16_t servoDuty[6][2] = {0};    // [][1] Upper servo, [][0] Bottom servo
 //uint16_t servoDuty[2000][2] = {0};    // [][1] Upper servo, [][0] Bottom servo
 float k1, k2, k3, k4, b1, b2, b3, b4, l1, l2, l3, l4;
-float x, y;
+float x, y, xLast = 0, yLast = 0;
 
 paramType widthPerPixel = 0.617283f;
-paramType heightPerPixel = 0.557894f;
-paramType unit = 1;
+paramType heightPerPixel = 0.537894f;
+paramType unit = 0.3f;
 
 
 void GetRectLine()
@@ -97,8 +97,8 @@ uint16_t LaserGoSquare(void)
     servoCoordBackup[cnt][1] = (int8_t)teachCorner[0][1];
     servoCoordBackup[cnt++][0] = (int8_t)teachCorner[0][0];
     
-    servoCoordBackup[cnt][1] = 0;
-    servoCoordBackup[cnt++][0] = 0;
+//    servoCoordBackup[cnt][1] = 0;
+//    servoCoordBackup[cnt++][0] = 0;
 
     memcpy(servoCoord, servoCoordBackup, sizeof(servoCoord));
 
@@ -177,8 +177,14 @@ uint16_t GetLaserPoint()
 
     for (float i = 0; i <= (l1 / unit); )
     {
-        x = cornerPoint[0][0] + unit * cosf(atanf(k1));
-        y = cornerPoint[0][1] + unit * sinf(atanf(k1));
+        x = cornerPoint[0][0] + unit * i * cosf(atanf(k1));
+        y = cornerPoint[0][1] + unit * i * sinf(atanf(k1));
+
+        if (x == xLast || y == yLast)
+            continue;
+
+        xLast = x;
+        yLast = y;
         servoCoordBackup[cnt][0] = (int8_t) roundf(x);
         servoCoordBackup[cnt++][1] = (int8_t) roundf(y);
         i += unit;
@@ -191,8 +197,14 @@ uint16_t GetLaserPoint()
         if (isinf(k2))
             x = cornerPoint[1][0];
         else
-            x = cornerPoint[1][0] + unit * cosf(atanf(k2));
-        y = cornerPoint[1][1] + unit * sinf(atanf(k2));
+            x = cornerPoint[1][0] + unit * i * cosf(atanf(k2));
+        y = cornerPoint[1][1] + unit * i * sinf(atanf(k2));
+
+        if (x == xLast || y == yLast)
+            continue;
+
+        xLast = x;
+        yLast = y;
         servoCoordBackup[cnt][0] = (int8_t) roundf(x);
         servoCoordBackup[cnt++][1] = (int8_t) roundf(y);
         i += unit;
@@ -203,8 +215,17 @@ uint16_t GetLaserPoint()
 
     for (float i = 0; i <= (l3 / unit); )
     {
-        x = cornerPoint[2][0] + unit * cosf(atanf(k3));
-        y = cornerPoint[2][1] + unit * sinf(atanf(k3));
+        x = cornerPoint[2][0] - unit * i * cosf(atanf(k3));
+        if (cornerPoint[2][1] > cornerPoint[3][1])
+            y = cornerPoint[2][1] - unit * i * sinf(atanf(k3));
+        else
+            y = cornerPoint[2][1] + unit * i * sinf(atanf(k3));
+
+        if (x == xLast || y == yLast)
+            continue;
+
+        xLast = x;
+        yLast = y;
         servoCoordBackup[cnt][0] = (int8_t) roundf(x);
         servoCoordBackup[cnt++][1] = (int8_t) roundf(y);
         i += unit;
@@ -217,9 +238,17 @@ uint16_t GetLaserPoint()
     {
         if (isinf(k4))
             x = cornerPoint[3][0];
+        else if (cornerPoint[3][0] < cornerPoint[0][0])
+            x = cornerPoint[3][0] + unit * i * cosf(atanf(k4));
         else
-            x = cornerPoint[3][0] + unit * cosf(atanf(k4));
-        y = cornerPoint[3][1] + unit * sinf(atanf(k4));
+            x = cornerPoint[3][0] - unit * i * cosf(atanf(k4));
+        y = cornerPoint[3][1] - unit * i * sinf(atanf(k4));
+
+        if (x == xLast || y == yLast)
+            continue;
+
+        xLast = x;
+        yLast = y;
         servoCoordBackup[cnt][0] = (int8_t) roundf(x);
         servoCoordBackup[cnt++][1] = (int8_t) roundf(y);
         i += unit;

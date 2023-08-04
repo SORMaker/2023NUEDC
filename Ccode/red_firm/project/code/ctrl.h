@@ -33,7 +33,7 @@
  */
 #define GetServoDuty(x)    (roundf((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ)))
 #define GetBottomServoDuty(x)    ((float)(10000 * (1.53 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
-#define GetUpServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
+#define GetUpServoDuty(x)    ((float)(10000 * (1.495 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 
 //#define GetServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))
 //#define GetBottomServoDuty(x)    ((float)(10000 * (1.5 + (float)x / 90.0)) / (1000.0 / (float)SERVO_FREQ))

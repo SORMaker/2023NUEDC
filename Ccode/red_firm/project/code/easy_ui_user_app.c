@@ -31,6 +31,12 @@ void EventSquareLoop(EasyUIItem_t *item)
     maxIndex = LaserGoSquare();
     pit_enable(TIM2_PIT);
 
+    if (servoCoord[0][0] == 0)
+    {
+        pit_disable(TIM2_PIT);
+        functionIsRunning = false;
+    }
+
     if (opnExit)
     {
         pit_disable(TIM2_PIT);
@@ -43,24 +49,13 @@ void EventSquareLoop(EasyUIItem_t *item)
 void EventRunLoop(EasyUIItem_t *item)
 {
     BufferFinish = 2;
-//    vofaData[4] = GetUpServoDuty(
-//            atanf(heightPerPixel * servoCoord[pointIndex][1] / 100.0f) * RAD_TO_DEGREE);
-//    dutyUp = PWM_CalServoDuty(vofaData[4]);
-//    if (dutyUpLast == 0)
-//        dutyUpLast = dutyUp;
-//    vofaData[5] = GetBottomServoDuty(
-//            -atanf(widthPerPixel * servoCoord[pointIndex++][0] / 100.0f) * RAD_TO_DEGREE);
-//    dutyDown = PWM_CalServoDuty(vofaData[5]);
-//    if (dutyDownLast == 0)
-//        dutyDownLast = dutyDown;
     pit_enable(TIM2_PIT);
-//    if (receiveSuccess)
-//    {
-//        GetRectLine();
-//        maxIndex = GetLaserPoint();
-//        functionIsRunning = false;
-//        EasyUIBackgroundBlur();
-//    }
+
+    if (servoCoord[0][0] == 0)
+    {
+        pit_disable(TIM2_PIT);
+        functionIsRunning = false;
+    }
 
     if (opnExit)
     {
