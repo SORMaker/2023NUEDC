@@ -38,8 +38,10 @@
 void packReceiveHandle(uint8_t *d, uint16_t s) {
     rxData.cx = (d[1] << 8) | d[0];
     rxData.cy = ((d[3] << 8) | d[2]);
-    if(rxData.cx!=0||rxData.cy!=0)
-        beepTime=100;
+    rxData.cx-=SOLID_BIAS_X;
+    rxData.cy-=SOLID_BIAS_Y;
+//    if(rxData.cx!=0||rxData.cy!=0)
+//        beepTime=100;
 //    printf("%d %d\n", rxData.cx, rxData.cy);
 }
 
@@ -50,14 +52,15 @@ void packSendHandle(uint8_t *d, uint16_t s) {
 //        printf("%c\n",i);
 //    }
 }
-
+upacker_inst myPack;
+upacker_inst_t myPackPtr = &myPack;
 int main(void) {
     clock_init(SYSTEM_CLOCK_120M);      // 初始化芯片时钟 工作频率为 120MHz
     debug_init();                       // 务必保留，本函数用于初始化MPU 时钟 调试串口
 
     uart_init(UART_7, 115200, UART7_MAP3_TX_E12, UART7_MAP3_RX_E13);
-    upacker_inst myPack;
-    upacker_inst_t myPackPtr = &myPack;
+
+
     upacker_init(myPackPtr, &packReceiveHandle, &packSendHandle);
     // 此处编写用户代码 例如外设初始化代码等
     gpio_init(A8,GPI,1,GPI_PULL_UP);
@@ -71,34 +74,11 @@ int main(void) {
     taskTimAllInit();
     cursorResume(&global_cursor);
     system_delay_ms(2000);
-    angleSet(SERVO_YAW_PIN, 0);
-    angleSet(SERVO_PITCH_PIN, 0);
-    cursorSetPointSport(&global_cursor, 25, 25, 2000);
-    while (global_cursor.is_sporting);
-    beepTime = 100;
-    cursorSetPointSport(&global_cursor, 25, -25, 2000);
-    while (global_cursor.is_sporting);
-    beepTime = 100;
-    cursorSetPointSport(&global_cursor, -25, -25, 2000);
-    while (global_cursor.is_sporting);
-    beepTime = 100;
-    cursorSetPointSport(&global_cursor, -25, 25,2000);
-    while (global_cursor.is_sporting);
-    beepTime = 100;
-    cursorSetPointSport(&global_cursor, 25, 25, 2000);
-    while (global_cursor.is_sporting);
-    beepTime = 500;
-    cursorSetPointSport(&global_cursor, 0, 0, 500);
     uart_rx_interrupt(UART_7, ENABLE);
     while (1) {
         EasyUI(20);
         // 此处编写需要循环执行的代码
-        if (BufferFinish == 1) {
-            upacker_unpack(myPackPtr, Buffer, sizeof(Buffer));
-            upacker_pack(myPackPtr, (uint8_t *) &rxData, sizeof(rxData));
-            BufferFinish = 0;
-            uart_rx_interrupt(UART_7, ENABLE);
-        }
+
 //        system_delay_ms(500);
         // 此处编写需要循环执行的代码
     }

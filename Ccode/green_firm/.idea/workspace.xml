@@ -21,119 +21,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cbeebac-3148-4070-af6c-888821d467a5" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/code/profile_photo_erbws.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/code/profile_photo_erbws.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d3a676444d7b7cdb935d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e2f002d1f6fd7c1a9ea3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-08-03T12-16-22-0409.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-green_firm-Debug-c78381e1b4d0893306e3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/32" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/33" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_i2c.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_iwdg.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_opa.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_pwr.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rcc.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rng.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_rtc.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_sdio.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_spi.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_tim.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usart.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_usbotg_device.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/sdk/Peripheral/ch32v30x_wwdg.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_clock.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_clock.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_debug.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_debug.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_fifo.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_fifo.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_font.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_font.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_function.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_function.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/libraries/zf_common/zf_common_interrupt.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/green_firm.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/green_firm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/green_firm.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/zf_device/zf_device_ips114.h" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/zf_device/zf_device_ips114.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/ctrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/cursor.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/cursor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/cursor.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/cursor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/inc_all.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/inc_all.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/moto.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/moto.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/pid.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/code/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/pid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/Seekfree_CH32V307VCT6_Opensource_Library.launch" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/Seekfree_CH32V307VCT6_Opensource_Library.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/cursor.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/cursor.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/cursor.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/cursor.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/moto.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/moto.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/objects.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/objects.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Core/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Peripheral/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sdk/Startup/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/sources.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/sources.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.d" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_common/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_common/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/subdir.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_device/zf_device_ips114.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mrs/obj/zf_driver/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/zf_driver/subdir.mk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/user/src/isr.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/isr.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/user/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/main.c" afterDir="false" />
     </list>
@@ -183,7 +85,7 @@
       <recent name="F:\TICup\Firmware\2023NUEDC\Ccode\green_firm\project\user\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile 目标.make">
+  <component name="RunManager" selected="OpenOCD 下载并运行.flash">
     <configuration name="green_firm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="green_firm" TARGET_NAME="green_firm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="green_firm" RUN_TARGET_NAME="green_firm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -226,12 +128,19 @@
       <workItem from="1691064885682" duration="563000" />
       <workItem from="1691065672783" duration="903000" />
       <workItem from="1691084819919" duration="24110000" />
-      <workItem from="1691176644198" duration="4870000" />
+      <workItem from="1691176644198" duration="29225000" />
     </task>
     <servers />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/project/code/easy_ui_user_app.c</url>
+          <line>13</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
       </default-breakpoints>
@@ -239,6 +148,7 @@
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="global_cursor" />
+        <watch expression="chaseXPid.delta_out" />
       </configuration>
     </watches-manager>
   </component>

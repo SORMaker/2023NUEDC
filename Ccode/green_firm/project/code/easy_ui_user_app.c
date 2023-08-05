@@ -4,57 +4,102 @@ EasyUIPage_t pageMain, pageSetCoord, pageSetAngle, pageCalibrate;
 
 EasyUIItem_t titleMain, titleSetCoord, titleSetAngle, itemCoord, itemAngle, itemCalibrate;
 
-EasyUIItem_t itemRun, itemSquare,itemCoordX, itemCoordY, itemAngleYaw, itemAnglePitch;
+EasyUIItem_t itemRun, itemBase, itemSquare, itemCoordX, itemCoordY, itemAngleYaw, itemAnglePitch;
 
 void EventChaseLoop(EasyUIItem_t *item) {
     cursorResume(&global_cursor);
     pidClear(&chaseXPid);
     pidClear(&chaseYPid);
-    rxData.cy = rxData.cx = 0;
-    while (rxData.cy == 0 && rxData.cx == 0) {
-        cursorSetPointSport(&global_cursor, -50, 0, 500);
-        while (global_cursor.is_sporting) {
-            if (rxData.cy != 0 || rxData.cx != 0) {
-                chase_enable=true;
-                beepTime = 1000;
+    while (true) {
+        if(isCatchPoint()==false){
+            cursorSetPointSport(&global_cursor, -50, 0, 800);
+            while (global_cursor.is_sporting) {
+                if (isCatchPoint()) {
+                    global_cursor.is_sporting=false;
+                    chase_enable = true;
+                    beepTime = 1000;
+                    break;
+                }
+            }
+            if (opnExit) {
+                cursorSetPointSport(&global_cursor, 0, 0, 1000);
+                while (global_cursor.is_sporting);
+                chase_enable = false;
+                cursorReset(&global_cursor);
+                opnExit = false;
+                functionIsRunning = false;
+                EasyUIBackgroundBlur();
+                break;
+            }
+            cursorSetPointSport(&global_cursor, 50, 0, 800);
+            while (global_cursor.is_sporting) {
+                if (isCatchPoint()) {
+                    global_cursor.is_sporting=false;
+                    chase_enable = true;
+                    beepTime = 1000;
+                    break;
+                }
+            }
+            if (opnExit) {
+                cursorSetPointSport(&global_cursor, 0, 0, 1000);
+                while (global_cursor.is_sporting);
+                chase_enable = false;
+                cursorReset(&global_cursor);
+                opnExit = false;
+                functionIsRunning = false;
+                EasyUIBackgroundBlur();
                 break;
             }
         }
-        if (opnExit) {
-            cursorSetPointSport(&global_cursor, 0, 0, 1000);
-            while(global_cursor.is_sporting);
-            chase_enable=false;
-            cursorReset(&global_cursor);
-            opnExit = false;
-            functionIsRunning = false;
-            EasyUIBackgroundBlur();
-            break;
+        else{
+            chase_enable = true;
+            beepTime = 1000;
         }
-        cursorSetPointSport(&global_cursor, 50, 0, 500);
-        while (global_cursor.is_sporting) {
-            if (rxData.cy != 0 || rxData.cx != 0) {
-                chase_enable=true;
-                beepTime = 1000;
+        while(chase_enable){
+            if (opnExit) {
+                cursorSetPointSport(&global_cursor, 0, 0, 1000);
+                while (global_cursor.is_sporting);
+                chase_enable = false;
+                cursorReset(&global_cursor);
+                opnExit = false;
+                functionIsRunning = false;
+                EasyUIBackgroundBlur();
                 break;
             }
         }
-        if (opnExit) {
-            cursorSetPointSport(&global_cursor, 0, 0, 1000);
-            while(global_cursor.is_sporting);
-            chase_enable=false;
-            cursorReset(&global_cursor);
-            opnExit = false;
-            functionIsRunning = false;
-            EasyUIBackgroundBlur();
-            break;
-        }
+        if (functionIsRunning == false)break;
     }
 
 }
-void EventSquareLoop(EasyUIItem_t *item)
-{
+
+void EventBaseLoop(EasyUIItem_t *item) {
+    cursorResume(&global_cursor);
+    cursorSetPointSport(&global_cursor, 25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, 25, -25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, -25, -25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, -25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 100;
+    cursorSetPointSport(&global_cursor, 25, 25, 2000);
+    while (global_cursor.is_sporting);
+    beepTime = 500;
+    cursorSetPointSport(&global_cursor, 0, 0, 500);
+    while (global_cursor.is_sporting);
+    opnExit = false;
+    functionIsRunning = false;
+    EasyUIBackgroundBlur();
+}
+
+void EventSquareLoop(EasyUIItem_t *item) {
 
 }
+
 void PageCalibrate(EasyUIItem_t *item) {
     static bool flag = false;
     static uint8 point_flag = false;
@@ -65,36 +110,34 @@ void PageCalibrate(EasyUIItem_t *item) {
     static float biasYTop;
     static float biasYBottom;
     IPS114_ClearBuffer();
-    if(point_flag==0)
+    if (point_flag == 0)
         IPS114_ShowStr(0, 2, "[Center Point]");
-    else if (point_flag==1)
+    else if (point_flag == 1)
         IPS114_ShowStr(0, 2, "[Left-Top Point]");
-    else if(point_flag==2)
+    else if (point_flag == 2)
         IPS114_ShowStr(0, 2, "[Right-Bottom Point]");
 
     IPS114_ShowStr(0, 14, "currentX:");
     IPS114_ShowStr(0, 26, "currentY:");
-    IPS114_ShowFloat(60, 14, global_cursor.X,3,2);
-    IPS114_ShowFloat(60, 26, global_cursor.Y,3,2);
+    IPS114_ShowFloat(60, 14, global_cursor.X, 3, 2);
+    IPS114_ShowFloat(60, 26, global_cursor.Y, 3, 2);
     IPS114_SendBuffer();
     if (opnMultiClick) {
         opnMultiClick = 0;
-        if(point_flag==0){
+        if (point_flag == 0) {
             biasX = global_cursor.X;
             biasY = global_cursor.Y;
-        }
-        else if(point_flag==1){
+        } else if (point_flag == 1) {
             biasXLeft = global_cursor.X - (-25.0) + biasX;
             biasYTop = global_cursor.Y - 25.0 + biasY;
-        }
-        else if(point_flag==2){
+        } else if (point_flag == 2) {
             biasXRight = global_cursor.X - 25.0 + biasX;
             biasYBottom = global_cursor.Y - (-25.0) + biasY;
         }
-        if(++point_flag==3){
-            point_flag=0;
+        if (++point_flag == 3) {
+            point_flag = 0;
         }
-        beepTime=500;
+        beepTime = 500;
         EasyUIDrawMsgBox("Saving...");
 
     }
@@ -107,11 +150,11 @@ void PageCalibrate(EasyUIItem_t *item) {
         beepTime = 100;
         opnDown = 0;
         if (flag)
-            cursorSetPoint(&global_cursor, global_cursor.X + 2, global_cursor.Y);
+            cursorSetPoint(&global_cursor, global_cursor.X + 5, global_cursor.Y);
         else
-            cursorSetPoint(&global_cursor, global_cursor.X, global_cursor.Y + 2);
+            cursorSetPoint(&global_cursor, global_cursor.X, global_cursor.Y + 5);
     }
-    if(gpio_get_level(KEY_DOWN)==0 && keyDown.holdTime >= HOLD_THRESHOLD_MS){
+    if (gpio_get_level(KEY_DOWN) == 0 && keyDown.holdTime >= HOLD_THRESHOLD_MS) {
         if (flag)
             cursorSetPoint(&global_cursor, global_cursor.X + 0.25, global_cursor.Y);
         else
@@ -121,38 +164,36 @@ void PageCalibrate(EasyUIItem_t *item) {
         beepTime = 100;
         opnUp = 0;
         if (flag)
-            cursorSetPoint(&global_cursor, global_cursor.X - 2, global_cursor.Y);
+            cursorSetPoint(&global_cursor, global_cursor.X - 5, global_cursor.Y);
         else
-            cursorSetPoint(&global_cursor, global_cursor.X, global_cursor.Y - 2);
+            cursorSetPoint(&global_cursor, global_cursor.X, global_cursor.Y - 5);
     }
-    if(gpio_get_level(KEY_UP)==0 && keyUp.holdTime >= HOLD_THRESHOLD_MS){
+    if (gpio_get_level(KEY_UP) == 0 && keyUp.holdTime >= HOLD_THRESHOLD_MS) {
         if (flag)
             cursorSetPoint(&global_cursor, global_cursor.X - 0.25, global_cursor.Y);
         else
             cursorSetPoint(&global_cursor, global_cursor.X, global_cursor.Y - 0.25);
     }
     if (opnExit) {
-        if(point_flag==0){
+        if (point_flag == 0) {
             biasX = global_cursor.X + global_cursor.biasX;
             biasY = global_cursor.Y + global_cursor.biasY;
-        }
-        else if(point_flag==1){
+        } else if (point_flag == 1) {
             biasXLeft = global_cursor.X - (-25.0) + biasX;
             biasYTop = global_cursor.Y - 25.0 + biasY;
-        }
-        else if(point_flag==2){
+        } else if (point_flag == 2) {
             biasXRight = global_cursor.X - 25.0 + biasX;
             biasYBottom = global_cursor.Y - (-25.0) + biasY;
         }
-        if(point_flag==2){
-            point_flag=0;
+        if (point_flag == 2) {
+            point_flag = 0;
         }
-        beepTime=800;
+        beepTime = 800;
         EasyUIDrawMsgBox("Saving...");
-        cursorInit(&global_cursor,biasX,biasY,biasXLeft,biasXRight,biasYTop,biasYBottom);
+        cursorInit(&global_cursor, biasX, biasY, biasXLeft, biasXRight, biasYTop, biasYBottom);
         flag = false;
         point_flag = false;
-        biasX=biasY=biasXLeft=biasXRight=biasYTop=biasYBottom=0;
+        biasX = biasY = biasXLeft = biasXRight = biasYTop = biasYBottom = 0;
         EasyUIBackgroundBlur();
     }
 }
@@ -165,8 +206,9 @@ void MenuInit() {
 
     EasyUIAddItem(&pageMain, &titleMain, "[Main]", ITEM_PAGE_DESCRIPTION);
     EasyUIAddItem(&pageMain, &itemRun, "Run Chase", ITEM_MESSAGE, "Running...", EventChaseLoop);
-    EasyUIAddItem(&pageMain, &itemSquare, "Run Square", ITEM_MESSAGE, "Running...", EventSquareLoop);
-    EasyUIAddItem(&pageMain, &itemSquare, "Run Square", ITEM_MESSAGE, "Running...", EventSquareLoop);
+//    EasyUIAddItem(&pageMain, &itemBase, "Run Base", ITEM_MESSAGE, "Running...", EventBaseLoop);
+//    EasyUIAddItem(&pageMain, &itemSquare, "Run Square", ITEM_MESSAGE, "Running...", EventSquareLoop);
+
     EasyUIAddItem(&pageMain, &itemCoord, "Set Coord", ITEM_JUMP_PAGE, pageSetCoord.id);
     EasyUIAddItem(&pageMain, &itemAngle, "Set Angle", ITEM_JUMP_PAGE, pageSetAngle.id);
     EasyUIAddItem(&pageMain, &itemCalibrate, "Calibrate", ITEM_JUMP_PAGE, pageCalibrate.id);

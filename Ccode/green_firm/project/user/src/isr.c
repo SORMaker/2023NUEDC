@@ -328,7 +328,8 @@ void TIM2_IRQHandler(void)
 
     }
 }
-
+extern upacker_inst myPack;
+extern upacker_inst_t myPackPtr;
 void TIM3_IRQHandler(void)
 {
     if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
@@ -337,6 +338,12 @@ void TIM3_IRQHandler(void)
        EasyKeyScanKeyState();
        EasyKeyUserApp();
        EasyUIKeyActionMonitor();
+        if (BufferFinish == 1) {
+            upacker_unpack(myPackPtr, Buffer, sizeof(Buffer));
+//            upacker_pack(myPackPtr, (uint8_t *) &rxData, sizeof(rxData));
+            BufferFinish = 0;
+            uart_rx_interrupt(UART_7, ENABLE);
+        }
        Beep();
     }
 }

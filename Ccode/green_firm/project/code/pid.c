@@ -139,6 +139,6 @@ void pidAllInit(void)
   * @retval None
   */
 
-	PID_Init(&chaseXPid,DELTA_PID,GetYawServoDuty(45),0,-1.0f,0,0);  // P
-    PID_Init(&chaseYPid,DELTA_PID, GetPitchServoDuty(45),0,-1.0f,0,0);  // P
+	PID_Init(&chaseXPid,DELTA_PID,GetYawServoDuty(30),1000,-0.1f,-0.0035f,0);  // P
+    PID_Init(&chaseYPid,DELTA_PID, GetPitchServoDuty(30),1000,-0.1f,-0.0035f,0);  // P
 }

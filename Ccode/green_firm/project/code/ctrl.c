@@ -13,15 +13,45 @@ void taskTimAllInit(void) {
     interrupt_set_priority(TIM1_UP_IRQn, (1 << 5) | 1);
     interrupt_set_priority(TIM3_IRQn, (2 << 5) | 2);
 }
+bool isCatchPoint(void){
+    return rxData.cx+SOLID_BIAS_X!=0||rxData.cy+SOLID_BIAS_Y!=0;
+}
 void ChasingControl(void) {
-    if(!chase_enable)return;
+    uint16 miss_count=0;
+    static bool mutex=false;
+    if(!chase_enable||global_cursor.is_halt)
+        return;
+    if(isCatchPoint()==false){
+        return;
+//        while (isCatchPoint()==false){
+//            miss_count++;
+//            if(miss_count>500){
+//                chase_enable=false;
+//                pidClear(&chaseYPid);
+//                pidClear(&chaseXPid);
+//                return;
+//            }
+//        }
+    }
     bias_chaseX = rxData.cx;
     bias_chaseY = rxData.cy;
-    PID_Calculate(&chaseXPid, 0, bias_chaseX);
-    PID_Calculate(&chaseYPid, 0, bias_chaseY);
-    cursorSetPoint(&global_cursor,chaseXPid.delta_out,chaseYPid.delta_out);
-    if(powf(bias_chaseX,2)+ powf(bias_chaseY,2)<36)
-        beepTime=2000;
+    if (mutex==false)
+    {
+        PID_Calculate(&chaseXPid, 0, bias_chaseX);
+        PID_Calculate(&chaseYPid, 0, bias_chaseY);
+        cursorSetPoint(&global_cursor,chaseXPid.delta_out,chaseYPid.delta_out);
+    }
+    else
+        beepTime=20;
+    if(powf(bias_chaseX,2)+ powf(bias_chaseY,2)<18&&mutex==false)
+    {
+        mutex=true;
+    } else if(powf(bias_chaseX,2)+ powf(bias_chaseY,2)>60&&mutex==true){
+//        pidClear(&chaseYPid);
+//        pidClear(&chaseXPid);
+        mutex=false;
+    }
+
 
 //    if(servo_sport_update_flag==0)
 //    {
