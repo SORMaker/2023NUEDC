@@ -96,9 +96,105 @@ void EventBaseLoop(EasyUIItem_t *item) {
     EasyUIBackgroundBlur();
 }
 
-void EventSquareLoop(EasyUIItem_t *item) {
+
+
+
+int16 global_x_bias=0,global_y_bias=0;
+bool enable_square_chase = false;
+typedef struct {
+    int16 X;
+    int16 Y;
+}node_Typedef;
+#define     PATH_BUFFER_MAX_SIZE 200
+#if PATH_BUFFER_MAX_SIZE%4!=0
+#error "must mod by 4!!"
+#endif
+node_Typedef PathBuff[PATH_BUFFER_MAX_SIZE] = {0};
+node_Typedef CornerNodeBuff[4] = {0};
+void getCornerNodes(void){
+    memset(CornerNodeBuff,0,sizeof(node_Typedef)*4);
 
 }
+void generatePath(void){
+    memset(PathBuff,0, sizeof(node_Typedef));
+    int16 X_bias,Y_bias;
+    for(int i=0;i<4;i++){
+        if(i!=3){
+            X_bias = CornerNodeBuff[i+1].X - CornerNodeBuff[i].X;
+            Y_bias = CornerNodeBuff[i+1].Y - CornerNodeBuff[i].Y;
+        }
+        else{
+            X_bias = CornerNodeBuff[0].X - CornerNodeBuff[3].X;
+            Y_bias = CornerNodeBuff[0].Y - CornerNodeBuff[3].Y;
+        }
+        for(int j=0;j<PATH_BUFFER_MAX_SIZE/4;j++){
+            PathBuff[i*PATH_BUFFER_MAX_SIZE+j].X = CornerNodeBuff[i].X + X_bias*j/(PATH_BUFFER_MAX_SIZE/4);
+            PathBuff[i*PATH_BUFFER_MAX_SIZE+j].Y = CornerNodeBuff[i].Y + Y_bias*j/(PATH_BUFFER_MAX_SIZE/4);
+        }
+    }
+    beepTime = 200;
+}
+node_Typedef getRedPoint(){
+    node_Typedef temp;
+
+
+    return temp;
+}
+#define FORECAST_FACTOR 10
+void EventSquareLoop(EasyUIItem_t *item) {
+    getCornerNodes();
+    generatePath();
+    int16 index=0;
+    int16 N = FORECAST_FACTOR;
+    double x,y,min_distance,temp;int16_t min_index;
+    enable_square_chase = true;
+    while(true){
+        node_Typedef red_point = getRedPoint();
+        if(index+N +1 > PATH_BUFFER_MAX_SIZE-1)
+        {
+            N = PATH_BUFFER_MAX_SIZE-1 - index -1;
+        }
+        for(uint16_t i=index; i<=(uint16_t)(index+N+1); i++){
+            temp = sqrt(pow(PathBuff[i].X - red_point.X,2)+pow(PathBuff[i].Y - red_point.Y,2));
+            if(i==index)
+            {
+                min_distance = temp;
+                min_index = index;
+            }
+            else if (temp < min_distance)
+            {
+                min_distance = temp;
+                min_index = i;
+            }
+        }
+        index = min_index;
+        global_x_bias = red_point.X - PathBuff[min_index].X;
+        global_y_bias = red_point.Y - PathBuff[min_index].Y;
+        if(index!=PATH_BUFFER_MAX_SIZE-1)
+        {
+        }
+        else{
+            beepTime = 2000;
+            enable_square_chase = false;
+            opnExit = false;
+            functionIsRunning = false;
+            EasyUIBackgroundBlur();
+            break;
+        }
+        if (opnExit) {
+            enable_square_chase = false;
+            opnExit = false;
+            functionIsRunning = false;
+            EasyUIBackgroundBlur();
+            break;
+        }
+    }
+}
+
+
+
+
+
 
 void PageCalibrate(EasyUIItem_t *item) {
     static bool flag = false;
@@ -207,7 +303,7 @@ void MenuInit() {
     EasyUIAddItem(&pageMain, &titleMain, "[Main]", ITEM_PAGE_DESCRIPTION);
     EasyUIAddItem(&pageMain, &itemRun, "Run Chase", ITEM_MESSAGE, "Running...", EventChaseLoop);
 //    EasyUIAddItem(&pageMain, &itemBase, "Run Base", ITEM_MESSAGE, "Running...", EventBaseLoop);
-//    EasyUIAddItem(&pageMain, &itemSquare, "Run Square", ITEM_MESSAGE, "Running...", EventSquareLoop);
+    EasyUIAddItem(&pageMain, &itemSquare, "Run Square", ITEM_MESSAGE, "Running...", EventSquareLoop);
 
     EasyUIAddItem(&pageMain, &itemCoord, "Set Coord", ITEM_JUMP_PAGE, pageSetCoord.id);
     EasyUIAddItem(&pageMain, &itemAngle, "Set Angle", ITEM_JUMP_PAGE, pageSetAngle.id);

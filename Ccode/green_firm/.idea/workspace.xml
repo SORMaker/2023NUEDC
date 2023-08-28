@@ -26,12 +26,14 @@
       <change beforePath="$PROJECT_DIR$/project/code/ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/code/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/pid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/pid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/cursor.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/cursor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/moto.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/pid.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" afterDir="false" />
@@ -97,11 +99,6 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="nim.task.build.to.cache" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="flash" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="green_firm" TARGET_NAME="green_firm" CONFIG_NAME="Debug" version="1" RUN_PATH="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf">
       <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="E:\MounRiver\MounRiver_Studio\toolchain\OpenOCD\bin\wch-riscv.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB">E:\MounRiver\MounRiver_Studio\toolchain\RISC-V Embedded GCC\bin\riscv-none-embed-gdb.exe</debugger>
@@ -128,7 +125,8 @@
       <workItem from="1691064885682" duration="563000" />
       <workItem from="1691065672783" duration="903000" />
       <workItem from="1691084819919" duration="24110000" />
-      <workItem from="1691176644198" duration="29225000" />
+      <workItem from="1691176644198" duration="34464000" />
+      <workItem from="1691676380393" duration="1808000" />
     </task>
     <servers />
   </component>

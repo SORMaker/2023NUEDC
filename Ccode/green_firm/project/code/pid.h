@@ -51,7 +51,8 @@ typedef struct _PID_Typedef
 // PID struct define
 extern PID_TypeDef chaseXPid;
 extern PID_TypeDef chaseYPid;
-
+extern PID_TypeDef chaseSqXPid;
+extern PID_TypeDef chaseSqYPid;
 void PID_Init(
         PID_TypeDef*	pid,
         uint32_t 			mode,

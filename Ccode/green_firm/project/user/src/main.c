@@ -38,6 +38,7 @@
 void packReceiveHandle(uint8_t *d, uint16_t s) {
     rxData.cx = (d[1] << 8) | d[0];
     rxData.cy = ((d[3] << 8) | d[2]);
+
     rxData.cx-=SOLID_BIAS_X;
     rxData.cy-=SOLID_BIAS_Y;
 //    if(rxData.cx!=0||rxData.cy!=0)

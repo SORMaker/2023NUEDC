@@ -9,5 +9,6 @@ extern bool chase_enable;
 bool isCatchPoint(void);
 void taskTimAllInit(void);
 void ChasingControl(void);
+void SquarePathControl(void);
 
 #endif

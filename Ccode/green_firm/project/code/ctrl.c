@@ -62,3 +62,12 @@ void ChasingControl(void) {
 //    pwm_set_duty(SERVO_YAW_PIN, (uint32)chaseXPid.pos_out);
 //    pwm_set_duty(SERVO_PITCH_PIN, (uint32)chaseYPid.pos_out);
 }
+void SquarePathControl(void){
+    extern bool enable_square_chase;
+    extern int16 global_x_bias,global_y_bias;
+    if(!enable_square_chase||global_cursor.is_halt)
+        return;
+    PID_Calculate(&chaseSqXPid, 0, global_x_bias);
+    PID_Calculate(&chaseSqYPid, 0, global_y_bias);
+    cursorSetPoint(&global_cursor,chaseSqXPid.delta_out,chaseSqYPid.delta_out);
+}

@@ -15,6 +15,8 @@ bool preset1 = false, preset2 = false, preset3 = false;
 // PID struct define
 PID_TypeDef chaseXPid;
 PID_TypeDef chaseYPid;
+PID_TypeDef chaseSqXPid;
+PID_TypeDef chaseSqYPid;
 void PID_Reset(PID_TypeDef	*pid, float kp, float ki, float kd)
 {
     pid->Kp = kp;
@@ -136,9 +138,11 @@ void pidAllInit(void)
     @param  积分系数
     @param  微分系数
 	
-  * @retval None
+  * @retval None 
   */
 
 	PID_Init(&chaseXPid,DELTA_PID,GetYawServoDuty(30),1000,-0.1f,-0.0035f,0);  // P
     PID_Init(&chaseYPid,DELTA_PID, GetPitchServoDuty(30),1000,-0.1f,-0.0035f,0);  // P
+    PID_Init(&chaseSqXPid,DELTA_PID, GetPitchServoDuty(30),1000,-0.1f,-0.0035f,0);  // P
+    PID_Init(&chaseSqYPid,DELTA_PID, GetPitchServoDuty(30),1000,-0.1f,-0.0035f,0);
 }
