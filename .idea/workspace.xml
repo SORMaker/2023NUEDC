@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD:.idea/workspace.xml
   <component name="CMakePresetLoader"><![CDATA[{
   "useNewFormat": true
 }]]></component>
   <component name="CMakeSettings">
+=======
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="CH32V307VCT6" targetName="2_BLDC" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+>>>>>>> c104f184beb1920bb169ba6194579f9810e48900:Ccode/red_firm/.idea/workspace.xml
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD:.idea/workspace.xml
     <list default="true" id="9c12bd1a-0190-4906-bc30-f3714b912d24" name="变更" comment="">
       <change afterPath="$PROJECT_DIR$/Ccode/red_firm/cmake-build-debug/.cmake/api/v1/reply/cache-v2-eb061c699bc4eddc4b24.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Ccode/red_firm/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3bed2896cea10cbc39d5.json" afterDir="false" />
@@ -347,6 +366,23 @@
       <change beforePath="$PROJECT_DIR$/Ccode/red_firm/project/mrs/obj/zf_driver/zf_driver_usb_cdc.o" beforeDir="false" afterPath="$PROJECT_DIR$/Ccode/red_firm/project/mrs/obj/zf_driver/zf_driver_usb_cdc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ccode/red_firm/project/user/src/isr.c" beforeDir="false" afterPath="$PROJECT_DIR$/Ccode/red_firm/project/user/src/isr.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ccode/red_firm/project/user/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Ccode/red_firm/project/user/src/main.c" afterDir="false" />
+=======
+    <list default="true" id="f793d503-f0cb-4acb-9078-5a392af2a895" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/ctrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/ctrl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/code/easy_ui_user_app.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/ctrl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/code/easy_ui_user_app.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/isr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/project/mrs/obj/user_c/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/user/src/isr.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/isr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/user/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/project/user/src/main.c" afterDir="false" />
+>>>>>>> c104f184beb1920bb169ba6194579f9810e48900:Ccode/red_firm/.idea/workspace.xml
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,6 +392,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+<<<<<<< HEAD:.idea/workspace.xml
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -363,10 +400,43 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UbZHRyCyA3vVx9cc1fM6PAmBYh" />
+=======
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="2128" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="Name" />
+        <option value="Value" />
+        <option value="Description" />
+      </list>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2NlHBq0B62bJd1v5PPSzF4MVN5y" />
+>>>>>>> c104f184beb1920bb169ba6194579f9810e48900:Ccode/red_firm/.idea/workspace.xml
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD:.idea/workspace.xml
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -390,4 +460,184 @@
     </task>
     <servers />
   </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/project/code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CLionExternalConfigurable&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="OpenOCD Download &amp; Run.Flash">
+    <configuration name="make all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/project/mrs/obj/makefile" target="all" workingDirectory="$PROJECT_DIR$/project/mrs/obj" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="make clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/project/mrs/obj/makefile" target="clean" workingDirectory="$PROJECT_DIR$/project/mrs/obj" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="Flash" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CH32V307VCT6" TARGET_NAME="2_BLDC" CONFIG_NAME="Debug" version="1" RUN_PATH="$PROJECT_DIR$/project/mrs/obj/Seekfree_CH32V307VCT6_Opensource_Library.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="$PROJECT_DIR$/../../../../Code/Toolchains/openocd_arm64/bin/wch-riscv.cfg" reset-type="RUN" download-type="UPDATED_ONLY">
+        <debugger kind="GDB">$PROJECT_DIR$/../../../../Code/Toolchains/xpack-riscv-none-embed-gcc-8.2.0/bin/riscv-none-embed-gdb</debugger>
+      </openocd>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="make all" run_configuration_type="MAKEFILE_TARGET_RUN_CONFIGURATION" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Target.make all" />
+      <item itemvalue="Makefile Target.make clean" />
+      <item itemvalue="OpenOCD Download &amp; Run.Flash" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f793d503-f0cb-4acb-9078-5a392af2a895" name="Changes" comment="" />
+      <created>1680231615443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680231615443</updated>
+      <workItem from="1680231616483" duration="3504000" />
+      <workItem from="1680241616278" duration="18040000" />
+      <workItem from="1680356294420" duration="17408000" />
+      <workItem from="1680522257858" duration="28576000" />
+      <workItem from="1680699227679" duration="19000" />
+      <workItem from="1680699259446" duration="51000" />
+      <workItem from="1680699316664" duration="36000" />
+      <workItem from="1680699359464" duration="30000" />
+      <workItem from="1680699395202" duration="918000" />
+      <workItem from="1680700390309" duration="32403000" />
+      <workItem from="1680839400562" duration="55601000" />
+      <workItem from="1681190925232" duration="10185000" />
+      <workItem from="1682339905678" duration="2405000" />
+      <workItem from="1682599763651" duration="28000" />
+      <workItem from="1682599806659" duration="63000" />
+      <workItem from="1682599874404" duration="2779000" />
+      <workItem from="1683445452815" duration="11416000" />
+      <workItem from="1683791360347" duration="710000" />
+      <workItem from="1683826072663" duration="982000" />
+      <workItem from="1684123496888" duration="1260000" />
+      <workItem from="1684138816678" duration="13758000" />
+      <workItem from="1684752073680" duration="9603000" />
+      <workItem from="1685363432157" duration="1798000" />
+      <workItem from="1685515810682" duration="11980000" />
+      <workItem from="1685696403074" duration="2350000" />
+      <workItem from="1686554955202" duration="19000" />
+      <workItem from="1687001355834" duration="565000" />
+      <workItem from="1687799177678" duration="1384000" />
+      <workItem from="1688981326092" duration="2438000" />
+      <workItem from="1689242650917" duration="1806000" />
+      <workItem from="1689341280938" duration="3193000" />
+      <workItem from="1689391502315" duration="84000" />
+      <workItem from="1689391589181" duration="500000" />
+      <workItem from="1689392098810" duration="2629000" />
+      <workItem from="1689607874300" duration="597000" />
+      <workItem from="1689656483094" duration="649000" />
+      <workItem from="1689690973392" duration="785000" />
+      <workItem from="1689694885648" duration="85000" />
+      <workItem from="1689700437029" duration="599000" />
+      <workItem from="1689749909488" duration="1502000" />
+      <workItem from="1689778520615" duration="1091000" />
+      <workItem from="1689791564245" duration="1203000" />
+      <workItem from="1689871031563" duration="1267000" />
+      <workItem from="1690098992319" duration="1304000" />
+      <workItem from="1690449338455" duration="9752000" />
+      <workItem from="1690873514306" duration="1902000" />
+      <workItem from="1690949732414" duration="1613000" />
+      <workItem from="1690959078864" duration="8958000" />
+      <workItem from="1690968073954" duration="53079000" />
+      <workItem from="1691081493191" duration="31812000" />
+      <workItem from="1691174455850" duration="3434000" />
+      <workItem from="1691178325085" duration="1200000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.s" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/libraries/zf_device/zf_device_imu660ra.c</url>
+          <line>266</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/libraries/zf_device/zf_device_icm20602.c</url>
+          <line>270</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/project/user/src/isr.c</url>
+          <line>407</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="l1" language="ObjectiveC" />
+        <watch expression="l2" language="ObjectiveC" />
+        <watch expression="l3" language="ObjectiveC" />
+        <watch expression="l4" language="ObjectiveC" />
+        <watch expression="servoCoordBackup" language="ObjectiveC" />
+        <watch expression="maxIndex" language="ObjectiveC" />
+        <watch expression="cornerPoint" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+>>>>>>> c104f184beb1920bb169ba6194579f9810e48900:Ccode/red_firm/.idea/workspace.xml
 </project>

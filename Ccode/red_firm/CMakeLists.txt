@@ -1,0 +1,202 @@
+cmake_minimum_required(VERSION 3.25)
+project(CH32V307VCT6 C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(libraries/sdk/Core)
+include_directories(libraries/sdk/Peripheral)
+include_directories(libraries/zf_common)
+include_directories(libraries/zf_device)
+include_directories(libraries/zf_driver)
+include_directories(project/code)
+include_directories(project/user/inc)
+
+## 设置xpack-riscv-none-embed-gcc-8.2.0路径
+#set(ENV-{CH32_DEV}/Users/baohan/ErBW_s/Code/Toolchains/xpack-riscv-none-embed-gcc-8.2.0/)
+#
+## 设置编译变量
+#set(COMPILER_DIR?$ENV{CH32_DEV}bin/riscv-none-embed-)
+#set(CMAKE_C_COMPILER?${COMPILER_DIR}gcc)
+#set(CMAKE_CXX_COMPILER${COMPILER_DIR}g++)
+#set(CMAKE_ASM_COMPILER${COMPILER_DIR}gcc)
+#set(CMAKE_LINKER?${COMPILER_DIR}gcc)
+#set(MAKE_AR?${COMPILER_DIR}ar)
+#set(CMAKE_OBJCOPY${COMPILER_DIR}objcopy)
+#set(MAKE_0BJDUMP${COMPILER_DIR}objdump)
+#set(SIZE${COMPILER_DIR}size)
+#set(CMAKE_TRY_COMPILE_TARGET_TYPE?STATIC_LIBRARY)
+
+add_executable(2_BLDC
+        libraries/sdk/Core/core_riscv.c
+        libraries/sdk/Core/core_riscv.h
+        libraries/sdk/Peripheral/ch32v30x.h
+        libraries/sdk/Peripheral/ch32v30x_adc.c
+        libraries/sdk/Peripheral/ch32v30x_adc.h
+        libraries/sdk/Peripheral/ch32v30x_bkp.c
+        libraries/sdk/Peripheral/ch32v30x_bkp.h
+        libraries/sdk/Peripheral/ch32v30x_can.c
+        libraries/sdk/Peripheral/ch32v30x_can.h
+        libraries/sdk/Peripheral/ch32v30x_crc.c
+        libraries/sdk/Peripheral/ch32v30x_crc.h
+        libraries/sdk/Peripheral/ch32v30x_dac.c
+        libraries/sdk/Peripheral/ch32v30x_dac.h
+        libraries/sdk/Peripheral/ch32v30x_dbgmcu.c
+        libraries/sdk/Peripheral/ch32v30x_dbgmcu.h
+        libraries/sdk/Peripheral/ch32v30x_dma.c
+        libraries/sdk/Peripheral/ch32v30x_dma.h
+        libraries/sdk/Peripheral/ch32v30x_dvp.c
+        libraries/sdk/Peripheral/ch32v30x_dvp.h
+        libraries/sdk/Peripheral/ch32v30x_eth.c
+        libraries/sdk/Peripheral/ch32v30x_eth.h
+        libraries/sdk/Peripheral/ch32v30x_exti.c
+        libraries/sdk/Peripheral/ch32v30x_exti.h
+        libraries/sdk/Peripheral/ch32v30x_flash.c
+        libraries/sdk/Peripheral/ch32v30x_flash.h
+        libraries/sdk/Peripheral/ch32v30x_fsmc.c
+        libraries/sdk/Peripheral/ch32v30x_fsmc.h
+        libraries/sdk/Peripheral/ch32v30x_gpio.c
+        libraries/sdk/Peripheral/ch32v30x_gpio.h
+        libraries/sdk/Peripheral/ch32v30x_i2c.c
+        libraries/sdk/Peripheral/ch32v30x_i2c.h
+        libraries/sdk/Peripheral/ch32v30x_iwdg.c
+        libraries/sdk/Peripheral/ch32v30x_iwdg.h
+        libraries/sdk/Peripheral/ch32v30x_opa.c
+        libraries/sdk/Peripheral/ch32v30x_opa.h
+        libraries/sdk/Peripheral/ch32v30x_pwr.c
+        libraries/sdk/Peripheral/ch32v30x_pwr.h
+        libraries/sdk/Peripheral/ch32v30x_rcc.c
+        libraries/sdk/Peripheral/ch32v30x_rcc.h
+        libraries/sdk/Peripheral/ch32v30x_rng.c
+        libraries/sdk/Peripheral/ch32v30x_rng.h
+        libraries/sdk/Peripheral/ch32v30x_rtc.c
+        libraries/sdk/Peripheral/ch32v30x_rtc.h
+        libraries/sdk/Peripheral/ch32v30x_sdio.c
+        libraries/sdk/Peripheral/ch32v30x_sdio.h
+        libraries/sdk/Peripheral/ch32v30x_spi.c
+        libraries/sdk/Peripheral/ch32v30x_spi.h
+        libraries/sdk/Peripheral/ch32v30x_tim.c
+        libraries/sdk/Peripheral/ch32v30x_tim.h
+        libraries/sdk/Peripheral/ch32v30x_usart.c
+        libraries/sdk/Peripheral/ch32v30x_usart.h
+        libraries/sdk/Peripheral/ch32v30x_usbotg_device.c
+        libraries/sdk/Peripheral/ch32v30x_usbotg_device.h
+        libraries/sdk/Peripheral/ch32v30x_wwdg.c
+        libraries/sdk/Peripheral/ch32v30x_wwdg.h
+        libraries/zf_common/zf_common_clock.c
+        libraries/zf_common/zf_common_clock.h
+        libraries/zf_common/zf_common_debug.c
+        libraries/zf_common/zf_common_debug.h
+        libraries/zf_common/zf_common_fifo.c
+        libraries/zf_common/zf_common_fifo.h
+        libraries/zf_common/zf_common_font.c
+        libraries/zf_common/zf_common_font.h
+        libraries/zf_common/zf_common_function.c
+        libraries/zf_common/zf_common_function.h
+        libraries/zf_common/zf_common_headfile.h
+        libraries/zf_common/zf_common_interrupt.c
+        libraries/zf_common/zf_common_interrupt.h
+        libraries/zf_common/zf_common_typedef.h
+        libraries/zf_device/zf_device_absolute_encoder.c
+        libraries/zf_device/zf_device_absolute_encoder.h
+        libraries/zf_device/zf_device_aht20.c
+        libraries/zf_device/zf_device_aht20.h
+        libraries/zf_device/zf_device_bluetooth_ch9141.c
+        libraries/zf_device/zf_device_bluetooth_ch9141.h
+        libraries/zf_device/zf_device_camera.c
+        libraries/zf_device/zf_device_camera.h
+        libraries/zf_device/zf_device_config.h
+        libraries/zf_device/zf_device_dl1a.c
+        libraries/zf_device/zf_device_dl1a.h
+        libraries/zf_device/zf_device_dm1xa.c
+        libraries/zf_device/zf_device_dm1xa.h
+        libraries/zf_device/zf_device_gps_tau1201.c
+        libraries/zf_device/zf_device_gps_tau1201.h
+        libraries/zf_device/zf_device_icm20602.c
+        libraries/zf_device/zf_device_icm20602.h
+        libraries/zf_device/zf_device_imu660ra.c
+        libraries/zf_device/zf_device_imu660ra.h
+        libraries/zf_device/zf_device_imu963ra.c
+        libraries/zf_device/zf_device_imu963ra.h
+        libraries/zf_device/zf_device_ips114.c
+        libraries/zf_device/zf_device_ips114.h
+        libraries/zf_device/zf_device_ips200.c
+        libraries/zf_device/zf_device_ips200.h
+        libraries/zf_device/zf_device_k24c02.c
+        libraries/zf_device/zf_device_k24c02.h
+        libraries/zf_device/zf_device_key.c
+        libraries/zf_device/zf_device_key.h
+        libraries/zf_device/zf_device_mpu6050.c
+        libraries/zf_device/zf_device_mpu6050.h
+        libraries/zf_device/zf_device_mt9v03x_dvp.c
+        libraries/zf_device/zf_device_mt9v03x_dvp.h
+        libraries/zf_device/zf_device_oled.c
+        libraries/zf_device/zf_device_oled.h
+        libraries/zf_device/zf_device_scc8660_dvp.c
+        libraries/zf_device/zf_device_scc8660_dvp.h
+        libraries/zf_device/zf_device_tft180.c
+        libraries/zf_device/zf_device_tft180.h
+        libraries/zf_device/zf_device_type.c
+        libraries/zf_device/zf_device_type.h
+        libraries/zf_device/zf_device_virtual_oscilloscope.c
+        libraries/zf_device/zf_device_virtual_oscilloscope.h
+        libraries/zf_device/zf_device_w25q32.c
+        libraries/zf_device/zf_device_w25q32.h
+        libraries/zf_device/zf_device_wifi_uart.c
+        libraries/zf_device/zf_device_wifi_uart.h
+        libraries/zf_device/zf_device_wireless_ch573.c
+        libraries/zf_device/zf_device_wireless_ch573.h
+        libraries/zf_device/zf_device_wireless_uart.c
+        libraries/zf_device/zf_device_wireless_uart.h
+        libraries/zf_driver/zf_driver_adc.c
+        libraries/zf_driver/zf_driver_adc.h
+        libraries/zf_driver/zf_driver_delay.c
+        libraries/zf_driver/zf_driver_delay.h
+        libraries/zf_driver/zf_driver_dvp.c
+        libraries/zf_driver/zf_driver_dvp.h
+        libraries/zf_driver/zf_driver_encoder.c
+        libraries/zf_driver/zf_driver_encoder.h
+        libraries/zf_driver/zf_driver_exti.c
+        libraries/zf_driver/zf_driver_exti.h
+        libraries/zf_driver/zf_driver_flash.c
+        libraries/zf_driver/zf_driver_flash.h
+        libraries/zf_driver/zf_driver_gpio.c
+        libraries/zf_driver/zf_driver_gpio.h
+        libraries/zf_driver/zf_driver_iic.c
+        libraries/zf_driver/zf_driver_iic.h
+        libraries/zf_driver/zf_driver_pit.c
+        libraries/zf_driver/zf_driver_pit.h
+        libraries/zf_driver/zf_driver_pwm.c
+        libraries/zf_driver/zf_driver_pwm.h
+        libraries/zf_driver/zf_driver_soft_iic.c
+        libraries/zf_driver/zf_driver_soft_iic.h
+        libraries/zf_driver/zf_driver_soft_spi.c
+        libraries/zf_driver/zf_driver_soft_spi.h
+        libraries/zf_driver/zf_driver_spi.c
+        libraries/zf_driver/zf_driver_spi.h
+        libraries/zf_driver/zf_driver_timer.c
+        libraries/zf_driver/zf_driver_timer.h
+        libraries/zf_driver/zf_driver_uart.c
+        libraries/zf_driver/zf_driver_uart.h
+        libraries/zf_driver/zf_driver_usb_cdc.c
+        libraries/zf_driver/zf_driver_usb_cdc.h
+        project/code/easy_key.c
+        project/code/easy_key.h
+        project/code/user_flash.c
+        project/code/user_flash.h
+        project/code/user_spi.c
+        project/code/user_spi.h
+        project/code/vofa.c
+        project/code/vofa.h
+        project/user/inc/isr.h
+        project/user/src/isr.c
+        project/user/src/main.c project/code/easing_function.c project/code/easing_function.h project/code/easy_ui.c project/code/easy_ui.h project/code/easy_ui_user_app.c project/code/easy_ui_user_app.h project/code/profile_photo_erbws.c project/code/profile_photo_erbws.h project/code/user_header.h project/code/nmea0183.h project/code/nmea0183.c
+        project/code/buzzer.h
+        project/code/buzzer.c
+        project/code/ctrl.c
+        project/code/ctrl.h
+        project/code/upacker.c
+        project/code/upacker.h
+        project/code/ips096.c
+        project/code/ips096.h
+        project/code/pid.c
+        project/code/pid.h)

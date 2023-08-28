@@ -1,0 +1,4 @@
+"/Users/baohan/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.8660.139/CLion 2023.2 EAP.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/baohan/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.8660.139/CLion 2023.2 EAP.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm -B /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/baohan/ErBW_s/Projects/2023NUEDC/Ccode/red_firm/cmake-build-debug
