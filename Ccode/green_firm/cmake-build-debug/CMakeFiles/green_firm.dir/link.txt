@@ -1,3 +1,0 @@
-"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\green_firm.dir/objects.a
-"E:\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\green_firm.dir/objects.a @CMakeFiles\green_firm.dir\objects1.rsp
-"E:\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\green_firm.dir/objects.a -Wl,--no-whole-archive -o green_firm.exe -Wl,--out-implib,libgreen_firm.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\green_firm.dir\linklibs.rsp
