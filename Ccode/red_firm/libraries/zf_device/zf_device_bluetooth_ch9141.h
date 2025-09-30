@@ -62,11 +62,11 @@
 
 
 uint32      bluetooth_ch9141_send_byte          (const uint8 data);
-uint32      bluetooth_ch9141_send_buff          (const uint8 *buff, uint32 len);
+uint32      bluetooth_ch9141_send_buffer        (const uint8 *buff, uint32 len);
 uint32      bluetooth_ch9141_send_string        (const char *str);
 void        bluetooth_ch9141_send_image         (const uint8 *image_addr, uint32 image_size);
 
-uint32      bluetooth_ch9141_read_buff          (uint8 *buff, uint32 len);
+uint32      bluetooth_ch9141_read_buffer        (uint8 *buff, uint32 len);
 
 void        bluetooth_ch9141_uart_callback      (void);
 

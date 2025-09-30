@@ -130,10 +130,10 @@ void uart_tx_interrupt(uart_index_enum uartn, uint8 status)
 // 返回参数     void
 // 使用示例     uint8 dat; uart_read_byte(USART_1,&dat);       // 接收串口1数据  存在在dat变量里
 //-------------------------------------------------------------------------------------------------------------------
-void uart_read_byte(uart_index_enum uartn, uint8 *dat)
+uint8 uart_read_byte(uart_index_enum uartn)
 {
     while((((USART_TypeDef*)uart_index[uartn])->STATR & USART_FLAG_RXNE) == 0);
-    *dat = (uint16)(((USART_TypeDef*)uart_index[uartn])->DATAR & (uint16)0xFF);
+    return (((USART_TypeDef*)uart_index[uartn])->DATAR & (uint16)0xFF);
 }
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -201,13 +201,13 @@ void uart_init(uart_index_enum uart_n, uint32 baud, uart_pin_enum tx_pin, uart_p
            break;
 
         case UART3_MAP1_TX_C10:
-            AFIO->PCFR1 &= ~(0x03<<3);
-            AFIO->PCFR1 |=  (0x01<<3);
+            AFIO->PCFR1 &= ~(0x03<<4);
+            AFIO->PCFR1 |=  (0x01<<4);
            break;
 
         case UART3_MAP2_TX_D8:
-            AFIO->PCFR1 &= ~(0x03<<3);
-            AFIO->PCFR1 |=  (0x03<<3);
+            AFIO->PCFR1 &= ~(0x03<<4);
+            AFIO->PCFR1 |=  (0x03<<4);
            break;
 
         case UART4_MAP1_TX_B0:

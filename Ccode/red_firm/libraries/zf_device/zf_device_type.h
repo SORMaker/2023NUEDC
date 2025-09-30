@@ -53,18 +53,31 @@ typedef enum
     BLUETOOTH_CH9141,                                                           // 蓝牙 CH9141
     WIFI_UART,                                                                  // Wi-Fi 串口
     WIRELESS_CH573,
+    WIFI_SPI,                                                                   // Wi-Fi SPI
 }wireless_type_enum;
+
+typedef enum
+{
+    NO_TOF = 0,                                                                 // 无设备
+    TOF_DL1A,                                                                   // DL1A
+    TOF_DL1B,                                                                   // DL1B
+}tof_type_enum;
 
 typedef void (*callback_function)(void);
 
 extern camera_type_enum     camera_type;
 extern wireless_type_enum   wireless_type;
+extern tof_type_enum        tof_type;
 
 extern callback_function    camera_uart_handler;
 extern callback_function    camera_dvp_handler;
 extern callback_function    wireless_module_uart_handler;
+extern callback_function    tof_module_exti_handler;
+
 
 void    set_camera_type     (camera_type_enum type_set, callback_function uart_callback, callback_function dvp_callback);
 void    set_wireless_type   (wireless_type_enum type_set, callback_function uart_callback);
+void    set_tof_type        (tof_type_enum type_set, callback_function exti_callback);
+
 
 #endif

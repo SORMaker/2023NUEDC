@@ -66,6 +66,10 @@
 #define SCC8660_COF_UART_RX     UART5_MAP0_TX_C12                               // 摄像头的  UART-RX 引脚 要接在单片机 TX 上
 #define SCC8660_COF_UART_TX     UART5_MAP0_RX_D2                                // 摄像头的  UART-TX 引脚 要接在单片机 RX 上
 
+#define SCC8660_COF_IIC_DELAY   (200)                                           // 凌瞳 IIC 延时
+#define SCC8660_COF_IIC_SCL     (D2)                                            // 凌瞳 IIC-SCL 引脚
+#define SCC8660_COF_IIC_SDA     (C12)                                           // 凌瞳 IIC-SDA 引脚
+
 #define SCC8660_D0_PIN          (A9 )
 #define SCC8660_D1_PIN          (A10)
 #define SCC8660_D2_PIN          (C8 )
@@ -90,7 +94,7 @@
 #define SCC8660_AUTO_EXP_DEF    (0  )                                           // 自动曝光     默认不开启自动曝光设置  范围 [0-1] 0为关闭
 #define SCC8660_BRIGHT_DEF      (300)                                           // 亮度设置     手动曝光默认：300   手动曝光时：参数范围0-65535   自动曝光推荐值：100 自动曝光时参数设置范围0-255
 #define SCC8660_FPS_DEF         (60 )                                           // 图像帧率     默认：60        可选参数为：60 50 30 25。 实际帧率还需要看SCC8660_PCLK_DIV参数的设置
-#define SCC8660_PCLK_DIV_DEF    (0  )                                           // PCLK分频系数 默认：0         可选参数为：<0:1/1> <1:2/3> <2:1/2> <3:1/3> <4:1/4> <5:1/8>
+#define SCC8660_PCLK_DIV_DEF    (1  )                                           // PCLK分频系数 默认：0         可选参数为：<0:1/1> <1:2/3> <2:1/2> <3:1/3> <4:1/4> <5:1/8>
                                                                                 //              分频系数越大，PCLK频率越低，降低PCLK可以减轻DVP接口的干扰，但降低PCLK频率则会影响帧率。若无特殊需求请保持默认。
                                                                                 //              例如设置FPS为50帧，但是pclk分频系数选择的为5，则摄像头输出的帧率为50*（1/8）=6.25帧
                                                                                 //              其他参数不变的情况下，SCC8660_PCLK_DIV参数越大图像会越亮
@@ -124,6 +128,13 @@ typedef enum
     SCC8660_SET_REG_ADDR        = 0xFE,
     SCC8660_SET_REG_DATA        = 0xFF,
 }scc8660_cmd_enum;
+
+// 摄像头接口类型枚举
+typedef enum
+{
+    SCC8660_UART,
+    SCC8660_SCCB,
+}scc8660_type_enum;
 
 extern vuint8       scc8660_finish_flag;                                        // 一场图像采集完成标志位
 extern uint16       scc8660_image[SCC8660_H][SCC8660_W];

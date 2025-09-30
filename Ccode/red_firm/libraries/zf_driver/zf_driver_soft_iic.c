@@ -594,11 +594,15 @@ void soft_iic_transfer_8bit_array (soft_iic_info_struct *soft_iic_obj, const uin
     {
         soft_iic_send_data(soft_iic_obj, *write_data ++);
     }
-    soft_iic_start(soft_iic_obj);
-    soft_iic_send_data(soft_iic_obj, soft_iic_obj->addr << 1 | 0x01);
-    while(read_len --)
+
+    if(read_len)
     {
-        *read_data ++ = soft_iic_read_data(soft_iic_obj, read_len == 0);
+        soft_iic_start(soft_iic_obj);
+        soft_iic_send_data(soft_iic_obj, soft_iic_obj->addr << 1 | 0x01);
+        while(read_len --)
+        {
+            *read_data ++ = soft_iic_read_data(soft_iic_obj, read_len == 0);
+        }
     }
     soft_iic_stop(soft_iic_obj);
 }
@@ -626,13 +630,16 @@ void soft_iic_transfer_16bit_array (soft_iic_info_struct *soft_iic_obj, const ui
         soft_iic_send_data(soft_iic_obj, (uint8)((*write_data & 0xFF00) >> 8));
         soft_iic_send_data(soft_iic_obj, (uint8)(*write_data ++ & 0x00FF));
     }
-    soft_iic_start(soft_iic_obj);
-    soft_iic_send_data(soft_iic_obj, soft_iic_obj->addr << 1 | 0x01);
-    while(read_len --)
+    if(read_len)
     {
-        *read_data = soft_iic_read_data(soft_iic_obj, 0);
-        *read_data = ((*read_data << 8)| soft_iic_read_data(soft_iic_obj, read_len == 0));
-        read_data ++;
+        soft_iic_start(soft_iic_obj);
+        soft_iic_send_data(soft_iic_obj, soft_iic_obj->addr << 1 | 0x01);
+        while(read_len --)
+        {
+            *read_data = soft_iic_read_data(soft_iic_obj, 0);
+            *read_data = ((*read_data << 8)| soft_iic_read_data(soft_iic_obj, read_len == 0));
+            read_data ++;
+        }
     }
     soft_iic_stop(soft_iic_obj);
 }

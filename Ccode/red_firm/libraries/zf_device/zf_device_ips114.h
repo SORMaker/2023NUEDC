@@ -62,7 +62,7 @@
 //====================================================软件 SPI 驱动====================================================
 #else
 //====================================================硬件 SPI 驱动====================================================
-#define IPS114_SPI_SPEED                (60 * 1000 * 1000)                      // 硬件 SPI 速率 这里设置为系统时钟二分频
+#define IPS114_SPI_SPEED                (72 * 1000 * 1000)                      // 硬件 SPI 速率 这里设置为系统时钟二分频
 #define IPS114_SPI                      (SPI_2)                                 // 硬件 SPI 号
 #define IPS114_SCL_PIN                  (SPI2_MAP0_SCK_B13)                           // 硬件 SPI SCK 引脚
 #define IPS114_SDA_PIN                  (SPI2_MAP0_MOSI_B15)                          // 硬件 SPI MOSI 引脚
@@ -74,10 +74,10 @@
 #define IPS114_CS_PIN                   (D4 )                                   // CS 片选引脚
 #define IPS114_BLK_PIN                  (D0 )                                   // 液晶背光引脚定义
 
-#define IPS114_DEFAULT_DISPLAY_DIR      (IPS114_CROSSWISE_180)                  // 默认的显示方向
-#define IPS114_DEFAULT_PENCOLOR         (RGB565_RED)                            // 默认的画笔颜色
-#define IPS114_DEFAULT_BGCOLOR          (RGB565_WHITE)                          // 默认的背景颜色
-#define IPS114_DEFAULT_DISPLAY_FONT     (IPS114_8X16_FONT)                      // 默认的字体模式
+#define IPS114_DEFAULT_DISPLAY_DIR      (IPS114_CROSSWISE)                  // 默认的显示方向
+#define IPS114_DEFAULT_PENCOLOR         (RGB565_WHITE)                            // 默认的画笔颜色
+#define IPS114_DEFAULT_BGCOLOR          (RGB565_BLACK)                          // 默认的背景颜色
+#define IPS114_DEFAULT_DISPLAY_FONT     (IPS114_6X8_FONT)                      // 默认的字体模式
 
 #define IPS114_DC(x)                    ((x) ? (gpio_high(IPS114_DC_PIN)) : (gpio_low(IPS114_DC_PIN)))
 #define IPS114_RST(x)                   ((x) ? (gpio_high(IPS114_RST_PIN)) : (gpio_low(IPS114_RST_PIN)))
@@ -111,7 +111,7 @@ void    ips114_show_char                (uint16 x, uint16 y, const char dat);
 void    ips114_show_string              (uint16 x, uint16 y, const char dat[]);
 void    ips114_show_int                 (uint16 x,uint16 y, const int32 dat, uint8 num);
 void    ips114_show_uint                (uint16 x,uint16 y, const uint32 dat, uint8 num);
-void    ips114_show_float               (uint16 x,uint16 y, const float dat, uint8 num, uint8 pointnum);
+void    ips114_show_float               (uint16 x,uint16 y, const double dat, uint8 num, uint8 pointnum);
 
 void    ips114_show_binary_image        (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height);
 void    ips114_show_gray_image          (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height, uint8 threshold);
