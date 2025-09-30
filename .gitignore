@@ -5,3 +5,5 @@ Ccode/green_firm/cmake-build-debug/*
 Ccode/red_firm/cmake-build-debug/*
 Ccode/green_firm/project/mrs/*
 Ccode/red_firm/project/mrs/*
+
+.DS_Store
