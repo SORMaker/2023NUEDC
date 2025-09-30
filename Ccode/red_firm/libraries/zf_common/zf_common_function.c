@@ -807,6 +807,7 @@ uint32 zf_sprintf (int8 *buff, const int8 *format, ...)
 
                     printf_reverse_order(vstr, vlen);
                     memcpy(buff, vstr, vlen);
+                    buff += vlen;
                     buff_len += vlen;
                 }
                 break;

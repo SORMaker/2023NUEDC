@@ -231,7 +231,7 @@ UINT8 TAB_USB_FS_OSC_DESC[ sizeof( MyCfgDescrHD ) ] =
 };
 
 
-void OTG_FS_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void OTG_FS_IRQHandler(void) __attribute__((interrupt()));
 
 /*******************************************************************************
 * Function Name  : USBOTG_FS_DeviceInit

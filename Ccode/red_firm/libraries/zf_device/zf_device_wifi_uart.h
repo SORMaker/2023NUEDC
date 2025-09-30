@@ -136,9 +136,9 @@ uint8   wifi_uart_entry_tcp_servers         (char *port);                       
 uint8   wifi_uart_exit_tcp_servers          (void);                                                                         // 关闭 TCP 服务器
 uint8   wifi_uart_tcp_servers_check_link    (void);                                                                         // TCP Server 模式下检查当前链接数量 并获取 IP
 
-uint32  wifi_uart_send_buffer               (uint8 *buff, uint32 len);                                                      // WIFI 模块数据发送函数
+uint32  wifi_uart_send_buffer               (const uint8 *buffer, uint32 len);                                              // WIFI 模块数据发送函数
 uint32  wifi_uart_tcp_servers_send_buffer   (uint8 *buff, uint32 len, wifi_uart_link_id_enum id);                           // WIFI 模块作为 TCP Server 指定目标设备发送函数
-uint16  wifi_uart_read_buffer               (uint8 *buff, uint16 len);                                                      // WIFI 模块数据接收函数
+uint32  wifi_uart_read_buffer               (uint8 *buffer, uint32 len);                                                    // WIFI 模块数据接收函数
 
 void    wifi_uart_callback                  (void);                                                                         // WIFI 模块串口回调函数
 uint8   wifi_uart_init                      (char *wifi_ssid, char *pass_word, wifi_uart_mode_enum wifi_mode);              // WIFI 模块初始化函数

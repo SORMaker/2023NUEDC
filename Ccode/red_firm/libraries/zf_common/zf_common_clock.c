@@ -46,7 +46,7 @@ uint32 system_clock = SYSTEM_CLOCK_144M;                               // 系统时
 // 参数说明     void
 // 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
-static void clock_reset(void)
+void clock_reset(void)
 {
     RCC->CTLR  |= (uint32) 0x00000001;      //使能HSI振荡器
     RCC->CFGR0 &= (uint32) 0xF8FF0000;
@@ -61,8 +61,9 @@ static void clock_reset(void)
 // 参数说明     clock           时钟频率 推荐使用 zf_common_clock.h 中 system_clock_enum 定义的选项
 // 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
-static void clock_set_freq(uint32 clock)
+void clock_set_freq(uint32 clock)
 {
+    clock_reset();
     __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
 
     RCC->CTLR |= ((uint32_t) RCC_HSEON);

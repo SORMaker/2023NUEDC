@@ -81,8 +81,9 @@ static ips200_font_size_enum    ips200_display_font = IPS200_DEFAULT_DISPLAY_FON
 static uint16 ips200_x_max = 240;
 static uint16 ips200_y_max = 320;
 
-static gpio_pin_enum ips_rst_pin = IPS200_RST_PIN_SPI;
-static gpio_pin_enum ips_bl_pin = IPS200_BLk_PIN_SPI;
+static gpio_pin_enum            ips_rst_pin             = IPS200_RST_PIN_SPI;
+static gpio_pin_enum            ips_bl_pin              = IPS200_BLk_PIN_SPI;
+static gpio_pin_enum            ips_cs_pin              = IPS200_CS_PIN_SPI;
 
 #if IPS200_USE_SOFT_SPI
 static soft_spi_info_struct                 ips200_spi;
@@ -297,7 +298,7 @@ static void ips200_debug_init (void)
 // 备注信息     将屏幕清空成背景颜色
 //-------------------------------------------------------------------------------------------------------------------
 void ips200_clear (void)
-{ 
+{
     uint16 i, j;
     if(IPS200_TYPE_SPI == ips200_display_type)
     {
@@ -325,7 +326,7 @@ void ips200_clear (void)
 // 备注信息     将屏幕填充成指定颜色
 //-------------------------------------------------------------------------------------------------------------------
 void ips200_full (const uint16 color)
-{ 
+{
     uint16 i, j;
     if(IPS200_TYPE_SPI == ips200_display_type)
     {
@@ -695,7 +696,7 @@ void ips200_show_uint (uint16 x, uint16 y, const uint32 dat, uint8 num)
 //              有关问题的详情，请自行百度学习   浮点数精度丢失问题。
 //              负数会显示一个 ‘-’号   正数显示一个空格
 //-------------------------------------------------------------------------------------------------------------------
-void ips200_show_float (uint16 x, uint16 y, const float dat, uint8 num, uint8 pointnum)
+void ips200_show_float (uint16 x, uint16 y, const double dat, uint8 num, uint8 pointnum)
 {
     // 如果程序在输出了断言信息 并且提示出错位置在这里
     // 那么一般是屏幕显示的时候超过屏幕分辨率范围了
@@ -706,8 +707,8 @@ void ips200_show_float (uint16 x, uint16 y, const float dat, uint8 num, uint8 po
     zf_assert(pointnum > 0);
     zf_assert(pointnum <= 6);
 
-    float dat_temp = dat;
-    float offset = 1.0;
+    double dat_temp = dat;
+    double offset = 1.0;
     char data_buffer[17];
     memset(data_buffer, 0, 17);
     memset(data_buffer, ' ', num+pointnum+2);
@@ -720,7 +721,7 @@ void ips200_show_float (uint16 x, uint16 y, const float dat, uint8 num, uint8 po
         }
         dat_temp = dat_temp - ((int)dat_temp / (int)offset) * offset;
     }
-    func_float_to_str(data_buffer, dat_temp, pointnum);
+    func_double_to_str(data_buffer, dat_temp, pointnum);
     ips200_show_string(x, y, data_buffer);
 }
 
@@ -961,7 +962,7 @@ void ips200_show_chinese (uint16 x, uint16 y, uint8 size, const uint8 *chinese_b
     zf_assert(y < ips200_y_max);
     zf_assert(chinese_buffer != NULL);
 
-    int i, j, k; 
+    int i, j, k;
     uint8 temp, temp1, temp2;
     const uint8 *p_data;
     
@@ -1018,6 +1019,7 @@ void ips200_init (ips200_type_enum type_select)
         ips200_display_type = IPS200_TYPE_SPI;
         ips_rst_pin = IPS200_RST_PIN_SPI;
         ips_bl_pin =  IPS200_BLk_PIN_SPI;
+        ips_cs_pin =  IPS200_CS_PIN_SPI;
 #if IPS200_USE_SOFT_SPI
         soft_spi_init(&ips200_spi, 0, IPS200_SOFT_SPI_DELAY, IPS200_SCL_PIN, IPS200_SDA_PIN, SOFT_SPI_PIN_NULL, SOFT_SPI_PIN_NULL);
 #else
@@ -1034,6 +1036,7 @@ void ips200_init (ips200_type_enum type_select)
         ips200_display_type = IPS200_TYPE_PARALLEL8;
         ips_rst_pin = IPS200_RST_PIN_PARALLEL8;
         ips_bl_pin = IPS200_BL_PIN_PARALLEL8;
+        ips_cs_pin =  IPS200_CS_PIN_PARALLEL8;
 
         gpio_init(IPS200_RD_PIN_PARALLEL8,  GPO, 1, GPO_PUSH_PULL);
         gpio_init(IPS200_WR_PIN_PARALLEL8,  GPO, 1, GPO_PUSH_PULL);
@@ -1074,8 +1077,8 @@ void ips200_init (ips200_type_enum type_select)
     }
     ips200_write_command(0x11);
     system_delay_ms(120);
-    
-    ips200_write_command(0x36);    
+
+    ips200_write_command(0x36);
     if(ips200_display_dir == 0)
     {
         ips200_write_8bit_data(0x00);

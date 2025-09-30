@@ -120,14 +120,14 @@
 #define IPS200_DEFAULT_DISPLAY_FONT     (IPS200_8X16_FONT)                      // 默认的字体模式
 
 // 控制语句
-#define IPS200_RD(x)        ((x) ? (gpio_high(IPS200_RD_PIN_PARALLEL8))  : (gpio_low(IPS200_RD_PIN_PARALLEL8)))
-#define IPS200_WR(x)        ((x) ? (gpio_high(IPS200_WR_PIN_PARALLEL8))  : (gpio_low(IPS200_WR_PIN_PARALLEL8)))
-#define IPS200_RS(x)        ((x) ? (gpio_high(IPS200_RS_PIN_PARALLEL8))  : (gpio_low(IPS200_RS_PIN_PARALLEL8)))
-#define IPS200_RST(x)       ((x) ? (gpio_high(ips_rst_pin))              : (gpio_low(ips_rst_pin)))
-#define IPS200_CS(x)        ((x) ? (gpio_high(IPS200_CS_PIN_PARALLEL8))  : (gpio_low(IPS200_CS_PIN_PARALLEL8)))
-#define IPS200_BL(x)        ((x) ? (gpio_high(ips_bl_pin))               : (gpio_low(ips_bl_pin)))
+#define IPS200_RD(x)        ((x) ? (gpio_high(IPS200_RD_PIN_PARALLEL8)) : (gpio_low(IPS200_RD_PIN_PARALLEL8)))
+#define IPS200_WR(x)        ((x) ? (gpio_high(IPS200_WR_PIN_PARALLEL8)) : (gpio_low(IPS200_WR_PIN_PARALLEL8)))
+#define IPS200_RST(x)       ((x) ? (gpio_high(ips_rst_pin)) : (gpio_low(ips_rst_pin)))
+#define IPS200_BL(x)        ((x) ? (gpio_high(ips_bl_pin)) : (gpio_low(ips_bl_pin)))
+#define IPS200_RS(x)        ((x) ? (gpio_high(IPS200_RS_PIN_PARALLEL8)) : (gpio_low(IPS200_RS_PIN_PARALLEL8)))
 
-#define IPS200_DC(x)        ((x) ? (gpio_high(IPS200_DC_PIN_SPI))  : (gpio_low(IPS200_DC_PIN_SPI)))
+#define IPS200_DC(x)        ((x) ? (gpio_high(IPS200_DC_PIN_SPI)) : (gpio_low(IPS200_DC_PIN_SPI)))
+#define IPS200_CS(x)        ((x) ? (gpio_high(ips_cs_pin)) : (gpio_low(ips_cs_pin)))
 
 
 typedef enum
@@ -163,7 +163,7 @@ void    ips200_show_char                (uint16 x, uint16 y, const char dat);
 void    ips200_show_string              (uint16 x, uint16 y, const char dat[]);
 void    ips200_show_int                 (uint16 x, uint16 y, const int32 dat, uint8 num);
 void    ips200_show_uint                (uint16 x, uint16 y, const uint32 dat, uint8 num);
-void    ips200_show_float               (uint16 x, uint16 y, const float dat, uint8 num, uint8 pointnum);
+void    ips200_show_float               (uint16 x, uint16 y, const double dat, uint8 num, uint8 pointnum);
 
 void    ips200_show_binary_image        (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height);
 void    ips200_show_gray_image          (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height, uint8 threshold);

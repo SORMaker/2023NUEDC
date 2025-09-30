@@ -111,7 +111,7 @@ void    tft180_show_char                (uint16 x, uint16 y, const char dat);
 void    tft180_show_string              (uint16 x, uint16 y, const char dat[]);
 void    tft180_show_int                 (uint16 x,uint16 y, const int32 dat, uint8 num);
 void    tft180_show_uint                (uint16 x,uint16 y, const uint32 dat, uint8 num);
-void    tft180_show_float               (uint16 x,uint16 y, const float dat, uint8 num, uint8 pointnum);
+void    tft180_show_float               (uint16 x,uint16 y, const double dat, uint8 num, uint8 pointnum);
 
 void    tft180_show_binary_image        (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height);
 void    tft180_show_gray_image          (uint16 x, uint16 y, const uint8 *image, uint16 width, uint16 height, uint16 dis_width, uint16 dis_height, uint8 threshold);
