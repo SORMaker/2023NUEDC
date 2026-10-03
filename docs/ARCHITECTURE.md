@@ -1,6 +1,6 @@
 # System architecture and source review
 
-This repository contains a MaixPy vision application and two CH32V307 firmware projects: a green tracking controller and a red trajectory controller. The architecture figure summarizes their source-level responsibilities. It does not establish that the checked-in versions form a calibrated, hardware-validated system. In particular, the red firmware expects a vision message that the included Python application does not produce.
+This repository contains a MaixPy vision application and two CH32V307 firmware projects: a green tracking controller and a red trajectory controller. The architecture figure summarizes their source-level responsibilities. It does not establish that the checked-in versions form a calibrated, hardware-validated system. In particular, the red firmware expects a vision message from the OpenMV camera on the red gimbal; that OpenMV program is not included, and the included K210 application does not produce this message.
 
 In the figure, the neutral connector groups each controller's own UI responsibilities; it is not an electrical bus or a shared display. The tracking inset is an explanatory model, separate from the physical module connections.
 
@@ -33,7 +33,7 @@ The red project represents a separate workflow. Its receive callback expects **2
 
 The operator can instead teach three corners. `LaserGoSquare()` creates five vertices, including the return to the first vertex. Selecting a run mode enables TIM2; playback converts buffered coordinates to servo angles and writes PWM registers. The timer period is 4 ms, with additional dwell for the five-vertex route. This path uses geometric playback; the bundled PID source is not called by the active playback handler. [Teaching](../Ccode/red_firm/project/code/easy_ui_user_app.c#L70), [vertices](../Ccode/red_firm/project/code/ctrl.c#L85), [playback](../Ccode/red_firm/project/user/src/isr.c#L355).
 
-No included Python program produces the required corner message. The two MCU projects should not be depicted as communicating directly with one another.
+The required corner message comes from the OpenMV vision program, which is not included; no included Python program produces it. The two MCU projects should not be depicted as communicating directly with one another.
 
 ## Interfaces and timing
 
